@@ -1,191 +1,213 @@
 [
     {
-        "category": "facility",
-        "title": "アクセス・問い合わせ",
-        "eng": "Contact",
-        "link": "contact",
-        "type": "normal"
+        "category": "ホーム",
+        "category-eng": "Home",
+        "icon": "mdi-home",
+        "link": "/"
     },
     {
-        "category": "facility",
-        "title": "開館カレンダー・開館時間",
-        "eng": "Calender",
-        "link": "calender",
-        "type": "normal"
+        "category": "施設案内",
+        "category-eng": "Facility",
+        "icon": "mdi-library",
+        "contents": [
+            {
+                "title": "アクセス・問い合わせ",
+                "eng": "Contact",
+                "link": "contact",
+                "type": "normal"
+            },
+            {
+                "title": "開館カレンダー・開館時間",
+                "eng": "Calender",
+                "link": "calender",
+                "type": "normal"
+            },
+            {
+                "title": "ラーニングコモンズ",
+                "eng": "Learning commons",
+                "link": "learning-commons",
+                "type": "normal"
+            },
+            {
+                "title": "年間予定",
+                "eng": "Schedule",
+                "link": "schedule",
+                "type": "normal"
+            },
+            {
+                "title": "フロアマップ",
+                "eng": "Floor map",
+                "link": "floor-map",
+                "type": "normal"
+            },
+            {
+                "title": "パンフレット（学生対象）",
+                "eng": "Pamphlet",
+                "link": "pamphlet",
+                "type": "normal"
+            }
+        ]
     },
     {
-        "category": "facility",
-        "title": "ラーニングコモンズ",
-        "eng": "Learning commons",
-        "link": "learning-commons",
-        "type": "normal"
+        "category": "利用案内",
+        "category-eng": "Service",
+        "icon": "mdi-information",
+        "contents": [
+            {
+                "title": "貸出サービス",
+                "eng": "Service",
+                "link": "service",
+                "type": "normal"
+            },
+            {
+                "title": "レファレンスサービス",
+                "eng": "Reference",
+                "link": "reference",
+                "type": "normal"
+            },
+            {
+                "title": "ツアー・ガイダンス",
+                "eng": "Tour",
+                "link": "tour",
+                "type": "normal"
+            },
+            {
+                "title": "学外から受けられるサポート",
+                "eng": "Off campus",
+                "link": "off-campus",
+                "type": "normal"
+            },
+            {
+                "title": "障がいのある方への支援",
+                "eng": "Supports",
+                "link": "supports",
+                "type": "normal"
+            },
+            {
+                "title": "学外の方へ",
+                "eng": "Visitor",
+                "link": "visitor",
+                "type": "normal"
+            },
+            {
+                "title": "Q&A",
+                "eng": "Question",
+                "link": "question",
+                "type": "normal"
+            },
+            {
+                "title": "各種申込書",
+                "eng": "Application",
+                "link": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
+                "type": "open-in-new"
+            }
+        ]
     },
     {
-        "category": "facility",
-        "title": "年間予定",
-        "eng": "Schedule",
-        "link": "schedule",
-        "type": "normal"
+        "category": "情報検索",
+        "category-eng": "Retrieval",
+        "icon": "mdi-text-box-search-outline",
+        "contents": [
+            {
+                "title": "資料の探し方",
+                "eng": "How to find",
+                "link": "how-to-find",
+                "type": "normal"
+            },
+            {
+                "title": "データベース・電子ブック",
+                "eng": "Database",
+                "link": "database",
+                "type": "normal"
+            },
+            {
+                "title": "キャリア支援",
+                "eng": "Carrier",
+                "link": "carrier",
+                "type": "normal"
+            },
+            {
+                "title": "新聞（緑園キャンパス）",
+                "eng": "Newspaper",
+                "link": "@/assets/pdf/newspaper.pdf",
+                "type": "pdf"
+            }
+        ]
     },
     {
-        "category": "facility",
-        "title": "フロアマップ",
-        "eng": "Floor map",
-        "link": "floor-map",
-        "type": "normal"
-    },
-    {
-        "category": "facility",
-        "title": "パンフレット（学生対象）",
-        "eng": "Pamphlet",
-        "link": "pamphlet",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "貸出サービス",
-        "eng": "Service",
-        "link": "service",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "レファレンスサービス",
-        "eng": "Reference",
-        "link": "reference",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "ツアー・ガイダンス",
-        "eng": "Tour",
-        "link": "tour",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "学外から受けられるサポート",
-        "eng": "Off campus",
-        "link": "off-campus",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "障がいのある方への支援",
-        "eng": "Supports",
-        "link": "supports",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "学外の方へ",
-        "eng": "Visitor",
-        "link": "visitor",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "Q&A",
-        "eng": "Question",
-        "link": "question",
-        "type": "normal"
-    },
-    {
-        "category": "service",
-        "title": "各種申込書",
-        "eng": "Application",
-        "link": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
-        "type": "open-in-new"
-    },
-    {
-        "category": "retrieval",
-        "title": "資料の探し方",
-        "eng": "How to find",
-        "link": "how-to-find",
-        "type": "normal"
-    },
-    {
-        "category": "retrieval",
-        "title": "データベース・電子ブック",
-        "eng": "Database",
-        "link": "database",
-        "type": "normal"
-    },
-    {
-        "category": "retrieval",
-        "title": "キャリア支援",
-        "eng": "Carrier",
-        "link": "carrier",
-        "type": "normal"
-    },
-    {
-        "category": "retrieval",
-        "title": "新聞（緑園キャンパス）",
-        "eng": "Newspaper",
-        "link": "@/assets/pdf/newspaper.pdf",
-        "type": "pdf"
-    },
-    {
-        "category": "news",
-        "title": "NEWS 一覧",
-        "eng": "News",
+        "category": "ニュース",
+        "category-eng": "News",
+        "icon": "mdi-newspaper-variant-outline",
         "link": "news",
-        "type": "normal"
+        "contents": [
+            {
+                "title": "NEWS 一覧",
+                "eng": "News",
+                "link": "news",
+                "type": "normal"
+            }
+        ]
     },
     {
-        "category": "topics",
-        "title": "学科推奨図書",
-        "eng": "Recommend",
-        "link": "recommend",
-        "type": "normal"
+        "category": "トピックス",
+        "category-eng": "Topics",
+        "icon": "mdi-book-open-variant",
+        "contents": [
+            {
+                "title": "学科推奨図書",
+                "eng": "Recommend",
+                "link": "recommend",
+                "type": "normal"
+            },
+            {
+                "title": "英語多読図書",
+                "eng": "English tadoku",
+                "link": "english-tadoku",
+                "type": "normal"
+            },
+            {
+                "title": "電子コレクション",
+                "eng": "Digital collection",
+                "link": "digital-collection",
+                "type": "normal"
+            }
+        ]
     },
     {
-        "category": "topics",
-        "title": "英語多読図書",
-        "eng": "English tadoku",
-        "link": "english-tadoku",
-        "type": "normal"
-    },
-    {
-        "category": "topics",
-        "title": "電子コレクション",
-        "eng": "Digital collection",
-        "link": "digital-collection",
-        "type": "normal"
-    },
-    {
-        "category": "links",
-        "title": "OPAC",
-        "eng": "OPAC",
-        "link": "https://www2.library.ferris.ac.jp/top/index?method=open",
-        "type": "open-in-new"
-    },
-    {
-        "category": "links",
-        "title": "学術機関リポジトリ",
-        "eng": "FAIR：Ferris Academic Intelligence Repository",
-        "link": "https://ferris.repo.nii.ac.jp/",
-        "type": "open-in-new"
-    },
-    {
-        "category": "links",
-        "title": "読書運動プロジェクト",
-        "eng": "Reading Project",
-        "link": "http://www.library.ferris.ac.jp/dokupuro/",
-        "type": "open-in-new"
-    },
-    {
-        "category": "links",
-        "title": "Book Web Pro",
-        "eng": "Book Web Pro",
-        "link": "https://pro.kinokuniya.co.jp/",
-        "type": "open-in-new"
-    },
-    {
-        "category": "links",
-        "title": "フェリス女学院大学",
-        "eng": "Ferris University",
-        "link": "http://www.ferris.ac.jp/",
-        "type": "open-in-new"
+        "category": "関連リンク",
+        "category-eng": "Links",
+        "icon": "mdi-connection",
+        "contents": [
+            {
+                "title": "OPAC",
+                "eng": "OPAC",
+                "link": "https://www2.library.ferris.ac.jp/top/index?method=open",
+                "type": "open-in-new"
+            },
+            {
+                "title": "学術機関リポジトリ",
+                "eng": "FAIR：Ferris Academic Intelligence Repository",
+                "link": "https://ferris.repo.nii.ac.jp/",
+                "type": "open-in-new"
+            },
+            {
+                "title": "読書運動プロジェクト",
+                "eng": "Reading Project",
+                "link": "http://www.library.ferris.ac.jp/dokupuro/",
+                "type": "open-in-new"
+            },
+            {
+                "title": "Book Web Pro",
+                "eng": "Book Web Pro",
+                "link": "https://pro.kinokuniya.co.jp/",
+                "type": "open-in-new"
+            },
+            {
+                "title": "フェリス女学院大学",
+                "eng": "Ferris University",
+                "link": "http://www.ferris.ac.jp/",
+                "type": "open-in-new"
+            }
+        ]
     }
 ]
