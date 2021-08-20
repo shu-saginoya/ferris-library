@@ -3,7 +3,7 @@
         "category": "ホーム",
         "category-eng": "Home",
         "icon": "mdi-home",
-        "link": "/"
+        "push": "/"
     },
     {
         "category": "施設案内",
@@ -13,38 +13,32 @@
             {
                 "title": "アクセス・問い合わせ",
                 "eng": "Contact",
-                "link": "contact",
-                "type": "normal"
+                "push": "contact"
             },
             {
                 "title": "開館カレンダー・開館時間",
                 "eng": "Calender",
-                "link": "calender",
-                "type": "normal"
+                "push": "calender"
             },
             {
                 "title": "ラーニングコモンズ",
                 "eng": "Learning commons",
-                "link": "learning-commons",
-                "type": "normal"
+                "push": "learning-commons"
             },
             {
                 "title": "年間予定",
                 "eng": "Schedule",
-                "link": "schedule",
-                "type": "normal"
+                "push": "schedule"
             },
             {
                 "title": "フロアマップ",
                 "eng": "Floor map",
-                "link": "floor-map",
-                "type": "normal"
+                "push": "floor-map"
             },
             {
                 "title": "パンフレット（学生対象）",
                 "eng": "Pamphlet",
-                "link": "pamphlet",
-                "type": "normal"
+                "push": "pamphlet"
             }
         ]
     },
@@ -56,50 +50,43 @@
             {
                 "title": "貸出サービス",
                 "eng": "Service",
-                "link": "service",
-                "type": "normal"
+                "push": "service"
             },
             {
                 "title": "レファレンスサービス",
                 "eng": "Reference",
-                "link": "reference",
-                "type": "normal"
+                "push": "reference"
             },
             {
                 "title": "ツアー・ガイダンス",
                 "eng": "Tour",
-                "link": "tour",
-                "type": "normal"
+                "push": "tour"
             },
             {
                 "title": "学外から受けられるサポート",
                 "eng": "Off campus",
-                "link": "off-campus",
-                "type": "normal"
+                "push": "off-campus"
             },
             {
                 "title": "障がいのある方への支援",
                 "eng": "Supports",
-                "link": "supports",
-                "type": "normal"
+                "push": "supports"
             },
             {
                 "title": "学外の方へ",
                 "eng": "Visitor",
-                "link": "visitor",
-                "type": "normal"
+                "push": "visitor"
             },
             {
                 "title": "Q&A",
                 "eng": "Question",
-                "link": "question",
-                "type": "normal"
+                "push": "question"
             },
             {
                 "title": "各種申込書",
                 "eng": "Application",
-                "link": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
-                "type": "open-in-new"
+                "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
+                "icon": "mdi-open-in-new"
             }
         ]
     },
@@ -111,26 +98,23 @@
             {
                 "title": "資料の探し方",
                 "eng": "How to find",
-                "link": "how-to-find",
-                "type": "normal"
+                "push": "how-to-find"
             },
             {
                 "title": "データベース・電子ブック",
                 "eng": "Database",
-                "link": "database",
-                "type": "normal"
+                "push": "database"
             },
             {
                 "title": "キャリア支援",
                 "eng": "Carrier",
-                "link": "carrier",
-                "type": "normal"
+                "push": "carrier"
             },
             {
                 "title": "新聞（緑園キャンパス）",
                 "eng": "Newspaper",
-                "link": "@/assets/pdf/newspaper.pdf",
-                "type": "pdf"
+                "href": "@/assets/pdf/newspaper.pdf",
+                "icon": "mdi-file-pdf-outline"
             }
         ]
     },
@@ -138,13 +122,12 @@
         "category": "ニュース",
         "category-eng": "News",
         "icon": "mdi-newspaper-variant-outline",
-        "link": "news",
+        "push": "news",
         "contents": [
             {
                 "title": "NEWS 一覧",
                 "eng": "News",
-                "link": "news",
-                "type": "normal"
+                "push": "news"
             }
         ]
     },
@@ -156,57 +139,54 @@
             {
                 "title": "学科推奨図書",
                 "eng": "Recommend",
-                "link": "recommend",
-                "type": "normal"
+                "push": "recommend"
             },
             {
                 "title": "英語多読図書",
                 "eng": "English tadoku",
-                "link": "english-tadoku",
-                "type": "normal"
+                "push": "english-tadoku"
             },
             {
                 "title": "電子コレクション",
                 "eng": "Digital collection",
-                "link": "digital-collection",
-                "type": "normal"
+                "push": "digital-collection"
             }
         ]
     },
     {
         "category": "関連リンク",
-        "category-eng": "Links",
+        "category-eng": "links",
         "icon": "mdi-connection",
         "contents": [
             {
                 "title": "OPAC",
                 "eng": "OPAC",
-                "link": "https://www2.library.ferris.ac.jp/top/index?method=open",
-                "type": "open-in-new"
+                "href": "https://www2.library.ferris.ac.jp/top/index?method=open",
+                "icon": "mdi-open-in-new"
             },
             {
                 "title": "学術機関リポジトリ",
                 "eng": "FAIR：Ferris Academic Intelligence Repository",
-                "link": "https://ferris.repo.nii.ac.jp/",
-                "type": "open-in-new"
+                "href": "https://ferris.repo.nii.ac.jp/",
+                "icon": "mdi-open-in-new"
             },
             {
                 "title": "読書運動プロジェクト",
                 "eng": "Reading Project",
-                "link": "http://www.library.ferris.ac.jp/dokupuro/",
-                "type": "open-in-new"
+                "href": "http://www.library.ferris.ac.jp/dokupuro/",
+                "icon": "mdi-open-in-new"
             },
             {
                 "title": "Book Web Pro",
                 "eng": "Book Web Pro",
-                "link": "https://pro.kinokuniya.co.jp/",
-                "type": "open-in-new"
+                "href": "https://pro.kinokuniya.co.jp/",
+                "icon": "mdi-open-in-new"
             },
             {
                 "title": "フェリス女学院大学",
                 "eng": "Ferris University",
-                "link": "http://www.ferris.ac.jp/",
-                "type": "open-in-new"
+                "href": "http://www.ferris.ac.jp/",
+                "icon": "mdi-open-in-new"
             }
         ]
     }
