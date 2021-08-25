@@ -1,55 +1,23 @@
 <template>
   <v-main>
-    <v-carousel cycle height="440px" hide-delimiter-background>
-      <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
-      >
-        <v-row class="fill-height" align="center" justify="center">
-          <img src="@/assets/image/site-logo.png" width="403" height="130" />
+    <v-container>
+      <main-visual />
+      <section>
+        <h2 class="v-heading text-h4 pt-6 mb-2">Calender</h2><p>※調整中です</p>
+        <v-row justify="space-around">
+          <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
+          <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
         </v-row>
-      </v-carousel-item>
-    </v-carousel>
-    <div>
-      あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />あ<br />
-    </div>
+      </section>
+      <section>
+        <h2 class="v-heading text-h4 pt-6 mb-2">News</h2>
+      </section>
+    </v-container>
   </v-main>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      items: [
-        {
-          src: require('@/assets/image/main-visual/main-visual-01.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-02.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-03.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-04.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-06.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-05.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-07.jpg'),
-        },
-        {
-          src: require('@/assets/image/main-visual/main-visual-08.jpg'),
-        },
-      ],
-    }
-  },
+  data: () => ({}),
 }
 </script>
