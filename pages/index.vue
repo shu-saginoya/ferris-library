@@ -7,7 +7,6 @@
         :src="item.src"
         reverse-transition="fade-transition"
         transition="fade-transition"
-        class="mein-visual"
       >
         <v-row class="fill-height" align="center" justify="center">
           <img src="@/assets/image/site-logo.png" width="403" height="130" />
@@ -38,10 +37,10 @@ export default {
           src: require('@/assets/image/main-visual/main-visual-04.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-05.jpg'),
+          src: require('@/assets/image/main-visual/main-visual-06.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-06.jpg'),
+          src: require('@/assets/image/main-visual/main-visual-05.jpg'),
         },
         {
           src: require('@/assets/image/main-visual/main-visual-07.jpg'),
@@ -54,9 +53,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.mein-visual {
-  filter: brightness(110%) grayscale(10%);
-}
-</style>
