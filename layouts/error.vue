@@ -1,44 +1,48 @@
 <template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
+  <v-main>
+    <v-container v-if="error.statusCode === 404" tag="section">
+      <h2 class="v-heading text-h4 pt-8 mb-4">
+        {{ pageNotFound }}
+      </h2>
+      <p>お探しのページは、移動または削除された可能性があります。</p>
+      <p>
+        現在このサイトはテストバージョンのためまだ制作されていない可能性もあります。
+      </p>
+      <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
+    </v-container>
+
+    <v-container v-else tag="section">
+      <h2 class="v-heading text-h4 pt-8 mb-4">
+        {{ otherError }}
+      </h2>
+      <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
 export default {
-  layout: 'empty',
   props: {
     error: {
       type: Object,
-      default: null
-    }
+      default: null,
+    },
   },
-  data () {
+  data() {
     return {
       pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      otherError: 'An error occurred',
     }
   },
-  head () {
+  head() {
     const title =
       this.error.statusCode === 404 ? this.pageNotFound : this.otherError
     return {
-      title
+      title,
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
-h1 {
-  font-size: 20px;
-}
 </style>
