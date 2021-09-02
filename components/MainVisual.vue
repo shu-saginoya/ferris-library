@@ -1,12 +1,12 @@
 <template>
-  <v-carousel cycle height="440" hide-delimiter-background show-arrows-on-hover>
+  <v-carousel cycle height="330" hide-delimiter-background show-arrows-on-hover>
     <v-carousel-item
       v-for="(item, i) in items"
       :key="i"
       :src="item.src"
     >
       <v-row class="fill-height" align="center" justify="center">
-        <img src="@/assets/image/site-logo.png" width="403" height="130" />
+        <img src="@/assets/image/site-logo.png" width="350" height="113" />
       </v-row>
     </v-carousel-item>
   </v-carousel>
