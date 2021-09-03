@@ -1,9 +1,9 @@
 <template>
   <v-main>
     <v-container v-if="error.statusCode === 404" tag="section">
-      <h2 class="v-heading text-h4 pt-8 mb-4">
+      <base-page-title>
         {{ pageNotFound }}
-      </h2>
+      </base-page-title>
       <p>お探しのページは、移動または削除された可能性があります。</p>
       <p>
         現在このサイトはテストバージョンのためまだ制作されていない可能性もあります。
@@ -12,9 +12,9 @@
     </v-container>
 
     <v-container v-else tag="section">
-      <h2 class="v-heading text-h4 pt-8 mb-4">
+      <base-page-title>
         {{ otherError }}
-      </h2>
+      </base-page-title>
       <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
     </v-container>
   </v-main>
