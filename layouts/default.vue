@@ -15,20 +15,17 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-      <v-menu
-        offset-y
-        :rounded="rounded"
-      >
+      <v-menu offset-y>
         <template #activator="{ attrs, on }">
           <v-btn icon>
             <v-icon v-bind="attrs" v-on="on">mdi-translate</v-icon>
           </v-btn>
         </template>
         <v-list>
-          <v-list-item to="/">
+          <v-list-item to="/" link>
             <v-list-item-title>日本語</v-list-item-title>
           </v-list-item>
-          <v-list-item to="english">
+          <v-list-item to="english" link>
             <v-list-item-title>English</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -37,7 +34,7 @@
     <Nuxt />
     <layout-footer />
 
-    <v-dialog v-model="dialog" max-width="60%">
+    <v-dialog v-model="dialog" max-width="500">
       <v-card>
         <v-card-title class="headline"
           >サイト内のページを検索します</v-card-title
