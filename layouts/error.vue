@@ -5,9 +5,6 @@
         {{ pageNotFound }}
       </base-page-title>
       <p>お探しのページは、移動または削除された可能性があります。</p>
-      <p>
-        現在このサイトはテストバージョンのためまだ制作されていない可能性もあります。
-      </p>
       </template>
       <template v-else>
       <base-page-title>
