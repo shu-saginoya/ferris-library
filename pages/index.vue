@@ -1,17 +1,27 @@
 <template>
-  <v-main>
+  <v-container>
     <main-visual />
-    <!--<v-container tag="section">
-      <h2 class="v-heading text-h4 pt-8 mb-2">Calender※調整中です</h2>
+    <!--<section>
+      <base-page-title>Calender※調整中です</base-page-title>
       <v-row justify="space-around">
         <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
         <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
       </v-row>
-    </v-container>-->
-    <!--<v-container tag="section">
-      <h2 class="v-heading text-h4 pt-6 mb-2">News</h2>
-    </v-container>-->
-  </v-main>
+    </section>-->
+    <!--<section>
+      <base-page-title>News</base-page-title>
+    </section>-->
+    <section>
+      <base-page-title>OPAC 蔵書検索</base-page-title>
+      <v-tabs>
+        <v-tab> 検索フォーム </v-tab>
+        <v-tab> スマートフォン </v-tab>
+      </v-tabs>
+    </section>
+    <!--<section>
+      <base-page-title>Topics</base-page-title>
+    </section>-->
+  </v-container>
 </template>
 
 <script>

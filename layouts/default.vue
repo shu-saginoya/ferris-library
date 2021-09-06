@@ -31,7 +31,9 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-    <Nuxt />
+    <v-main>
+      <Nuxt />
+    </v-main>
     <layout-footer />
 
     <v-dialog v-model="dialog" max-width="500">

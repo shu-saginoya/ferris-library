@@ -1,6 +1,6 @@
 <template>
-  <v-main>
-    <v-container v-if="error.statusCode === 404" tag="section">
+    <v-container>
+      <template v-if="error.statusCode === 404">
       <base-page-title>
         {{ pageNotFound }}
       </base-page-title>
@@ -8,16 +8,14 @@
       <p>
         現在このサイトはテストバージョンのためまだ制作されていない可能性もあります。
       </p>
-      <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
-    </v-container>
-
-    <v-container v-else tag="section">
+      </template>
+      <template v-else>
       <base-page-title>
         {{ otherError }}
       </base-page-title>
+      </template>
       <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
     </v-container>
-  </v-main>
 </template>
 
 <script>
