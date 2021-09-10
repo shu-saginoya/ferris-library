@@ -13,35 +13,7 @@
     </section>-->
     <!--<section>
       <base-page-title>OPAC 蔵書検索</base-page-title>
-      <v-tabs v-model="tab">
-        <v-tab> 検索フォーム </v-tab>
-        <v-tab> スマートフォン </v-tab>
-      </v-tabs>
-      <v-tabs-items v-model="tab">
-        <v-tab-item>
-          <v-form>
-            <v-text-field
-
-            ></v-text-field>
-          </v-form>
-          <p>
-            <a class="open-in-new" href="#"
-              >詳細検索</a
-            ><a class="open-in-new" href="#"
-              >My library login</a
-            >
-          </p>
-        </v-tab-item>
-        <v-tab-item>
-          スマートフォン版OPAC<br />
-          <a
-            class="open-in-new"
-            href="http://osirabe.net/opac.ferris/"
-            target="_blank"
-            >http://osirabe.net/opac.ferris/</a
-          >
-        </v-tab-item>
-      </v-tabs-items>
+      <opac />
     </section>-->
     <!--<section>
       <base-page-title>Topics</base-page-title>
@@ -73,8 +45,5 @@
 
 <script>
 export default {
-  data: () => ({
-    tab: null,
-  }),
 }
 </script>
