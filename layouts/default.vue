@@ -15,10 +15,10 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-      <v-menu offset-y>
-        <template #activator="{ attrs, on }">
-          <v-btn icon>
-            <v-icon v-bind="attrs" v-on="on">mdi-translate</v-icon>
+      <v-menu bottom offset-y>
+        <template #activator="{ on, attrs }">
+          <v-btn icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-translate</v-icon>
           </v-btn>
         </template>
         <v-list>
@@ -58,6 +58,10 @@
         </v-card-text>
       </v-card>
     </v-dialog>
+
+    <v-btn fab color="primary" fixed right bottom  icon @click="toTop">
+      <v-icon large>mdi-format-vertical-align-top</v-icon>
+    </v-btn>
   </v-app>
 </template>
 
@@ -71,6 +75,9 @@ export default {
   methods: {
     validate() {
       this.$refs.form.validate()
+    },
+    toTop () {
+      this.$vuetify.goTo(0)
     },
   },
 }
