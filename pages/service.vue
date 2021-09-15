@@ -8,7 +8,6 @@
       v-model="panel"
       accordion
       multiple="true"
-      focusable
     >
       <v-expansion-panel v-for="(item, i) in items" :key="i">
         <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
