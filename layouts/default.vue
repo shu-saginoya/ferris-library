@@ -59,9 +59,21 @@
       </v-card>
     </v-dialog>
 
-    <v-btn fab color="primary" fixed right bottom  icon @click="toTop">
-      <v-icon large>mdi-format-vertical-align-top</v-icon>
-    </v-btn>
+    <transition name="fade">
+      <v-btn
+        v-show="fab"
+        v-scroll="onScroll"
+        class="mx-2"
+        fab
+        fixed
+        bottom
+        right
+        color="primary"
+        @click="toTop"
+      >
+        <v-icon large>mdi-format-vertical-align-top</v-icon>
+      </v-btn>
+    </transition>
   </v-app>
 </template>
 
@@ -71,14 +83,32 @@ export default {
     drawer: null,
     dialog: false,
     valid: true,
+    fab: false,
   }),
   methods: {
     validate() {
       this.$refs.form.validate()
     },
-    toTop () {
+    onScroll(e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset || e.target.scrollTop || 0
+      this.fab = top > 500
+    },
+    toTop() {
       this.$vuetify.goTo(0)
     },
   },
 }
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+</style>
