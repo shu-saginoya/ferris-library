@@ -10,28 +10,30 @@
           <v-card-text>
             <form
               name="QSearch"
-              action="https://www2.library.ferris.ac.jp/search/switch"
-              onsubmit="return qSearch('QSearch',2);"
+              action="https://www2.library.ferris.ac.jp/gate"
               method="POST"
+              target="_blank"
             >
+              <input type="hidden" name="module" value="search" />
+              <input type="hidden" name="path" value="switch" />
               <input type="hidden" name="method" value="search" />
               <input type="hidden" name="quick" value="true" />
-              <input type="hidden" name="word" value="" />
               <input type="hidden" name="prefix" value="/search" />
+              <input type="hidden" name="page" value="/search" />
               <v-text-field
-                name="before"
+                id="QSearch"
+                name="word"
                 label="クイックリサーチ"
                 placeholder="キーワードを入力してください"
                 outlined
                 dense
-                append-outer-icon="mdi-send"
                 prepend-inner-icon="mdi-magnify"
                 clearable
-                @click:append-outer="opacSearch"
-              ></v-text-field>
-              <input type="submit" value="検索">
-              <input type="hidden" name="position" value="book" />
-              <input type="hidden" name="page" value="/search" />
+              >
+                <template #append-outer>
+                  <v-btn type="submit" class="submit-btn" small fab icon color="primary"><v-icon>mdi-send</v-icon></v-btn>
+                </template>
+              </v-text-field>
             </form>
 
             <v-btn
@@ -77,11 +79,11 @@ export default {
   data: () => ({
     tab: null,
   }),
-  methods: {
-    opacSearch() {
-      const url = 'https://www2.library.ferris.ac.jp/search/switch'
-      window.open(url, '_blank')
-    },
-  },
 }
 </script>
+
+<style scoped>
+.submit-btn {
+  margin-top: -8px;
+}
+</style>

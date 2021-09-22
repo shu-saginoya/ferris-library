@@ -11,10 +11,10 @@
     <!--<section>
       <base-page-title>News</base-page-title>
     </section>-->
-    <!--<section>
+    <section>
       <base-page-title>OPAC 蔵書検索</base-page-title>
       <opac />
-    </section>-->
+    </section>
     <!--<section>
       <base-page-title>Topics</base-page-title>
     </section>-->
