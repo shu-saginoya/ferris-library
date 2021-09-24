@@ -27,6 +27,7 @@
                 placeholder="キーワードを入力してください"
                 outlined
                 dense
+                append-icon="mdi-open-in-new"
                 prepend-inner-icon="mdi-magnify"
                 clearable
               >
@@ -56,10 +57,9 @@
       <v-tab-item>
         <v-card flat class="d-md-flex justify-start">
           <div>
-            <v-card-title>スマートフォン版OPAC</v-card-title>
             <v-card-text>
               <v-btn href="http://osirabe.net/opac.ferris/" target="_blank">
-                http://osirabe.net/opac.ferris/
+                スマートフォン版OPAC
                 <v-icon right>mdi-open-in-new</v-icon>
               </v-btn>
             </v-card-text>
