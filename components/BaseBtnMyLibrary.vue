@@ -1,0 +1,22 @@
+<template>
+  <v-btn
+    href="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
+    target="_blank"
+    class="my-library"
+  >
+    My Library login
+    <v-icon right>mdi-open-in-new</v-icon>
+  </v-btn>
+</template>
+
+<script>
+export default {
+  name: 'BaseBtnMyLibrary',
+}
+</script>
+
+<style scoped>
+.my-library {
+  text-transform: none;
+}
+</style>

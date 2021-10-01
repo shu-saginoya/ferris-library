@@ -44,13 +44,7 @@
               詳細検索
               <v-icon right>mdi-open-in-new</v-icon>
             </v-btn>
-            <v-btn
-              href="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
-              target="_blank"
-            >
-              My library login
-              <v-icon right>mdi-open-in-new</v-icon>
-            </v-btn>
+            <base-btn-my-library></base-btn-my-library>
           </v-card-text>
         </v-card>
       </v-tab-item>
