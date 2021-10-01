@@ -36,12 +36,10 @@
     </v-main>
     <layout-footer />
 
-    <v-dialog v-model="dialog" max-width="500">
+    <v-dialog v-model="dialog" max-width="600">
       <v-card>
-        <v-card-title class="headline"
-          >サイト内のページを検索します</v-card-title
-        >
         <v-card-text>
+          <div class="pt-4 pb-2">サイト内のページを検索します</div>
           <v-form ref="form" v-model="valid" lazy-validation>
             <v-text-field
               v-model="message"
