@@ -10,6 +10,9 @@
         <v-card-text>
           <slot name="contents">ダイアログカードの内容</slot>
         </v-card-text>
+        <v-card-actions>
+          <slot name="actions"></slot>
+        </v-card-actions>
         <v-card-actions class="justify-end">
           <v-btn text @click="dialog.value = false">Close</v-btn>
         </v-card-actions>
