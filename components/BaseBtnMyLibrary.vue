@@ -2,7 +2,7 @@
   <v-btn
     href="https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
     target="_blank"
-    class="my-library"
+    class="my-library ma-2"
   >
     My Library login
     <v-icon right>mdi-open-in-new</v-icon>

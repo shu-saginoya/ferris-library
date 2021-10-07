@@ -9,7 +9,7 @@
       <v-card-text>
         ご希望の資料が当図書館にない時、国内外の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryからも調査の依頼ができます。
       </v-card-text>
-      <v-card-actions>
+      <v-card-actions class="d-flex flex-wrap">
         <base-default-dialog>
           <template #name>文献複写</template>
           <template #contents>
@@ -65,7 +65,7 @@
           </template>
         </base-default-dialog>
 
-        <base-btn-my-library></base-btn-my-library>
+        <base-btn-my-library />
       </v-card-actions>
     </v-card>
 
@@ -74,7 +74,7 @@
       <v-card-text>
         他大学の図書館を利用するために必要な紹介状を発行します。
       </v-card-text>
-      <v-card-actions>
+      <v-card-actions class="d-flex flex-wrap">
         <base-default-dialog>
           <template #name>大学図書館</template>
           <template #contents>
@@ -225,7 +225,7 @@
         先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" text to="tour">
+        <v-btn color="primary" outlined to="tour">
           ツアー・ガイダンスページへ
         </v-btn>
       </v-card-actions>
@@ -240,7 +240,7 @@
         手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" text to="consortium">
+        <v-btn color="primary" outlined to="consortium">
           詳細ページへ
         </v-btn>
       </v-card-actions>
