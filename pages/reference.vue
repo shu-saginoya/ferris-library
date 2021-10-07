@@ -173,7 +173,7 @@
           <v-card-text>
             下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。カウンターで毎年度発行手続きをしてください。
           </v-card-text>
-          <v-card-actions>
+          <v-card-actions class="d-flex flex-wrap">
             <base-default-dialog>
               <template #name>神奈川県内大学図書館共通閲覧証</template>
               <template #contents>
