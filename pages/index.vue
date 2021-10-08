@@ -10,19 +10,10 @@
     </section>-->
     <section>
       <base-page-title>News</base-page-title>
-      <v-card>
-        <v-list two-line>
-          <v-list-item v-for="info in news" :key="info.id">
-            <v-list-item-icon>
-              <v-icon>mdi-information-outline</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ info.title }}</v-list-item-title>
-              <v-list-item-subtitle>{{ info.date }}</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card>
+      <news-list><template #name>新着情報</template></news-list>
+      <div  class="text-center mt-6">
+        <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
+      </div>
     </section>
     <section>
       <base-page-title>OPAC 蔵書検索</base-page-title>
