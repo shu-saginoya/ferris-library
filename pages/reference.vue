@@ -10,7 +10,7 @@
         ご希望の資料が当図書館にない時、国内外の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryからも調査の依頼ができます。
       </v-card-text>
       <v-card-actions class="d-flex flex-wrap">
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>文献複写</template>
           <template #contents>
             <div class="text-h5 pt-12">文献複写</div>
@@ -30,9 +30,9 @@
           <template #actions>
             <base-btn-my-library></base-btn-my-library>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
 
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>現物貸借</template>
           <template #contents>
             <div class="text-h5 pt-12">現物貸借</div>
@@ -63,7 +63,7 @@
           <template #actions>
             <base-btn-my-library></base-btn-my-library>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
 
         <base-btn-my-library />
       </v-card-actions>
@@ -75,7 +75,7 @@
         他大学の図書館を利用するために必要な紹介状を発行します。
       </v-card-text>
       <v-card-actions class="d-flex flex-wrap">
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>大学図書館</template>
           <template #contents>
             <div class="text-h5 pt-12">大学図書館</div>
@@ -94,9 +94,9 @@
               url="http://ci.nii.ac.jp/books/"
             ></base-btn-open-in-new>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
 
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>横浜市立図書館</template>
           <template #contents>
             <div class="text-h5 pt-12">横浜市立図書館</div>
@@ -115,9 +115,9 @@
               url="https://opac.lib.city.yokohama.lg.jp/opac/"
             ></base-btn-open-in-new>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
 
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>神奈川県立図書館</template>
           <template #contents>
             <div class="text-h5 pt-12">神奈川県立図書館</div>
@@ -133,9 +133,9 @@
               url="https://www.klnet.pref.kanagawa.jp/"
             ></base-btn-open-in-new>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
 
-        <base-default-dialog>
+        <base-dialog-default>
           <template #name>国立国会図書館</template>
           <template #contents>
             <div class="text-h5 pt-12">国立国会図書館</div>
@@ -151,7 +151,7 @@
               url="http://iss.ndl.go.jp/"
             ></base-btn-open-in-new>
           </template>
-        </base-default-dialog>
+        </base-dialog-default>
       </v-card-actions>
     </v-card>
 
@@ -174,7 +174,7 @@
             下記の共通閲覧証があれば、紹介状なしで加盟大学図書館・機関が利用できます。カウンターで毎年度発行手続きをしてください。
           </v-card-text>
           <v-card-actions class="d-flex flex-wrap">
-            <base-default-dialog>
+            <base-dialog-default>
               <template #name>神奈川県内大学図書館共通閲覧証</template>
               <template #contents>
                 <div class="text-h5 pt-12">神奈川県内大学図書館共通閲覧証</div>
@@ -189,9 +189,9 @@
                   url="http://www.kanagawa-la.jp/link/"
                 ></base-btn-open-in-new>
               </template>
-            </base-default-dialog>
+            </base-dialog-default>
 
-            <base-default-dialog>
+            <base-dialog-default>
               <template #name>音楽図書館協議会共通閲覧証</template>
               <template #contents>
                 <div class="text-h5 pt-12">音楽図書館協議会共通閲覧証</div>
@@ -206,7 +206,7 @@
                   url="https://mlaj.org/"
                 ></base-btn-open-in-new>
               </template>
-            </base-default-dialog>
+            </base-dialog-default>
           </v-card-actions>
         </div>
       </v-expand-transition>
