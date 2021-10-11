@@ -38,8 +38,11 @@
                   </v-card-subtitle>
                   <v-card-text class="mt-6" v-html="info.contents">
                   </v-card-text>
-                  <v-card-actions>
-                    <slot name="actions"></slot>
+                  <v-card-actions v-if="info.actions">
+                    <base-btn-inside v-for="btn in info.actions" :key="btn.id" :link="btn.link" :to="btn.to"></base-btn-inside>
+                  </v-card-actions>
+                  <v-card-actions v-if="info.openinnew">
+                    <base-btn-open-in-new v-for="btn in info.openinnew" :key="btn.id" :link="btn.link" :url="btn.url"></base-btn-open-in-new>
                   </v-card-actions>
                   <v-card-actions class="justify-end">
                     <v-btn text @click="dialog.value = false">Close</v-btn>
