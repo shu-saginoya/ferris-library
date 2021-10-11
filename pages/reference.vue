@@ -225,9 +225,7 @@
         先生方や学生の皆さんのご要望に応じて、図書館の効率的な使い方をご説明します。
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" outlined to="tour">
-          ツアー・ガイダンスページへ
-        </v-btn>
+        <base-btn-inside link="ツアー・ガイダンスページへ" to="tour"></base-btn-inside>
       </v-card-actions>
     </v-card>
 
@@ -240,16 +238,16 @@
         手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" outlined to="consortium">
-          詳細ページへ
-        </v-btn>
+        <base-btn-inside link="詳細ページへ" to="consortium"></base-btn-inside>
       </v-card-actions>
     </v-card>
   </v-container>
 </template>
 
 <script>
+import BaseBtnInside from '~/components/BaseBtnInside.vue'
 export default {
+  components: { BaseBtnInside },
   data: () => ({
     show: false,
   }),
