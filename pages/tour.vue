@@ -85,9 +85,7 @@
 </template>
 
 <script>
-import BaseBtnMyLibrary from '~/components/BaseBtnMyLibrary.vue'
 export default {
-  components: { BaseBtnMyLibrary },
   data: () => ({
     show: false,
     show2: false,

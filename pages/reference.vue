@@ -245,9 +245,7 @@
 </template>
 
 <script>
-import BaseBtnInside from '~/components/BaseBtnInside.vue'
 export default {
-  components: { BaseBtnInside },
   data: () => ({
     show: false,
   }),
