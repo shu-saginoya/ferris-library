@@ -1,15 +1,22 @@
 <template>
-  <v-carousel cycle height="330" hide-delimiter-background show-arrows-on-hover>
-    <v-carousel-item
-      v-for="(item, i) in items"
-      :key="i"
-      :src="item.src"
+  <v-skeleton-loader
+    :height="height"
+    type="image"
+    :loading="loading"
+  >
+    <v-carousel
+      cycle
+      hide-delimiter-background
+      show-arrows-on-hover
+      :height="height"
     >
-      <v-row class="fill-height" align="center" justify="center">
-        <img src="@/assets/image/site-logo.png" width="350" height="113" />
-      </v-row>
-    </v-carousel-item>
-  </v-carousel>
+      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+        <v-row class="fill-height" align="center" justify="center">
+          <img src="@/assets/image/site-logo.png" width="350" height="113" />
+        </v-row>
+      </v-carousel-item>
+    </v-carousel>
+  </v-skeleton-loader>
 </template>
 
 <script>
@@ -17,6 +24,8 @@ export default {
   name: 'MainVisual',
   data() {
     return {
+      loading: true,
+      height: '260',
       items: [
         {
           src: require('@/assets/image/main-visual/main-visual-01.jpg'),
@@ -44,6 +53,9 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.loading = false
   },
 }
 </script>
