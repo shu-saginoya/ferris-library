@@ -63,6 +63,11 @@
                 "push": "tour"
             },
             {
+                "title": "コンソーシアム",
+                "eng": "consortium",
+                "push": "consortium"
+            },
+            {
                 "title": "学外から受けられるサポート",
                 "eng": "Off campus",
                 "push": "off-campus"
