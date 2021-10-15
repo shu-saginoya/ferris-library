@@ -42,7 +42,6 @@
           <div class="pt-4 pb-2">サイト内のページを検索します</div>
           <v-form ref="form" v-model="valid" lazy-validation>
             <v-text-field
-              v-model="message"
               label="Keyword"
               type="text"
               outlined
