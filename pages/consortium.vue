@@ -60,7 +60,6 @@
         <p>
           （手続き方法は、各館によって異なります。事前連絡、紹介状が必要な館もあります。また、利用時期等に制限がある場合もありますので、記載事項を確認してください。東洋英和女学院大学図書館、フェリス女学院大学附属図書館の場合学生による利用は女子に限ります。）
         </p>
-        <a href="static/pdf/consortium/kanagawa20161005.pdf" target="_blank">神奈川大学図書館</a>
       </v-card-text>
     </v-card>
   </v-container>
@@ -73,54 +72,54 @@ export default {
     items: [
       {
         name: '神奈川大学図書館',
-        url: '@/assets/pdf/consortium/kanagawa20161005.pdf',
+        url: '/pdf/consortium/kanagawa.pdf',
       },
       {
         name: '関東学院大学図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/kangaku_hon20161005.pdf',
+        url: '/pdf/consortium/kangaku_hon.pdf',
       },
       {
         name: '慶應義塾大学日吉メディアセンター',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/keio20150801.pdf',
+        url: '/pdf/consortium/keio.pdf',
       },
       {
         name: '國學院大學たまプラーザ図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/kokugakuin20150801.pdf',
+        url: '/pdf/consortium/kokugakuin.pdf',
       },
       {
         name: '鶴見大学図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/turumi20161005.pdf',
+        url: '/pdf/consortium/turumi.pdf',
       },
       {
         name: '桐蔭横浜大学大学情報センター',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/toin20150801.pdf',
+        url: '/pdf/consortium/toin.pdf',
       },
       {
         name: '東京都市大学横浜キャンパス図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/toshi20161005.pdf',
+        url: '/pdf/consortium/toshi.pdf',
       },
       {
         name: '東洋英和女学院大学図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/toyoeiwa20150801.pdf',
+        url: '/pdf/consortium/toyoeiwa.pdf',
       },
       {
         name: 'フェリス女学院大学附属図書館',
       },
       {
         name: '明治学院大学横浜校舎図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/meigaku20170401.pdf',
+        url: '/pdf/consortium/meigaku.pdf',
       },
       {
         name: '横浜国立大学附属図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/yokokoku20150801.pdf',
+        url: '/pdf/consortium/yokokoku.pdf',
       },
       {
         name: '横浜商科大学図書館',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/yokosho20150801.pdf',
+        url: '/pdf/consortium/yokosho.pdf',
       },
       {
         name: '横浜市立大学学術情報センター',
-        url: 'https://www.library.ferris.ac.jp/library/consortium/yokoichi20150801.pdf',
+        url: '/pdf/consortium/yokoichi.pdf',
       },
     ],
   }),
