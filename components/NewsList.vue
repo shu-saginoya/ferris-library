@@ -37,6 +37,7 @@
                 </template>
                 <template #default="dialog">
                   <v-card>
+                    <v-system-bar color="primary" dark> News </v-system-bar>
                     <v-card-title>
                       {{ info.title }}
                     </v-card-title>
@@ -80,13 +81,16 @@ import news from '@/assets/json/news.json'
 
 export default {
   name: 'NewsList',
+  props: {
+    number: { type: Number, default: 0 },
+  },
   data: () => ({
     news,
     loading: true,
   }),
   computed: {
     reverseNews() {
-      return this.news.slice().reverse()
+      return this.news.slice(0, this.number).reverse()
     },
   },
   mounted() {
@@ -94,3 +98,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.headline {
+  text-overflow: inherit;
+  white-space: unset;
+}
+</style>

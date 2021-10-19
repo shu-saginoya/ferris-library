@@ -10,7 +10,7 @@
     </section>-->
     <section>
       <base-page-title>News</base-page-title>
-      <news-list><template #name>新着情報</template></news-list>
+      <news-list number="5"><template #name>新着情報</template></news-list>
       <div  class="text-center mt-6">
         <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
       </div>
