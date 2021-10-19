@@ -118,7 +118,7 @@
             {
                 "title": "新聞（緑園キャンパス）",
                 "eng": "Newspaper",
-                "href": "/pdf/newspaper.pdf",
+                "push": "newspaper",
                 "icon": "mdi-file-pdf-box"
             }
         ]

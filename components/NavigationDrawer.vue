@@ -20,6 +20,9 @@
           link
         >
           <v-list-item-title v-text="content.title"></v-list-item-title>
+          <v-list-item-icon v-if="content.icon">
+            <v-icon v-text="content.icon"></v-icon>
+          </v-list-item-icon>
         </v-list-item>
 
         <v-list-item
@@ -30,7 +33,7 @@
           link
         >
           <v-list-item-title v-text="content.title"></v-list-item-title>
-          <v-list-item-icon>
+          <v-list-item-icon v-if="content.icon">
             <v-icon v-text="content.icon"></v-icon>
           </v-list-item-icon>
         </v-list-item>
