@@ -5,7 +5,7 @@
     </v-skeleton-loader>
 
     <v-list two-line>
-      <template v-for="info in reverseNews">
+      <template v-for="info in newsList">
         <v-divider :key="info.id"></v-divider>
         <v-skeleton-loader
           :key="info.id"
@@ -89,8 +89,8 @@ export default {
     loading: true,
   }),
   computed: {
-    reverseNews() {
-      return this.news.slice(0, this.number).reverse()
+    newsList() {
+      return this.news.slice(0, this.number)
     },
   },
   mounted() {
