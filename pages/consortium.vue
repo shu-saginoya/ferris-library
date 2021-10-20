@@ -1,10 +1,10 @@
 <template>
   <v-container>
     <base-page-title>横浜市内大学図書館コンソーシアム</base-page-title>
-    <v-alert border="top" colored-border type="info" elevation="2">
-      横浜市内大学図書館コンソーシアムは、「横浜市内大学間学術・教育交流協議会」の会員校によって、学生の教育機会の多様化を図ること、相互に各図書館の特性を生かしつつ協力し、交流を深め、教育・研究活動の推進を図ることを目的として結成されました。
-    </v-alert>
     <v-card>
+      <v-card-text>
+        横浜市内大学図書館コンソーシアムは、「横浜市内大学間学術・教育交流協議会」の会員校によって、学生の教育機会の多様化を図ること、相互に各図書館の特性を生かしつつ協力し、交流を深め、教育・研究活動の推進を図ることを目的として結成されました。
+      </v-card-text>
       <v-card-actions @click="show = !show">
         <v-btn color="primary" text> 大学名一覧（50音順） </v-btn>
         <v-spacer></v-spacer>
@@ -18,7 +18,15 @@
           <v-list>
             <template v-for="(item, i) in items">
               <template v-if="item.url">
-                <v-list-item :key="i" link @click="snackbar = true, university = item.name, file = item.url">
+                <v-list-item
+                  :key="i"
+                  link
+                  @click="
+                    ;(snackbar = true),
+                      (university = item.name),
+                      (file = item.url)
+                  "
+                >
                   <v-list-item-content>
                     <v-list-item-title v-text="item.name"></v-list-item-title>
                   </v-list-item-content>
@@ -48,35 +56,32 @@
       {{ university }}のPDFファイルを開きますか？
 
       <template #action="{ attrs }">
-        <v-btn :href="file" target="_blank"
+        <v-btn class="mx-3" :href="file" target="_blank"
           >はい<v-icon right>mdi-download</v-icon></v-btn
         >
-        <v-btn color="red" text v-bind="attrs" @click="snackbar = false">
-          Close
+        <v-btn icon v-bind="attrs" @click="snackbar = false">
+          <v-icon>mdi-close</v-icon>
         </v-btn>
       </template>
     </v-snackbar>
 
-    <v-card class="mt-4">
-      <v-card-text>
+    <v-alert dense text type="success" class="mt-4">
+      <p>
         大学名一覧の13大学の学生・教職員は、以下のとおりそれぞれの図書館を利用することができます。
-      </v-card-text>
-      <v-card-text class="text-h6 pt-12">１．所蔵情報の提供</v-card-text>
-      <v-card-text
-        >各大学図書館ホームページから、オンライン蔵書検索OPAC（Online Public
-        Access
-        Catalog）によって、所蔵情報を検索することができます。</v-card-text
-      >
-      <v-card-text class="text-h6 pt-12">２．図書館の館内利用</v-card-text>
-      <v-card-text>
-        <p>
-          原則として、学生証又は大学発行の身分証明書を提示し、手続きすることで、館内利用ができます。
-        </p>
-        <p>
-          （手続き方法は、各館によって異なります。事前連絡、紹介状が必要な館もあります。また、利用時期等に制限がある場合もありますので、記載事項を確認してください。東洋英和女学院大学図書館、フェリス女学院大学附属図書館の場合学生による利用は女子に限ります。）
-        </p>
-      </v-card-text>
-    </v-card>
+      </p>
+      <div class="text-h6">１．所蔵情報の提供</div>
+      <p>
+        各大学図書館ホームページから、オンライン蔵書検索OPAC（Online Public
+        Access Catalog）によって、所蔵情報を検索することができます。
+      </p>
+      <div class="text-h6">２．図書館の館内利用</div>
+      <p>
+        原則として、学生証又は大学発行の身分証明書を提示し、手続きすることで、館内利用ができます。
+      </p>
+      <p>
+        （手続き方法は、各館によって異なります。事前連絡、紹介状が必要な館もあります。また、利用時期等に制限がある場合もありますので、記載事項を確認してください。東洋英和女学院大学図書館、フェリス女学院大学附属図書館の場合学生による利用は女子に限ります。）
+      </p>
+    </v-alert>
   </v-container>
 </template>
 
