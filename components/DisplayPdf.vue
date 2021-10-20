@@ -1,18 +1,18 @@
 <template>
   <v-sheet color="grey lighten-3" class="pa-6">
+    <v-pagination
+      v-if="totalPageNum > 1"
+      v-model="currentPageNum"
+      :length="totalPageNum"
+      total-visible="5"
+      class="mb-2"
+    ></v-pagination>
     <vue-pdf
       :src="location"
       :page="currentPageNum"
       @num-pages="totalPageNum = $event"
     ></vue-pdf>
-    <v-pagination
-      v-if="totalPageNum > 1"
-      v-model="currentPageNum"
-      :length="totalPageNum"
-      total-visible="6"
-      class="mb-2"
-    ></v-pagination>
-    <v-row align="center" justify="space-around">
+    <v-row align="center" justify="space-around" class="mt-4">
       <v-btn :href="location" :download="name">
         ダウンロード
         <v-icon right>mdi-download</v-icon>
