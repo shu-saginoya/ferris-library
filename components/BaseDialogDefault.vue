@@ -1,7 +1,7 @@
 <template>
   <v-dialog transition="dialog-top-transition" max-width="600">
     <template #activator="{ on, attrs }">
-      <v-btn class="dialog-btn ma-2" color="primary lighten-1" v-bind="attrs" v-on="on">
+      <v-btn class="ma-2" color="primary lighten-1" v-bind="attrs" v-on="on">
         <slot name="name">ボタンの表明名</slot>
       </v-btn>
     </template>
@@ -28,7 +28,4 @@ export default {
 </script>
 
 <style scoped>
-  .dialog-btn {
-    text-transform: none;
-  }
 </style>
