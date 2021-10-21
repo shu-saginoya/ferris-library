@@ -7,14 +7,16 @@
       total-visible="5"
       class="mb-2"
     ></v-pagination>
-    <vue-pdf
-      :src="location"
-      :page="currentPageNum"
-      @num-pages="totalPageNum = $event"
-    ></vue-pdf>
+    <v-skeleton-loader type="image" :loading="loading">
+      <vue-pdf
+        :src="location"
+        :page="currentPageNum"
+        @num-pages="totalPageNum = $event"
+      ></vue-pdf>
+    </v-skeleton-loader>
     <v-row align="center" justify="space-around" class="mt-4">
-      <v-btn :href="location" :download="name">
-        ダウンロード
+      <v-btn :href="location" target="_blank">
+        PDFファイルを開く
         <v-icon right>mdi-download</v-icon>
       </v-btn>
     </v-row>
@@ -25,12 +27,15 @@
 export default {
   name: 'DisplayPdf',
   props: {
-    location: {type: String, default: "デフォルト設定です"},
-    name: {type: String, default: "デフォルト設定です"},
+    location: { type: String, default: 'デフォルト設定です' },
   },
   data: () => ({
     currentPageNum: 1,
     totalPageNum: 0,
+    loading: true,
   }),
+  mounted() {
+    this.loading = false
+  },
 }
 </script>

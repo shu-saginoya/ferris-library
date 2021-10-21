@@ -12,13 +12,11 @@
       <v-tab-item>
         <display-pdf
           location="/pdf/pamphlet/pamphlet_ryokuen.pdf"
-          name="pamphlet_ryokuen.pdf"
         ></display-pdf>
       </v-tab-item>
       <v-tab-item>
         <display-pdf
           location="/pdf/pamphlet/pamphlet_yamate.pdf"
-          name="pamphlet_yamate.pdf"
         ></display-pdf>
       </v-tab-item>
     </v-tabs-items>
