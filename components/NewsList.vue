@@ -5,7 +5,7 @@
     </v-skeleton-loader>
 
     <v-list two-line>
-      <template v-for="info in newsList">
+      <template v-for="info in displayLists">
         <v-divider :key="info.id"></v-divider>
         <v-skeleton-loader
           :key="info.id"
@@ -73,35 +73,49 @@
         </v-skeleton-loader>
       </template>
     </v-list>
+    <v-card-text v-if="pagination">
+      <v-pagination
+        v-model="page"
+        :length="length"
+        @input="pageChange"
+      ></v-pagination>
+    </v-card-text>
   </v-card>
 </template>
 
 <script>
-import news from '@/assets/json/news.json'
+import lists from '@/assets/json/news.json'
 
 export default {
   name: 'NewsList',
   props: {
-    number: { type: Number, default: 0 },
+    pagination: { type: Boolean, default: false },
+    pageSize: { type: Number, default: 10 },
   },
   data: () => ({
-    news,
     loading: true,
+    page: 1,
+    length: 0,
+    lists,
+    displayLists: [],
   }),
-  computed: {
-    newsList() {
-      return this.news.slice(0, this.number)
-    },
-  },
   mounted() {
     this.loading = false
+
+    this.length = Math.ceil(this.lists.length / this.pageSize)
+
+    this.displayLists = this.lists.slice(
+      this.pageSize * (this.page - 1),
+      this.pageSize * this.page
+    )
+  },
+  methods: {
+    pageChange(pageNumber) {
+      this.displayLists = this.lists.slice(
+        this.pageSize * (pageNumber - 1),
+        this.pageSize * pageNumber
+      )
+    },
   },
 }
 </script>
-
-<style scoped>
-.headline {
-  text-overflow: inherit;
-  white-space: unset;
-}
-</style>
