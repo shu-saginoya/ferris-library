@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>学外の方へ</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <v-select
       v-model="selected"
       :items="items"
@@ -56,6 +56,7 @@
 <script>
 export default {
   data: () => ({
+    title: '学外の方へ',
     selected: '',
     items: [
       '卒業生・修了生',
@@ -185,5 +186,10 @@ export default {
       },
     ],
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

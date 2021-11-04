@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>レファレンスサービス</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
 
     <base-sub-title>サービス一覧</base-sub-title>
 
@@ -247,7 +247,13 @@
 <script>
 export default {
   data: () => ({
+    title: 'レファレンスサービス',
     show: false,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

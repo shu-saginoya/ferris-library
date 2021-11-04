@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>学科推奨図書</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
 
     <v-alert
       border="top"
@@ -58,6 +58,7 @@
 <script>
 export default {
   data: () => ({
+    title: '学科推奨図書',
     snackbar: false,
     timeout: 6000,
     fileName: '',
@@ -100,6 +101,11 @@ export default {
       },
     ],
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>
 

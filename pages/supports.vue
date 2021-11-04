@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>障がいのある方への支援</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <p>図書館では、障がいのある方に以下の支援を行っています。</p>
 
     <v-card>
@@ -82,8 +82,14 @@
 <script>
 export default {
   data: () => ({
+    title: '障がいのある方への支援',
     show: true,
     show2: true,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

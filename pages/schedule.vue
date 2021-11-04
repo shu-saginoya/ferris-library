@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <base-page-title>年間予定</base-page-title>
+        <base-page-title>{{ title }}</base-page-title>
         <v-card>
             <v-card-text>
                 2021年度のスケジュールは開館カレンダーをご確認ください
@@ -11,3 +11,16 @@
         </v-card>
     </v-container>
 </template>
+
+<script>
+export default {
+  data: () => ({
+      title: '年間予定'
+  }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
+}
+</script>

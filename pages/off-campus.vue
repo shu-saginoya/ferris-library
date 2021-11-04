@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>学外から受けられるサポート</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
 
     <template v-for="(item, i) in items">
       <v-card :key="i" class="my-6">
@@ -57,6 +57,7 @@
 <script>
 export default {
   data: () => ({
+    title: '学外から受けられるサポート',
     snackbar: false,
     timeout: 6000,
     fileName: '',
@@ -94,6 +95,11 @@ export default {
       },
     ],
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>
 

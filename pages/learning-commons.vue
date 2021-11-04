@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>ラーニングコモンズ</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <v-row dense>
       <v-col v-for="(item, i) in items" :key="i" cols="6">
         <v-card :href="item.href" target="_blank" dark>
@@ -21,6 +21,7 @@
 <script>
 export default {
   data: () => ({
+    title: 'ラーニングコモンズ',
     items: [
       {
         title: 'ラーニングコモンズの紹介',
@@ -34,5 +35,10 @@ export default {
       },
     ],
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

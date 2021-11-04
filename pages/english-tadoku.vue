@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>英語多読図書</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <p>
       英語多読（たどく）とは、辞書を使わずに、意味の分からないところは読み飛ばしながら、たくさんの英語の本を読む学習法で、英語の力を身につけるために効果的であると言われています。本学では、電子ブックと書籍の2種類の英語多読用図書を所蔵しています。
     </p>
@@ -80,8 +80,14 @@
 <script>
 export default {
   data: () => ({
+    title: '英語多読図書',
     maxWidth: 560,
     minWidth: 250,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

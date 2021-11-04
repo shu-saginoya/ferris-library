@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>フロアマップ</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <p>緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です</p>
 
     <v-tabs v-model="tab" color="primary" grow>
@@ -41,7 +41,13 @@
 <script>
 export default {
   data: () => ({
+    title: 'フロアマップ',
     tab: null,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>学生向けパンフレット</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
     <p>在学生対象のパンフレットです</p>
 
     <v-tabs v-model="tab" color="primary" grow>
@@ -26,7 +26,13 @@
 <script>
 export default {
   data: () => ({
-      tab: null,
+    title: '学生向けパンフレット',
+    tab: null,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

@@ -7,7 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s ｜フェリス女学院大学附属図書館',
-    title: 'フェリス女学院大学附属図書館',
+    title: 'title',
     htmlAttrs: {
       lang: 'ja'
     },

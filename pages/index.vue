@@ -10,7 +10,7 @@
     </section>-->
     <section>
       <base-page-title>News</base-page-title>
-      <news-list pageSize="5"><template #name>新着情報</template></news-list>
+      <news-list page-size="5"><template #name>新着情報</template></news-list>
       <div  class="text-center mt-6">
         <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
       </div>
@@ -30,7 +30,13 @@ import news from '@/assets/json/news.json'
 
 export default {
   data: () => ({
+    title: 'ホームページ',
     news,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

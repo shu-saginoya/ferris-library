@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>ツアー・ガイダンス</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
 
     <v-card class="mt-4">
       <v-card-title> ツアー </v-card-title>
@@ -87,8 +87,14 @@
 <script>
 export default {
   data: () => ({
+    title: 'ツアー・ガイダンス',
     show: false,
     show2: false,
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>

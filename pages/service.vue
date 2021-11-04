@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>貸出サービス</base-page-title>
+    <base-page-title>{{ title }}</base-page-title>
 
     <base-sub-title>サービス一覧</base-sub-title>
 
@@ -104,6 +104,7 @@
 <script>
 export default {
   data: () => ({
+    title: '貸出サービス',
     panel: [0, 1],
     items: [
       {
@@ -243,5 +244,10 @@ export default {
       },
     ],
   }),
+  head () {
+    return {
+      title: this.title,
+    }
+  }
 }
 </script>
