@@ -238,7 +238,7 @@
         手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
       </v-card-text>
       <v-card-actions>
-        <base-btn-inside link="詳細ページへ" to="consortium"></base-btn-inside>
+        <base-btn-inside link="コンソーシアムページへ" to="consortium"></base-btn-inside>
       </v-card-actions>
     </v-card>
   </v-container>
