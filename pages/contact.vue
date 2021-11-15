@@ -22,7 +22,7 @@
           </v-card-title>
         </v-img>
         <v-list two-line>
-          <v-list-item>
+          <v-list-item :href="'tel:' + item.tel">
             <v-list-item-icon>
               <v-icon color="primary"> mdi-phone </v-icon>
             </v-list-item-icon>
@@ -39,7 +39,7 @@
             </v-list-item-content>
           </v-list-item>
           <v-divider inset></v-divider>
-          <v-list-item>
+          <v-list-item :href="'mailto:' + item.eMali">
             <v-list-item-icon>
               <v-icon color="primary"> mdi-email </v-icon>
             </v-list-item-icon>
