@@ -8,7 +8,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>フェリス女学院大学附属図書館</v-toolbar-title>
-
+<!--
       <v-spacer></v-spacer>
 
       <v-btn icon @click.stop="dialog = true">
@@ -29,7 +29,7 @@
             <v-list-item-title>English</v-list-item-title>
           </v-list-item>
         </v-list>
-      </v-menu>
+      </v-menu>-->
     </v-app-bar>
     <v-main>
       <Nuxt />
