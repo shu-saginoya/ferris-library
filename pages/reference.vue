@@ -236,7 +236,7 @@
           <v-card-actions>
             <base-btn-inside
               link="ツアー・ガイダンスページへ"
-              to="tour"
+              to="/tour"
             ></base-btn-inside>
           </v-card-actions>
         </v-card>
@@ -253,7 +253,7 @@
           <v-card-actions>
             <base-btn-inside
               link="コンソーシアムページへ"
-              to="consortium"
+              to="/consortium"
             ></base-btn-inside>
           </v-card-actions>
         </v-card>

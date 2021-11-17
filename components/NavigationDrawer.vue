@@ -1,7 +1,7 @@
 <template>
   <v-list>
     <template v-for="(menu, i) in menus">
-      <v-list-item v-if="menu.push" :key="i" :to="menu.push">
+      <v-list-item v-if="menu.push" :key="i" :to="'/' + menu.push">
         <v-list-item-icon>
           <v-icon>{{ menu.icon }}</v-icon>
         </v-list-item-icon>
@@ -16,7 +16,7 @@
         <v-list-item
           v-if="content.push"
           :key="i + j"
-          :to="content.push"
+          :to="'/' + content.push"
           link
         >
           <v-list-item-title v-text="content.title"></v-list-item-title>
