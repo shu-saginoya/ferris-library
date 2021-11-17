@@ -13,32 +13,32 @@
             {
                 "title": "アクセス・問い合わせ",
                 "eng": "Contact",
-                "push": "contact"
+                "push": "/contact"
             },
             {
                 "title": "開館カレンダー・開館時間",
                 "eng": "Calender",
-                "push": "calender"
+                "push": "/calender"
             },
             {
                 "title": "ラーニングコモンズ",
                 "eng": "Learning commons",
-                "push": "learning-commons"
+                "push": "/learning-commons"
             },
             {
                 "title": "年間予定",
                 "eng": "Schedule",
-                "push": "schedule"
+                "push": "/schedule"
             },
             {
                 "title": "フロアマップ",
                 "eng": "Floor map",
-                "push": "floor-map"
+                "push": "/floor-map"
             },
             {
                 "title": "パンフレット（学生対象）",
                 "eng": "Pamphlet",
-                "push": "pamphlet"
+                "push": "/pamphlet"
             }
         ]
     },
@@ -50,42 +50,42 @@
             {
                 "title": "貸出サービス",
                 "eng": "Service",
-                "push": "service"
+                "push": "/service"
             },
             {
                 "title": "レファレンスサービス",
                 "eng": "Reference",
-                "push": "reference"
+                "push": "/reference"
             },
             {
                 "title": "ツアー・ガイダンス",
                 "eng": "Tour",
-                "push": "tour"
+                "push": "/tour"
             },
             {
                 "title": "コンソーシアム",
                 "eng": "consortium",
-                "push": "consortium"
+                "push": "/consortium"
             },
             {
                 "title": "学外から受けられるサポート",
                 "eng": "Off campus",
-                "push": "off-campus"
+                "push": "/off-campus"
             },
             {
                 "title": "障がいのある方への支援",
                 "eng": "Supports",
-                "push": "supports"
+                "push": "/supports"
             },
             {
                 "title": "学外の方へ",
                 "eng": "Visitor",
-                "push": "visitor"
+                "push": "/visitor"
             },
             {
                 "title": "Q&A",
                 "eng": "Question",
-                "push": "question"
+                "push": "/question"
             },
             {
                 "title": "各種申込書",
@@ -103,22 +103,22 @@
             {
                 "title": "資料の探し方",
                 "eng": "How to find",
-                "push": "how-to-find"
+                "push": "/how-to-find"
             },
             {
                 "title": "データベース・電子ブック",
                 "eng": "Database",
-                "push": "database"
+                "push": "/database"
             },
             {
                 "title": "キャリア支援",
                 "eng": "Carrier",
-                "push": "carrier"
+                "push": "/carrier"
             },
             {
                 "title": "新聞（緑園キャンパス）",
                 "eng": "Newspaper",
-                "push": "newspaper",
+                "push": "/newspaper",
                 "icon": "mdi-file-pdf-box"
             }
         ]
@@ -127,12 +127,12 @@
         "category": "ニュース",
         "category-eng": "News",
         "icon": "mdi-newspaper-variant-outline",
-        "push": "news",
+        "push": "/news",
         "contents": [
             {
                 "title": "NEWS 一覧",
                 "eng": "News",
-                "push": "news"
+                "push": "/news"
             }
         ]
     },
@@ -144,17 +144,17 @@
             {
                 "title": "学科推奨図書",
                 "eng": "Recommend",
-                "push": "recommend"
+                "push": "/recommend"
             },
             {
                 "title": "英語多読図書",
                 "eng": "English tadoku",
-                "push": "english-tadoku"
+                "push": "/english-tadoku"
             },
             {
                 "title": "電子コレクション",
                 "eng": "Digital collection",
-                "push": "digital-collection"
+                "push": "/digital-collection"
             }
         ]
     },
