@@ -88,7 +88,7 @@ export default {
   name: 'NewsList',
   props: {
     pagination: { type: Boolean, default: false },
-    pageSize: { type: [Number], default: 10 },
+    pageSize: { type: Number, default: 10 },
   },
   data: () => ({
     loading: true,
