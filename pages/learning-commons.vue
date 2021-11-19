@@ -2,7 +2,7 @@
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
     <v-row dense>
-      <v-col v-for="(item, i) in items" :key="i" cols="6">
+      <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
         <v-card :href="item.href" target="_blank" dark>
           <v-img
             :src="item.img"
