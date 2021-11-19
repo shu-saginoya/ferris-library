@@ -40,7 +40,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="6" lg="4">
-        <v-card :max-width="maxWidth" :min-width="minWidth">
+        <v-card>
           <v-card-subtitle class="pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0"
             >Gale Virtual Reference Library</v-card-title
@@ -66,7 +66,7 @@
         </v-card>
       </v-col>
       <v-col cols="12" md="6" lg="4">
-        <v-card :max-width="maxWidth" :min-width="minWidth">
+        <v-card>
           <v-card-subtitle class="pb-0">書籍</v-card-subtitle>
           <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
           <v-card-text>
