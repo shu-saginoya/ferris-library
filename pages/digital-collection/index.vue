@@ -1,13 +1,9 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-    <div class="d-md-flex flex-wrap align-content-start">
-      <v-card
-        v-for="(item, i) in items"
-        :key="i"
-        class="mx-1 my-2"
-        max-width="430px"
-      >
+<v-row>
+  <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
+      <v-card>
         <v-list-item three-line>
           <v-list-item-content>
             <div class="text-overline mb-4">{{ item.kind }}</div>
@@ -22,11 +18,11 @@
             <img :src="item.image" />
           </v-list-item-avatar>
         </v-list-item>
-        <v-card-text class="overflow-auto overflow">
+        <v-card-text>
           <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
         </v-card-text>
         <v-card-actions>
-          <v-btn v-if="item.identification" outlined color="primary">
+          <v-btn v-if="item.identification" :to="'/digital-collection/' + item.identification" outlined color="primary">
             資料をみる
           </v-btn>
           <v-btn v-if="item.link" :href="item.link" target="_blank">
@@ -34,7 +30,8 @@
           >
         </v-card-actions>
       </v-card>
-    </div>
+  </v-col>
+</v-row>
   </v-container>
 </template>
 

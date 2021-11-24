@@ -1,5 +1,29 @@
 [
     {
+        "id": "19",
+        "title": "電子コレクション－新三十六歌仙画帖ページを制作しました",
+        "date": "2021.11.24",
+        "contents": "<p>電子コレクション－新三十六歌仙画帖ページを制作しました。</p>",
+        "actions": [
+            {
+                "link": "新三十六歌仙画帖のページへ",
+                "to": "/digital-collection/collection01"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "title": "電子コレクションのインデックスページを制作しました",
+        "date": "2021.11.24",
+        "contents": "<p>電子コレクションのインデックスページを制作しました。</p>",
+        "actions": [
+            {
+                "link": "電子コレクションのインデックスページへ",
+                "to": "/digital-collection"
+            }
+        ]
+    },
+    {
         "id": "17",
         "title": "アクセス・問い合わせページを制作しました",
         "date": "2021.11.9",
@@ -7,7 +31,7 @@
         "actions": [
             {
                 "link": "アクセス・問い合わせのページへ",
-                "to": "contact"
+                "to": "/contact"
             }
         ]
     },
@@ -19,7 +43,7 @@
         "actions": [
             {
                 "link": "ラーニングコモンズのページへ",
-                "to": "learning-commons"
+                "to": "/learning-commons"
             }
         ]
     },
@@ -31,7 +55,7 @@
         "actions": [
             {
                 "link": "学外から受けられるサポートのページへ",
-                "to": "off-campus"
+                "to": "/off-campus"
             }
         ]
     },
@@ -43,7 +67,7 @@
         "actions": [
             {
                 "link": "英語多読図書のページへ",
-                "to": "english-tadoku"
+                "to": "/english-tadoku"
             }
         ]
     },
@@ -55,7 +79,7 @@
         "actions": [
             {
                 "link": "学科推奨図書のページへ",
-                "to": "recommend"
+                "to": "/recommend"
             }
         ]
     },
@@ -67,7 +91,7 @@
         "actions": [
             {
                 "link": "資料の探し方のページへ",
-                "to": "how-to-find"
+                "to": "/how-to-find"
             }
         ]
     },
@@ -79,7 +103,7 @@
         "actions": [
             {
                 "link": "学外の方へのページへ",
-                "to": "visitor"
+                "to": "/visitor"
             }
         ]
     },
@@ -91,7 +115,7 @@
         "actions": [
             {
                 "link": "障がいのある方への支援ページへ",
-                "to": "supports"
+                "to": "/supports"
             }
         ]
     },
@@ -103,7 +127,7 @@
         "actions": [
             {
                 "link": "フロアマップページへ",
-                "to": "floor-map"
+                "to": "/floor-map"
             }
         ]
     },
@@ -115,7 +139,7 @@
         "actions": [
             {
                 "link": "パンフレット（学生向け）ページへ",
-                "to": "pamphlet"
+                "to": "/pamphlet"
             }
         ]
     },
@@ -127,7 +151,7 @@
         "actions": [
             {
                 "link": "新聞（緑園キャンパス）ページへ",
-                "to": "newspaper"
+                "to": "/newspaper"
             }
         ]
     },
@@ -139,7 +163,7 @@
         "actions": [
             {
                 "link": "コンソーシアムページへ",
-                "to": "consortium"
+                "to": "/consortium"
             }
         ]
     },
@@ -151,7 +175,7 @@
         "actions": [
             {
                 "link": "ツアー・ガイダンスページへ",
-                "to": "tour"
+                "to": "/tour"
             }
         ]
     },
@@ -163,7 +187,7 @@
         "actions": [
             {
                 "link": "ニュース一覧ページへ",
-                "to": "news"
+                "to": "/news"
             }
         ]
     },
@@ -175,7 +199,7 @@
         "actions": [
             {
                 "link": "レファレンスサービスページへ",
-                "to": "reference"
+                "to": "/reference"
             }
         ]
     },
@@ -187,7 +211,7 @@
         "actions": [
             {
                 "link": "貸出サービスページへ",
-                "to": "service"
+                "to": "/service"
             }
         ]
     },
