@@ -14,12 +14,12 @@
             <img :src="titleLogo" :alt="title" class="titleLogo" />
           </v-card-title>
           <v-row>
-            <v-col cols="12" md="8">
+            <v-col cols="12" sm="8">
               <v-card-text>
                 <p v-for="(text, i) in commentary" :key="i">{{ text.p }}</p>
               </v-card-text>
             </v-col>
-            <v-col cols="12" md="4">
+            <v-col cols="12" sm="4">
               <v-card-text>
                 <v-img :src="topImage" contain class="grey lighten-3"></v-img>
                 <p
@@ -42,7 +42,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col v-for="(image, idx) in images" :key="idx" cols="12" sm="6" md="3">
+      <v-col v-for="(image, idx) in images" :key="idx" cols="6" sm="4" md="3">
         <v-card
           elevation="0"
           color="grey lighten-4"
@@ -82,7 +82,7 @@ export default {
     topImage: '/digital-collection/collection02/00.jpg',
     index: null,
     dialog: false,
-    topImageCaptions: [{ p: '三田村雅子' }, { p: '新生　優希' }],
+    topImageCaptions: [{ p: '三田村雅子　新生優希' }],
     commentary: [
       {
         p: 'フェリス女学院大学図書館では2004年度に絵入り竹取物語写本三冊を貴重書として購入した。紺地金襴表紙のこの竹取物語は、二十四枚の極彩色の絵を伴っており、これは、竹取物語の絵入本としてはもっとも多い絵を含む新出写本であり、しかもその絵には際立った個性が認められる。',
