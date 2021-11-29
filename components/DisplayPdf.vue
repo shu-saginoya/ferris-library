@@ -7,13 +7,17 @@
       total-visible="5"
       class="mb-2"
     ></v-pagination>
-    <v-skeleton-loader type="image" :loading="loading">
-      <vue-pdf
-        :src="location"
-        :page="currentPageNum"
-        @num-pages="totalPageNum = $event"
-      ></vue-pdf>
-    </v-skeleton-loader>
+    <vue-pdf
+      :src="location"
+      :page="currentPageNum"
+      @num-pages="totalPageNum = $event"
+    >
+      <template #placeholder>
+        <v-row class="fill-height ma-0" align="center" justify="center">
+          <v-progress-circular indeterminate></v-progress-circular>
+        </v-row>
+      </template>
+    </vue-pdf>
     <v-row align="center" justify="space-around" class="mt-4">
       <v-btn :href="location" target="_blank">
         PDFファイルを開く
@@ -32,7 +36,6 @@ export default {
   data: () => ({
     currentPageNum: 1,
     totalPageNum: 0,
-    loading: true,
   }),
   mounted() {
     this.loading = false
