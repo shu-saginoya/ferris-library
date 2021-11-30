@@ -50,14 +50,26 @@
                 <v-icon color="primary"> mdi-map-marker </v-icon>
               </v-list-item-icon>
               <v-list-item-content>
-                <v-list-item-title>{{ item.address }}</v-list-item-title>
                 <v-list-item-subtitle>
                   〒{{ item.addressNumber }}
                 </v-list-item-subtitle>
+                <v-list-item-title>{{ item.address }}</v-list-item-title>
               </v-list-item-content>
               <v-list-item-icon>
                 <v-icon>mdi-open-in-new</v-icon>
               </v-list-item-icon>
+            </v-list-item>
+            <v-divider inset></v-divider>
+            <v-list-item v-for="(access, j) in item.accesses" :key="j">
+              <v-list-item-icon>
+                <v-icon color="primary"> {{ access.icon }} </v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-subtitle>
+                  {{ access.transportation }}
+                </v-list-item-subtitle>
+                <v-list-item-title>{{ access.root }}</v-list-item-title>
+              </v-list-item-content>
             </v-list-item>
           </v-list>
         </v-card>
@@ -80,6 +92,18 @@ export default {
         fax: '045 (812) 9772',
         eMali: 'r_library@ferris.ac.jp',
         image: require(`@/assets/image/contact-ryokuen.jpg`),
+        accesses: [
+          {
+            transportation: '相鉄いずみの線',
+            root: '「緑園都市」下車徒歩3分',
+            icon: 'mdi-train'
+          },
+          {
+            transportation: '神奈中バス',
+            root: '「フェリス女学院」下車徒歩1分',
+            icon: 'mdi-train-car-passenger-variant'
+          },
+        ],
       },
       {
         name: '山手分室',
@@ -90,6 +114,13 @@ export default {
         fax: '045 (681) 5188',
         eMali: 'y_library@ferris.ac.jp',
         image: require(`@/assets/image/contact-yamate.jpg`),
+        accesses: [
+          {
+            transportation: 'JR京浜東北（根岸）線',
+            root: '「石川町」下車徒歩10分',
+            icon: 'mdi-train'
+          },
+        ],
       },
     ],
   }),
