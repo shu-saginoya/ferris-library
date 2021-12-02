@@ -2,7 +2,7 @@
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
     <v-row>
-      <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
+      <v-col v-for="(item, i) in items" :key="i" cols="12" sm="8" md="6" lg="4">
         <v-card>
           <v-img
             :src="item.image"

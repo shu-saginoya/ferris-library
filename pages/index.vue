@@ -1,27 +1,25 @@
 <template>
   <v-container>
-    <main-visual />
-    <!--<section>
-      <base-page-title>Calender※調整中です</base-page-title>
-      <v-row justify="space-around">
-        <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
-        <v-col cols="12" md="6" class="pa-6"><calender /></v-col>
-      </v-row>
-    </section>-->
-    <section>
-      <base-page-title>News</base-page-title>
-      <news-list :page-size="5"><template #name>新着情報</template></news-list>
-      <div  class="text-center mt-6">
-        <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
-      </div>
-    </section>
-    <section>
-      <base-page-title>OPAC 蔵書検索</base-page-title>
-      <opac />
-    </section>
-    <!--<section>
-      <base-page-title>Topics</base-page-title>
-    </section>-->
+    <v-row dense>
+      <v-col clos="12" xl="8">
+        <main-visual />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" lg="6" xl="4">
+          <base-page-title>News</base-page-title>
+          <news-list :page-size="5"
+            ><template #name>新着情報</template></news-list
+          >
+          <div class="text-center mt-6">
+            <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
+          </div>
+      </v-col>
+      <v-col cols="12" lg="6" xl="4">
+          <base-page-title>OPAC 蔵書検索</base-page-title>
+          <opac />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -33,10 +31,10 @@ export default {
     title: 'ホームページ',
     news,
   }),
-  head () {
+  head() {
     return {
       title: this.title,
     }
-  }
+  },
 }
 </script>

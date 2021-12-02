@@ -1,7 +1,11 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-    <display-pdf :location="location" :name="name"></display-pdf>
+    <v-row>
+      <v-col cols="12" lg="10" xl="6">
+        <display-pdf :location="location" :name="name"></display-pdf>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -12,10 +16,10 @@ export default {
     location: 'pdf/newspaper.pdf',
     name: 'newspaper.pdf',
   }),
-  head () {
+  head() {
     return {
       title: this.title,
     }
-  }
+  },
 }
 </script>

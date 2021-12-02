@@ -1,43 +1,42 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-
-    <template v-for="(item, i) in items">
-      <v-card :key="i" class="my-6">
-        <v-card-title>{{ item.category }}</v-card-title>
-        <v-list>
-          <v-list-item
-            v-for="(content, j) in item.contents"
-            :key="j"
-            link
-            @click="
-              ;(snackbar = true), (fileName = content.name), (url = content.url)
-            "
-          >
-            <v-list-item-content>
-              <v-list-item-subtitle class="mb-2">
-                <v-chip
-                  v-if="content.target"
-                  small
-                  color="primary lighten-2"
-                >
-                  {{ content.target }}
-                </v-chip>
-                <v-chip v-if="content.date" small outlined>
-                  {{ content.date }}
-                </v-chip>
-              </v-list-item-subtitle>
-              <v-list-item-title class="wrap-text">
-                {{ content.name }}
-              </v-list-item-title>
-            </v-list-item-content>
-            <v-list-item-icon>
-              <v-icon>mdi-file-pdf-box</v-icon>
-            </v-list-item-icon>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </template>
+    <v-row>
+      <v-col v-for="(item, i) in items" :key="i" cols="12" lg="6">
+        <v-card>
+          <v-card-title>{{ item.category }}</v-card-title>
+          <v-list>
+            <v-list-item
+              v-for="(content, j) in item.contents"
+              :key="j"
+              link
+              @click="
+                ;(snackbar = true),
+                  (fileName = content.name),
+                  (url = content.url)
+              "
+            >
+              <v-list-item-content>
+                <v-list-item-subtitle class="mb-2">
+                  <v-chip v-if="content.target" small color="primary lighten-2">
+                    {{ content.target }}
+                  </v-chip>
+                  <v-chip v-if="content.date" small outlined>
+                    {{ content.date }}
+                  </v-chip>
+                </v-list-item-subtitle>
+                <v-list-item-title class="wrap-text">
+                  {{ content.name }}
+                </v-list-item-title>
+              </v-list-item-content>
+              <v-list-item-icon>
+                <v-icon>mdi-file-pdf-box</v-icon>
+              </v-list-item-icon>
+            </v-list-item>
+          </v-list>
+        </v-card>
+      </v-col>
+    </v-row>
 
     <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
       {{ fileName }}のPDFファイルを開きますか？
@@ -133,11 +132,11 @@ export default {
       },
     ],
   }),
-  head () {
+  head() {
     return {
       title: this.title,
     }
-  }
+  },
 }
 </script>
 

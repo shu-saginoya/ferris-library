@@ -1,74 +1,80 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-    <v-select
-      v-model="selected"
-      :items="items"
-      filled
-      label="選択してください"
-    ></v-select>
-    <template v-for="(content, index) in contents">
-      <v-card
-        v-if="selected == content.name"
-        :key="index"
-        transition="scroll-x-transition"
-      >
-        <v-card-title>{{ content.name }}</v-card-title>
-        <v-card-text>
-          <v-alert
-            v-if="content.replenishment"
-            outlined
-            type="warning"
-            prominent
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <v-select
+          v-model="selected"
+          :items="items"
+          filled
+          label="選択してください"
+        ></v-select>
+        <template v-for="(content, index) in contents">
+          <v-card
+            v-if="selected == content.name"
+            :key="index"
+            transition="scroll-x-transition"
           >
-            {{ content.replenishment }}
-          </v-alert>
-          <template v-for="(service, index2) in content.service">
-            <v-alert
-              v-if="service.judgment"
-              :key="index2"
-              outlined
-              type="success"
-              prominent
-            >
-              <div class="text-h6">{{ service.title }}</div>
-              {{ service.notes }}
-            </v-alert>
+            <v-card-title>{{ content.name }}</v-card-title>
+            <v-card-text>
+              <v-alert
+                v-if="content.replenishment"
+                outlined
+                type="warning"
+                prominent
+              >
+                {{ content.replenishment }}
+              </v-alert>
+              <template v-for="(service, index2) in content.service">
+                <v-alert
+                  v-if="service.judgment"
+                  :key="index2"
+                  outlined
+                  type="success"
+                  prominent
+                >
+                  <div class="text-h6">{{ service.title }}</div>
+                  {{ service.notes }}
+                </v-alert>
 
-            <v-alert
-              v-else
-              :key="index2"
-              color="error"
-              outlined
-              icon="mdi-close"
-              prominent
-            >
-              <div class="text-h6">{{ service.title }}</div>
-              {{ service.notes }}
-            </v-alert>
-          </template>
-        </v-card-text>
-        <v-card-actions>
-        <v-list v-if="content.pdfs">
-          <v-list-item
-            v-for="(pdf, index3) in content.pdfs"
-            :key="index3"
-            link
-            @click=";(snackbar = true), (fileName = pdf.title), (url = pdf.url)"
-          >
-            <v-list-item-content>
-              <v-list-item-title class="wrap-text">
-                {{ content.name }}
-              </v-list-item-title>
-            </v-list-item-content>
-            <v-list-item-icon>
-              <v-icon>mdi-file-pdf-box</v-icon>
-            </v-list-item-icon>
-          </v-list-item>
-        </v-list>
-        </v-card-actions>
-      </v-card>
-    </template>
+                <v-alert
+                  v-else
+                  :key="index2"
+                  color="error"
+                  outlined
+                  icon="mdi-close"
+                  prominent
+                >
+                  <div class="text-h6">{{ service.title }}</div>
+                  {{ service.notes }}
+                </v-alert>
+              </template>
+            </v-card-text>
+            <v-card-actions>
+              <v-list v-if="content.pdfs">
+                <v-list-item
+                  v-for="(pdf, index3) in content.pdfs"
+                  :key="index3"
+                  link
+                  @click="
+                    ;(snackbar = true), (fileName = pdf.title), (url = pdf.url)
+                  "
+                >
+                  <v-list-item-content>
+                    <v-list-item-title class="wrap-text">
+                      {{ content.name }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                  <v-list-item-icon>
+                    <v-icon>mdi-file-pdf-box</v-icon>
+                  </v-list-item-icon>
+                </v-list-item>
+              </v-list>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-col>
+    </v-row>
 
     <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
       {{ fileName }}のPDFファイルを開きますか？

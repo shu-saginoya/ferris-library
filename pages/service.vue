@@ -1,103 +1,74 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-
-    <base-sub-title>サービス一覧</base-sub-title>
-
-    <v-expansion-panels
-      v-model="panel"
-      accordion
-      multiple="true"
-    >
-      <v-expansion-panel v-for="(item, i) in items" :key="i">
-        <v-expansion-panel-header>{{ item.title }}</v-expansion-panel-header>
-        <v-expansion-panel-content>{{
-          item.content
-        }}</v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-expansion-panels>
-    <v-alert
-      dense
-      border="left"
-      type="warning"
-      class="mt-4"
-    >
-      教育実習・海外研修等で返却日までに図書館に来館できない場合は、<strong>必ず事前に延長（更新）手続きをしてください</strong>。学部生・大学院生はMyLibraryでも延長できます。更新してもなお期限内に返却できない場合は申し出て下さい（事後は認めません）。なお、返却は郵送や宅配便でも受け付けます。
-    </v-alert>
-
-    <base-sub-title>貸出冊数</base-sub-title>
-    <v-data-table
-      :headers="headersQuantity"
-      :items="quantity"
-      :items-per-page="4"
-      hide-default-footer
-      class="elevation-1"
-    ></v-data-table>
-
-    <v-alert
-      dense
-      text
-      type="success"
-      class="mt-4"
-    >
-      参考図書、雑誌の最新号、貴重書、マイクロ資料、ビデオ、LD、DVD、CD-ROMは館内でご利用ください。
-    </v-alert>
-
-    <base-sub-title>貸出期間</base-sub-title>
-    <v-data-table
-      :headers="headersPeriod"
-      :items="period"
-      :items-per-page="7"
-      hide-default-footer
-      class="elevation-1"
-    ></v-data-table>
-
-    <v-alert
-      dense
-      type="info"
-      class="mt-4"
-    >
-      春・夏・冬季休暇中には学部生・大学院生を対象に長期貸出を行います。詳細はこのHPや掲示などでお知らせします。
-    </v-alert>
-    <v-alert
-      dense
-      type="info"
-      class="mt-4"
-    >
-      当日貸出もご利用いただけます。 (冊数制限なし)
-    </v-alert>
-
-    <base-sub-title>注意事項</base-sub-title>
-    <v-alert
-      dense
-      outlined
-      type="error"
-    >
-      貸出手続きを忘れると出口のアラームが鳴ります。
-    </v-alert>
-    <v-alert
-      dense
-      outlined
-      type="error"
-    >
-      資料を<strong>破損・紛失</strong>したときは速やかにお知らせください。
-    </v-alert>
-    <v-alert
-      dense
-      border="left"
-      type="warning"
-      class="mt-4"
-    >
-      借りたい資料が図書館にない場合や探せない場合はカウンターにご相談ください。レファレンス・サービスで対応致します。
-    </v-alert>
-    <v-alert
-      dense
-      border="left"
-      type="warning"
-      class="mt-4"
-    >
-      資料の又貸しや学生証・ライブラリーカードの貸借は、資料の紛失・返却の遅延等の原因になるため一切禁止です。
-    </v-alert>
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <base-sub-title>サービス一覧</base-sub-title>
+        <v-expansion-panels v-model="panel" accordion multiple="true">
+          <v-expansion-panel v-for="(item, i) in items" :key="i">
+            <v-expansion-panel-header>{{
+              item.title
+            }}</v-expansion-panel-header>
+            <v-expansion-panel-content>{{
+              item.content
+            }}</v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
+        <v-alert dense border="left" type="warning" class="mt-4">
+          教育実習・海外研修等で返却日までに図書館に来館できない場合は、<strong>必ず事前に延長（更新）手続きをしてください</strong>。学部生・大学院生はMyLibraryでも延長できます。更新してもなお期限内に返却できない場合は申し出て下さい（事後は認めません）。なお、返却は郵送や宅配便でも受け付けます。
+        </v-alert>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <base-sub-title>貸出冊数</base-sub-title>
+        <v-data-table
+          :headers="headersQuantity"
+          :items="quantity"
+          :items-per-page="4"
+          hide-default-footer
+          class="elevation-1"
+        ></v-data-table>
+        <v-alert dense text type="success" class="mt-4">
+          参考図書、雑誌の最新号、貴重書、マイクロ資料、ビデオ、LD、DVD、CD-ROMは館内でご利用ください。
+        </v-alert>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <base-sub-title>貸出期間</base-sub-title>
+        <v-data-table
+          :headers="headersPeriod"
+          :items="period"
+          :items-per-page="7"
+          hide-default-footer
+          class="elevation-1"
+        ></v-data-table>
+        <v-alert dense type="info" class="mt-4">
+          春・夏・冬季休暇中には学部生・大学院生を対象に長期貸出を行います。詳細はこのHPや掲示などでお知らせします。
+        </v-alert>
+        <v-alert dense type="info">
+          当日貸出もご利用いただけます。 (冊数制限なし)
+        </v-alert>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <base-sub-title>注意事項</base-sub-title>
+        <v-alert dense outlined type="error">
+          貸出手続きを忘れると出口のアラームが鳴ります。
+        </v-alert>
+        <v-alert dense outlined type="error">
+          資料を<strong>破損・紛失</strong>したときは速やかにお知らせください。
+        </v-alert>
+        <v-alert dense border="left" type="warning">
+          借りたい資料が図書館にない場合や探せない場合はカウンターにご相談ください。レファレンス・サービスで対応致します。
+        </v-alert>
+        <v-alert dense border="left" type="warning">
+          資料の又貸しや学生証・ライブラリーカードの貸借は、資料の紛失・返却の遅延等の原因になるため一切禁止です。
+        </v-alert>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -244,10 +215,10 @@ export default {
       },
     ],
   }),
-  head () {
+  head() {
     return {
       title: this.title,
     }
-  }
+  },
 }
 </script>

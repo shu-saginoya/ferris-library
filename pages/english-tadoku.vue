@@ -5,7 +5,7 @@
       英語多読（たどく）とは、辞書を使わずに、意味の分からないところは読み飛ばしながら、たくさんの英語の本を読む学習法で、英語の力を身につけるために効果的であると言われています。本学では、電子ブックと書籍の2種類の英語多読用図書を所蔵しています。
     </p>
     <v-row>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
           <v-card-subtitle class="pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0">EBSCO eBooks</v-card-title>
@@ -39,7 +39,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
           <v-card-subtitle class="pb-0">電子ブック</v-card-subtitle>
           <v-card-title class="pt-0"
@@ -65,7 +65,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="12" md="6" lg="4">
+      <v-col cols="12" sm="8" md="6" lg="4">
         <v-card>
           <v-card-subtitle class="pb-0">書籍</v-card-subtitle>
           <v-card-title class="pt-0">英語多読図書コーナー</v-card-title>
