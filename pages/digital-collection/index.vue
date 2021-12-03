@@ -2,8 +2,8 @@
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
 <v-row>
-  <v-col v-for="(item, i) in items" :key="i" cols="12" md="6">
-      <v-card>
+  <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
+      <v-card height="100%">
         <v-list-item three-line>
           <v-list-item-content>
             <div class="text-overline mb-4">{{ item.kind }}</div>

@@ -8,7 +8,7 @@
           </template>
         </v-breadcrumbs>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" xl="6">
         <v-card>
           <v-row>
             <v-col cols="12" sm="8">
@@ -36,7 +36,7 @@
           </v-row>
         </v-card>
       </v-col>
-      <v-col v-for="(image, idx) in images" :key="idx" cols="6" sm="4" md="3">
+      <v-col v-for="(image, idx) in images" :key="idx" cols="6" sm="4" md="3" xl="2">
         <v-card
           elevation="0"
           color="grey lighten-4"

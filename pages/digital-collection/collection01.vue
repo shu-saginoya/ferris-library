@@ -42,7 +42,7 @@
           </p>
         </v-alert>
       </v-col>
-      <v-col v-for="(image, idx) in images" :key="idx" cols="6" md="3">
+      <v-col v-for="(image, idx) in images" :key="idx" cols="6" md="3" xl="2">
         <v-card
           elevation="0"
           color="grey lighten-4"
