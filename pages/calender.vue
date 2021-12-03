@@ -3,46 +3,38 @@
     <base-page-title>{{ title }}</base-page-title>
     <v-row>
       <v-col cols="12" xl="8">
-        <v-sheet height="64">
-          <v-toolbar flat>
-            <v-menu bottom>
-              <template #activator="{ on, attrs }">
-                <v-btn
-                  outlined
-                  color="grey darken-2"
-                  class="mr-4"
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  <span>{{ placeToLabel[place] }}</span>
-                  <v-icon right> mdi-menu-down </v-icon>
-                </v-btn>
-              </template>
-              <v-list>
-                <v-list-item @click="place = 'ryokuen'" @change="eventColor">
-                  <v-list-item-title>緑園本館</v-list-item-title>
-                </v-list-item>
-                <v-list-item @click="place = 'yamate'" @change="eventColor">
-                  <v-list-item-title>山手分室</v-list-item-title>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-            <v-btn fab text small color="grey darken-2" @click="prev">
-              <v-icon small> mdi-chevron-left </v-icon>
-            </v-btn>
-            <v-btn fab text small color="grey darken-2" @click="next">
-              <v-icon small> mdi-chevron-right </v-icon>
-            </v-btn>
-            <v-toolbar-title v-if="$refs.calendar">
-              {{ $refs.calendar.title }}
-            </v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn outlined right color="grey darken-2" @click="setToday">
-              Today
-            </v-btn>
-          </v-toolbar>
-        </v-sheet>
-        <v-sheet height="600" max-width="1200px">
+        <v-toolbar flat>
+          <v-menu bottom>
+            <template #activator="{ on, attrs }">
+              <v-btn outlined color="grey darken-2" v-bind="attrs" v-on="on">
+                <span>{{ placeToLabel[place] }}</span>
+                <v-icon right> mdi-menu-down </v-icon>
+              </v-btn>
+            </template>
+            <v-list>
+              <v-list-item @click="place = 'ryokuen'" @change="eventColor">
+                <v-list-item-title>緑園本館</v-list-item-title>
+              </v-list-item>
+              <v-list-item @click="place = 'yamate'" @change="eventColor">
+                <v-list-item-title>山手分室</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+          <v-btn fab text small color="grey darken-2" @click="prev">
+            <v-icon small> mdi-chevron-left </v-icon>
+          </v-btn>
+          <v-btn fab text small color="grey darken-2" @click="next">
+            <v-icon small> mdi-chevron-right </v-icon>
+          </v-btn>
+          <v-toolbar-title v-if="$refs.calendar" class="wrap-text">
+            {{ $refs.calendar.title }}
+          </v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn right color="grey darken-2" icon @click="setToday">
+            <v-icon>mdi-calendar-today</v-icon>
+          </v-btn>
+        </v-toolbar>
+        <v-sheet height="600">
           <v-calendar
             ref="calendar"
             v-model="focus"
@@ -53,7 +45,18 @@
             @change="eventColor"
             @click:more="viewDay"
             @click:date="viewDay"
-          ></v-calendar>
+          >
+            <template #event="props">
+              <v-tooltip bottom>
+                <template #activator="{ on, attrs }">
+                  <div class="pl-1" v-bind="attrs" v-on="on">
+                    {{ props.event.name }}
+                  </div>
+                </template>
+                <span>{{ props.event.name }}</span>
+              </v-tooltip>
+            </template>
+          </v-calendar>
         </v-sheet>
       </v-col>
       <v-col cols="12" xl="4">
@@ -63,9 +66,7 @@
             学部生、大学院生、専任教員、2021年度ご出講の非常勤講師、事務職員（副手を含む）<br />
           </p>
           <h4>ご予約によりご利用いただける方</h4>
-          <p>
-            名誉教授
-          </p>
+          <p>名誉教授</p>
 
           <p>
             当面の間、上記以外の方は対象外とさせていただきます。一般公開はしていません。<br />
