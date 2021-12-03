@@ -30,9 +30,14 @@
             {{ $refs.calendar.title }}
           </v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-btn right color="grey darken-2" icon @click="setToday">
+                        <v-tooltip bottom>
+                <template #activator="{ on, attrs }">
+          <v-btn right color="grey darken-2" icon v-bind="attrs" v-on="on" @click="setToday">
             <v-icon>mdi-calendar-today</v-icon>
           </v-btn>
+                </template>
+                <span>today</span>
+              </v-tooltip>
         </v-toolbar>
         <v-sheet height="600">
           <v-calendar
