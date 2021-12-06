@@ -28,12 +28,13 @@ import news from '@/assets/json/news.json'
 
 export default {
   data: () => ({
-    title: 'ホームページ',
+    title: 'フェリス女学院大学附属図書館',
     news,
   }),
   head() {
     return {
       title: this.title,
+      titleTemplate: ''
     }
   },
 }

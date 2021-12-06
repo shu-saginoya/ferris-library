@@ -64,7 +64,8 @@ export default {
           accent: colors.grey.darken4,
         }
       }
-    }
+    },
+    options: { customProperties: true },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
