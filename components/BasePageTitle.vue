@@ -1,5 +1,5 @@
 <template>
-      <h1 class="v-heading text-h4 pt-8 mb-4">
+      <h1 class="v-heading text-h5 text-sm-h4 page-title pt-8 mb-4">
         <slot />
       </h1>
 </template>
@@ -9,3 +9,6 @@ export default {
   name: 'BasePageTitle',
 }
 </script>
+
+<style scoped>
+</style>
