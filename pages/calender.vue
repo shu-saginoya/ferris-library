@@ -30,14 +30,21 @@
             {{ $refs.calendar.title }}
           </v-toolbar-title>
           <v-spacer></v-spacer>
-                        <v-tooltip bottom>
-                <template #activator="{ on, attrs }">
-          <v-btn right color="grey darken-2" icon v-bind="attrs" v-on="on" @click="setToday">
-            <v-icon>mdi-calendar-today</v-icon>
-          </v-btn>
-                </template>
-                <span>today</span>
-              </v-tooltip>
+          <v-tooltip bottom>
+            <template #activator="{ on, attrs }">
+              <v-btn
+                right
+                color="grey darken-2"
+                icon
+                v-bind="attrs"
+                v-on="on"
+                @click="setToday"
+              >
+                <v-icon>mdi-calendar-today</v-icon>
+              </v-btn>
+            </template>
+            <span>today</span>
+          </v-tooltip>
         </v-toolbar>
         <v-sheet height="600">
           <v-calendar
@@ -64,26 +71,49 @@
           </v-calendar>
         </v-sheet>
       </v-col>
-      <v-col cols="12" xl="4">
-        <v-alert dense outlined type="error">
-          <h4>ご利用いただける方</h4>
-          <p>
-            学部生、大学院生、専任教員、2021年度ご出講の非常勤講師、事務職員（副手を含む）<br />
-          </p>
-          <h4>ご予約によりご利用いただける方</h4>
-          <p>名誉教授</p>
+      <v-col class="text-center">
+        <v-bottom-sheet v-model="sheet">
+          <template #activator="{ on, attrs }">
+          <v-btn
+            color="primary"
+            dark
+            outlined
+            v-bind="attrs"
+            v-on="on"
+          >
+            注意事項
+          </v-btn>
+          </template>
+                  <v-sheet
+          class="text-center pa-4"
+        >              <v-btn class="mb-2" text color="error" @click="sheet = !sheet">
+                close
+              </v-btn>
 
-          <p>
-            当面の間、上記以外の方は対象外とさせていただきます。一般公開はしていません。<br />
-            開館日時は変更する可能性があります。
-          </p>
 
-          <p>
-            今後の予定は状況により予告なく変更することがあります。<br />
-            今後のスケジュールにつきましては、学生：FerrisPassport、教職員：グループウェアでご確認ください。
-          </p>
-          <p class="text-right">2021年12月1日現在</p>
-        </v-alert>
+              <v-alert dense outlined type="error" class="text-left">
+                <h4>ご利用いただける方</h4>
+                <p>
+                  学部生、大学院生、専任教員、2021年度ご出講の非常勤講師、事務職員（副手を含む）<br />
+                </p>
+                <h4>ご予約によりご利用いただける方</h4>
+                <p>名誉教授</p>
+
+                <p>
+                  当面の間、上記以外の方は対象外とさせていただきます。一般公開はしていません。<br />
+                  開館日時は変更する可能性があります。
+                </p>
+
+                <p>
+                  今後の予定は状況により予告なく変更することがあります。<br />
+                  今後のスケジュールにつきましては、学生：FerrisPassport、教職員：グループウェアでご確認ください。
+                </p>
+                <p class="text-right">2021年12月1日現在</p>
+              </v-alert>
+
+
+                  </v-sheet>
+        </v-bottom-sheet>
       </v-col>
     </v-row>
   </v-container>
@@ -96,6 +126,7 @@ import yamate from '@/assets/json/calender-yamate.json'
 export default {
   data: () => ({
     title: '開館カレンダー・開館時間',
+    sheet: false,
     place: 'ryokuen',
     placeToLabel: {
       ryokuen: '緑園本館',
