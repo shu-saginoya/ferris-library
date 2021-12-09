@@ -12,7 +12,7 @@
                 "url": "https://link.gale.com/apps/AHSI?u=ferris"
             }
         ],
-        "categories": [ "社会科学" ]
+        "categories": [ "社会科学", "社会科学" ]
     },
     {
         "name": "bookplus",
@@ -60,7 +60,7 @@
                 "url": "http://ci.nii.ac.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "D1-Law.com",
@@ -75,7 +75,7 @@
                 "url": "https://dtp-cm.d1-law.com/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "判例・法令・議会資料" ]
     },
     {
         "name": "EBSCO eBooks（旧 NetLibrary）",
@@ -94,7 +94,7 @@
                 "url": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "日本文学", "音楽" ]
     },
     {
         "name": "ECCO (Eighteenth Century Collections Online)",
@@ -112,7 +112,7 @@
                 "url": "http://reo.nii.ac.jp/hss/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "EEBO (Early English Books Online)",
@@ -130,7 +130,7 @@
                 "url": "http://reo.nii.ac.jp/hss/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },    
     {
         "name": "Eighteenth Century Journals I",
@@ -145,7 +145,7 @@
                 "url": "http://www.18thcjournals.amdigital.co.uk/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "Entertainment Industry Magazine Archive (EIMA)",
@@ -159,7 +159,7 @@
                 "url": "https://search.proquest.com/eima"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学", "音楽" ]
     },
     {
         "name": "Ethnomusicology（世界の民族音楽アーカイブ）",
@@ -175,7 +175,7 @@
                 "url": "https://www.ethnomusicology.amdigital.co.uk/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "音楽" ]
     },
     {
         "name": "Gale Literature",
@@ -193,7 +193,7 @@
                 "url": "http://infotrac.galegroup.com/itweb/ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "英米文学" ]
     },
     {
         "name": "Gale eBooks（旧 Gale Virtual Reference Library（GVRL））",
@@ -218,7 +218,7 @@
                 "type": "PDF"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "参考・辞書事典類", "英米文学", "社会科学" ]
     },
     {
         "name": "Grove Music Online（Oxford Music Online）",
@@ -232,7 +232,7 @@
                 "url": "https://www.oxfordmusiconline.com/grovemusic"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "参考・辞書事典類", "音楽" ]
     },
     {
         "name": "Illustrated London News Historical Archive 1842-2003",
@@ -250,7 +250,7 @@
                 "url": "https://link.gale.com/apps/GDCS?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "The International Encyclopedia of Intercultural Communication（Wiley Online Library）",
@@ -264,7 +264,7 @@
                 "url": "https://onlinelibrary.wiley.com/book/10.1002/9781118783665/toc"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "参考・辞書事典類", "社会科学" ]
     },
     {
         "name": "JapanKnowledge Lib",
@@ -284,12 +284,12 @@
                 "url": "https://japanknowledge.com/library/jkbooks.html"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "参考・辞書事典類" ]
     },
     {
         "name": "JSTOR",
         "languages": ["外国語"],
-        "explanation": "<p>人文科学系を中心とした学術雑誌の創刊号からのアーカイブコレクションです。最新号から過去約5年分は提供されていません。</p>",
+        "explanation": "<p>人文科学系を中心とした学術雑誌の創刊号からのアーカイブコレクションです。最新号から過去約5年分は提供されていません。</p><p>契約タイトル一覧は「Arts & Science I」「Arts & Science Ⅲ」のエクセルファイルから確認できます。</p>",
         "access": "無制限",
         "logout": false,
         "links": [
@@ -310,7 +310,7 @@
                 "type": "Excel"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "LLBA (Linguistics and Language Behavior Abstracts)",
@@ -324,7 +324,7 @@
                 "url": "https://search.proquest.com/llba"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "言語学" ]
     },
     {
         "name": "Literary Print Culture",
@@ -338,7 +338,7 @@
                 "url": "http://www.literaryprintculture.amdigital.co.uk/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "英米文学", "社会科学" ]
     },
     {
         "name": "Literature Online",
@@ -352,7 +352,7 @@
                 "url": "https://search.proquest.com/lion"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "英米文学" ]
     },
     {
         "name": "magazineplus",
@@ -366,7 +366,7 @@
                 "url": "https://web.nichigai.jp/magazine?user_id=FRA"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "The Making of Modern World",
@@ -385,7 +385,7 @@
                 "url": "https://reo.nii.ac.jp/hss/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "Maruzen eBook Library",
@@ -403,7 +403,7 @@
                 "url": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "日本文学", "社会科学" ]
     },
     {
         "name": "Medical Online（メディカルオンライン）",
@@ -418,7 +418,7 @@
                 "url": "https://www.medicalonline.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合", "社会科学" ]
     },
     {
         "name": "NAXOS Music Library",
@@ -433,7 +433,7 @@
                 "url": "http://ferris.ml.naxos.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "音楽" ]
     },
     {
         "name": "New York Times",
@@ -447,7 +447,7 @@
                 "url": "https://search.proquest.com/news?accountid=27276"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "Oxford English Dictionary Online ：OED Online",
@@ -465,7 +465,7 @@
                 "url": "http://public.oed.com/guide-japanese/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "参考・辞書事典類" ]
     },
     {
         "name": "Oxford History of Western Music",
@@ -479,7 +479,7 @@
                 "url": "https://www.oxfordwesternmusic.com/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "音楽" ]
     },
     {
         "name": "Political Extremism and Radicalism",
@@ -494,7 +494,7 @@
                 "url": "https://link.gale.com/apps/PLEX?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "ProQuest",
@@ -508,7 +508,7 @@
                 "url": "https://search.proquest.com/?accountid=27276"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "ProQuest Ebook Central（旧ebrary）",
@@ -523,7 +523,7 @@
                 "url": "https://ebookcentral.proquest.com/lib/ferrisjp-ebooks"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "社会科学", "音楽", "判例・法令・議会資料" ]
     },
     {
         "name": "RILM Abstracts of Music Literature（1967 to Present only）",
@@ -537,7 +537,7 @@
                 "url": "https://search.ebscohost.com/login.aspx?profile=ehost&defaultdb=ram"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "音楽" ]
     },
     {
         "name": "The Shakespeare Collection",
@@ -551,7 +551,7 @@
                 "url": "https://link.gale.com/apps/collection/3EHI/GDSC?u=ferris&sid=GDSC"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "英米文学" ]
     },
     {
         "name": "Something About the Author",
@@ -565,7 +565,7 @@
                 "url": "https://link.gale.com/apps/SATA?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "参考・辞書事典類", "英米文学" ]
     },
     {
         "name": "TLS (The Times Literary Supplement Historical Archive)",
@@ -583,7 +583,7 @@
                 "url": "https://link.gale.com/apps/GDCS?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "英米文学", "社会科学" ]
     },
     {
         "name": "The Vogue Archive",
@@ -597,7 +597,7 @@
                 "url": "https://search.proquest.com/vogue/arts/fromDatabasesLayer?accountid=27276"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "Web OYA-bunko",
@@ -611,7 +611,7 @@
                 "url": "http://www.oya-bunko.com/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "Web版「鎌倉遺文」",
@@ -625,7 +625,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/ibunseries/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック" ]
     },
     {
         "name": "Web版「群書類従」 Web版「續群書類従」 Web版「續々群書類従」",
@@ -639,7 +639,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/gunshoruiju/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "参考・辞書事典類", "日本文学" ]
     },
     {
         "name": "Web版「人物叢書」",
@@ -653,7 +653,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/jinbutsusosho/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック" ]
     },
     {
         "name": "Web版日本近代文学館（滝田樗陰旧蔵近代作家原稿集）",
@@ -667,7 +667,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/choin/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "日本文学" ]
     },
     {
         "name": "Web版「風俗画報」",
@@ -681,7 +681,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/fuzokugaho/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック" ]
     },
     {
         "name": "Web版「文芸倶楽部・明治篇」",
@@ -695,7 +695,7 @@
                 "url": "https://japanknowledge.com/lib/shelf/bungeikurabu/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "電子ブック", "日本文学" ]
     },
     {
         "name": "聞蔵Ⅱビジュアル",
@@ -709,7 +709,7 @@
                 "url": "https://database.asahi.com/login/loginexec.php?user_id=fej248gyk&password=bby046wwt"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "国立国会図書館デジタル化資料送信サービス",
@@ -717,11 +717,11 @@
         "explanation": "<p>国立国会図書館デジタルコレクションのコンテンツのうち、入手困難な資料を全国の公共図書館、大学図書館等に配信し利用できるサービスです。</p><p>閲覧できるPCが限定されていますので、詳しくは図書館カウンターまでお問合せください。（緑園：2階カウンター内PC）</p><p>※国立国会図書館デジタル化資料の検索と一般公開資料の閲覧は以下のサイトから自由に行えます。</p>",
         "links": [
             {
-                "name": "国立国会図書館デジタルコレクション",
+                "name": "アクセス",
                 "url": "http://dl.ndl.go.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "総合" ]
     },
     {
         "name": "国立国会図書館歴史的音源",
@@ -733,7 +733,7 @@
                 "url": "http://rekion.dl.ndl.go.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "音楽" ]
     },
     {
         "name": "人民日報（1946～Present）",
@@ -756,7 +756,7 @@
                 "type": "PDF"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "東洋経済デジタルアーカイブズ（1927～2015年）",
@@ -770,7 +770,7 @@
                 "url": "http://lib.keiyou.jp/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "都道府県統計書データベース",
@@ -785,7 +785,7 @@
                 "url": "https://j-dac.jp/RISA"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     },
     {
         "name": "日経テレコン",
@@ -799,7 +799,7 @@
                 "url": "https://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "日本文学Web図書館",
@@ -815,7 +815,7 @@
                 "type": "EXE"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "参考・辞書事典類", "日本文学" ]
     },
     {
         "name": "毎索",
@@ -829,7 +829,7 @@
                 "url": "https://dbs.g-search.or.jp/WMAI/WMAI_ipcu_login.html"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "オンライン版日本近代文学館所蔵 (太宰治　自筆資料集)",
@@ -843,7 +843,7 @@
                 "url": "http://j-dac.jp/dazai"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "日本文学" ]
     },
     {
         "name": "ヨミダス歴史館",
@@ -857,7 +857,7 @@
                 "url": "https://database.yomiuri.co.jp/rekishikan/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "17th and 18th Century Burney Newspapers Collection",
@@ -875,7 +875,7 @@
                 "url": "https://link.gale.com/apps/GDCS?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "17th and 18th Century Nichols Newspapers Collection",
@@ -893,7 +893,7 @@
                 "url": "https://link.gale.com/apps/GDCS?u=ferris"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "新聞記事" ]
     },
     {
         "name": "18C HCPP (18th Century House of Commons Parliamentary Papers)",
@@ -907,12 +907,12 @@
                 "url": "http://reo.nii.ac.jp/hss/"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学", "判例・法令・議会資料" ]
     },
     {
         "name": "1911-1949年中文期刊篇名数拠庫",
         "languages": ["外国語"],
-        "explanation": "<p>清末から民国期にかけて発行された雑誌・新聞の収録文献の篇名索引。1－9輯を利用することができます。一部は全文も利用することができます。終了時は「退出」を押してください。</p><p>『上海図書館Online Data Base』 トライアル*実施中！（2021年11月30日まで）</p><p>■『上海図書館オンライン・データベース』とは<br>上海図書館で構築中の、上海に深い関わりのある資料群のデータベース。<br>*トライアルは「1911-1949年中文期刊篇名数拠庫」に搭載済みです。</p><p>【主要コンテンツ】</p><table class='contents-table'><tr><th>タイトル</th><th>収録内容</th></tr><tr><td>晩清期全文数拠庫</td><td>上海図書館所蔵の清末期の新聞・雑誌300点</td></tr><tr><td>中文期刊全文数拠庫</td><td>1911年～1949年（清末から民国期）に発行された雑誌・新聞20,000点</td></tr><tr><td>中国近代中文報紙全文数拠庫</td><td>上海図書館所蔵の新聞（中文）のうち11紙</td></tr><tr><td>中国近代図書全文数拠庫</td><td>上海図書館所蔵の近代図書のうち、稀覯書など12万種</td></tr><tr><td>字林洋行中英文報紙全文数拠庫</td><td>19世紀後半の上海の新聞社「字林洋行」が発行した英字新聞7種</td></tr><tr><td>中国近代中文期刊全文数拠庫・電影専題</td><td>中国近代刊行物のうち電影関係325種</td></tr></table>",
+        "explanation": "<p>清末から民国期にかけて発行された雑誌・新聞の収録文献の篇名索引。1－9輯を利用することができます。一部は全文も利用することができます。終了時は「退出」を押してください。</p><p>『上海図書館Online Data Base』 トライアル*実施中！（2021年11月30日まで）</p><p>■『上海図書館オンライン・データベース』とは<br>上海図書館で構築中の、上海に深い関わりのある資料群のデータベース。<br>*トライアルは「1911-1949年中文期刊篇名数拠庫」に搭載済みです。</p><table><caption>【主要コンテンツ】</caption><thead><tr><th>タイトル</th><th>収録内容</th></tr></thead><tbody><tr><td>晩清期全文数拠庫</td><td>上海図書館所蔵の清末期の新聞・雑誌300点</td></tr><tr><td>中文期刊全文数拠庫</td><td>1911年～1949年（清末から民国期）に発行された雑誌・新聞20,000点</td></tr><tr><td>中国近代中文報紙全文数拠庫</td><td>上海図書館所蔵の新聞（中文）のうち11紙</td></tr><tr><td>中国近代図書全文数拠庫</td><td>上海図書館所蔵の近代図書のうち、稀覯書など12万種</td></tr><tr><td>字林洋行中英文報紙全文数拠庫</td><td>19世紀後半の上海の新聞社「字林洋行」が発行した英字新聞7種</td></tr><tr><td>中国近代中文期刊全文数拠庫・電影専題</td><td>中国近代刊行物のうち電影関係325種</td></tr></tbody></table>",
         "access": "5",
         "logout": true,
         "links": [
@@ -921,6 +921,6 @@
                 "url": "http://www.cnbksy.com/home"
             }
         ],
-        "categories": [ "" ]
+        "categories": [ "社会科学" ]
     }
 ]

@@ -2,7 +2,7 @@
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
     <v-row dense>
-      <v-col v-for="(item, i) in database" :key="i" cols="12" xl="8">
+      <v-col v-for="(item, i) in items" :key="i" cols="12" xl="8">
         <v-card>
           <v-container>
             <v-row dense>
@@ -31,7 +31,7 @@
               </v-col>
               <v-col cols="12" sm="8">
                 <v-card-text>
-                  <div v-html="item.explanation"></div>
+                  <div class="explanation" v-html="item.explanation"></div>
                   <div v-if="item.feature">
                     <v-chip small>特長</v-chip>
                     <div v-html="item.feature"></div>
@@ -47,36 +47,41 @@
                   </v-chip>
                   <span v-if="item.attention">※{{ item.attention }}</span>
                 </v-card-text>
-                <v-card-actions>
-                  <base-btn-open-in-new
+                <v-card-actions class="flex-wrap">
+                  <v-btn
                     v-for="(link, k) in item.links"
                     :key="k"
-                    :link="link.name"
-                    :url="link.url"
+                    :href="link.url"
+                    target="_blank"
+                    class="mr-2 mb-2"
                   >
-                  </base-btn-open-in-new>
+                    {{ link.name }}
+                    <v-icon right>mdi-open-in-new</v-icon>
+                  </v-btn>
                   <template v-if="item.documents">
                     <v-btn
                       v-for="(file, n) in item.documents"
                       :key="n"
+                      class="mr-2 mb-2"
                       @click="
                         ;(snackbar = true),
                           (university = file.type),
                           (file = file.url)
                       "
                     >
-                    {{ file.name }}
-                      <v-icon v-if="file.type == 'PDF'" dark right 
+                      {{ file.name }}
+                      <v-icon v-if="file.type == 'PDF'" dark right
                         >mdi-file-pdf-box</v-icon
                       >
                       <v-icon v-else-if="file.type == 'Excel'" dark right
                         >mdi-file-excel-outline</v-icon
                       >
-                      <v-icon v-else dark right>mdi-file-document-multiple-outline</v-icon>
+                      <v-icon v-else dark right
+                        >mdi-file-document-multiple-outline</v-icon
+                      >
                     </v-btn>
                   </template>
-                  <v-spacer></v-spacer>
-                  <v-btn icon><v-icon>mdi-heart-outline</v-icon></v-btn>
+                  <v-btn icon absolute bottom right><v-icon>mdi-heart-outline</v-icon></v-btn>
                 </v-card-actions>
               </v-col>
             </v-row>
@@ -84,6 +89,7 @@
         </v-card>
       </v-col>
     </v-row>
+    <p v-if="items.length === 0">該当する項目はみつかりませんでした。</p>
     <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
       {{ university }}ファイルを開きますか？
 
@@ -106,15 +112,41 @@ export default {
   data: () => ({
     title: 'データベース・電子ブック',
     database,
+    items: database,
     multiLine: true,
     snackbar: false,
     university: '',
     timeout: 6000,
+    languages: [ "日本語", "外国語" ],
+    categories: [ "電子ブック", "総合", "参考・辞書事典類", "新聞記事", "英米文学", "日本文学", "言語学", "社会科学", "音楽", "判例・法令・議会資料", ],
+    value: null,
   }),
   head() {
     return {
       title: this.title,
     }
   },
+  methods: {
+    fetchItem() {
+      const self = this
+      self.items = self.database
+    }
+  }
 }
 </script>
+
+<style scoped>
+.explanation >>> caption {
+  text-align: left;
+}
+.explanation >>> table {
+  border-collapse: collapse;
+}
+.explanation >>> th,
+.explanation >>> td {
+  text-align: left;
+  vertical-align: top;
+  border-top: gray solid 1px;
+  border-bottom: gray solid 1px;
+}
+</style>
