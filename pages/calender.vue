@@ -86,7 +86,7 @@
           </template>
                   <v-sheet
           class="text-center pa-4"
-        >              <v-btn class="mb-2" text color="error" @click="sheet = !sheet">
+        >              <v-btn class="mb-2" text @click="sheet = !sheet">
                 close
               </v-btn>
 
