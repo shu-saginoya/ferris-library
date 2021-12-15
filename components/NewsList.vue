@@ -9,8 +9,12 @@
 
     <v-list>
       <template v-for="info in displayLists">
-        <v-divider :key="info.id"></v-divider>
-        <v-list-item :key="info.id" two-line>
+        <v-list-item
+          :key="'info' + info.id"
+          two-line
+          link
+          @click.native=";(dialog = true), (newsCard = info)"
+        >
           <v-list-item-content>
             <v-list-item-title class="wrap-text">{{
               info.title
@@ -18,55 +22,12 @@
             <v-list-item-subtitle>
               {{ info.date }}
             </v-list-item-subtitle>
+            
           </v-list-item-content>
           <v-list-item-action>
-            <v-dialog v-model="dialog" max-width="600">
-              <template #activator="{ on, attrs }">
-                <v-btn
-                  class="dialog-btn ma-2"
-                  color="primary lighten-1"
-                  v-bind="attrs"
-                  icon
-                  v-on="on"
-                >
-                  <v-icon color="grey lighten-1"
-                    >mdi-arrow-right-circle-outline</v-icon
-                  >
-                </v-btn>
-              </template>
-              <template #default="dialog">
-                <v-card>
-                  <v-system-bar color="primary" dark> News </v-system-bar>
-                  <v-card-title>
-                    {{ info.title }}
-                  </v-card-title>
-                  <v-card-subtitle>
-                    {{ info.date }}
-                  </v-card-subtitle>
-                  <v-card-text class="mt-6" v-html="info.contents">
-                  </v-card-text>
-                  <v-card-actions v-if="info.actions">
-                    <base-btn-inside
-                      v-for="btn in info.actions"
-                      :key="btn.id"
-                      :link="btn.link"
-                      :to="btn.to"
-                    ></base-btn-inside>
-                  </v-card-actions>
-                  <v-card-actions v-if="info.openinnew">
-                    <base-btn-open-in-new
-                      v-for="btn in info.openinnew"
-                      :key="btn.id"
-                      :link="btn.link"
-                      :url="btn.url"
-                    ></base-btn-open-in-new>
-                  </v-card-actions>
-                  <v-card-actions class="justify-end">
-                    <v-btn text @click="dialog.value = false">Close</v-btn>
-                  </v-card-actions>
-                </v-card>
-              </template>
-            </v-dialog>
+            <v-icon color="grey lighten-1"
+              >mdi-arrow-right-circle-outline</v-icon
+            >
           </v-list-item-action>
         </v-list-item>
       </template>
@@ -78,6 +39,37 @@
         @input="pageChange"
       ></v-pagination>
     </v-card-text>
+    <v-dialog v-model="dialog" max-width="600">
+      <v-card>
+        <v-system-bar color="primary" dark> News </v-system-bar>
+        <v-card-title>
+          {{ newsCard.title }}
+        </v-card-title>
+        <v-card-subtitle>
+          {{ newsCard.date }}
+        </v-card-subtitle>
+        <v-card-text class="mt-6" v-html="newsCard.contents"> </v-card-text>
+        <v-card-actions v-if="newsCard.actions">
+          <base-btn-inside
+            v-for="btn in newsCard.actions"
+            :key="btn.id"
+            :link="btn.link"
+            :to="btn.to"
+          ></base-btn-inside>
+        </v-card-actions>
+        <v-card-actions v-if="newsCard.openinnew">
+          <base-btn-open-in-new
+            v-for="btn in newsCard.openinnew"
+            :key="btn.id"
+            :link="btn.link"
+            :url="btn.url"
+          ></base-btn-open-in-new>
+        </v-card-actions>
+        <v-card-actions class="justify-end">
+          <v-btn text @click="dialog = false">Close</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-card>
 </template>
 
@@ -96,6 +88,8 @@ export default {
     length: 0,
     lists,
     displayLists: [],
+    dialog: false,
+    newsCard: [],
   }),
   mounted() {
     this.loading = false
