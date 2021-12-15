@@ -38,12 +38,22 @@
                 </v-card-text>
                 <v-divider></v-divider>
                 <v-card-text v-if="item.access">
-                  同時アクセス数
-                  <v-chip outlined> {{ item.access }} </v-chip>
-                  <v-chip v-if="item.logout" color="warning" outlined small>
-                    <v-icon left>mdi-alert-circle-outline</v-icon>
-                    利用後は必ずログアウトしてください
-                  </v-chip>
+                  <p class="my-0">
+                    利用可能場所：
+                    <span
+                      v-for="(place, p) in item.available"
+                      :key="'ava' + p"
+                    >
+                      {{ place }}
+                    </span>
+                  </p>
+                  <p class="my-0">
+                    同時アクセス数：{{ item.access }}
+                    <span v-if="item.logout" class="orange--text ml-2">
+                      <v-icon small color="orange">mdi-alert-circle-outline</v-icon>
+                      利用後は必ずログアウトしてください
+                    </span>
+                  </p>
                   <span v-if="item.attention">※{{ item.attention }}</span>
                 </v-card-text>
                 <v-card-actions class="flex-wrap">
@@ -80,9 +90,9 @@
                       >
                     </v-btn>
                   </template>
-                  <!--<v-btn icon absolute bottom right
+                  <v-btn icon absolute bottom right
                     ><v-icon>mdi-heart-outline</v-icon></v-btn
-                  >-->
+                  >
                 </v-card-actions>
               </v-col>
             </v-row>
