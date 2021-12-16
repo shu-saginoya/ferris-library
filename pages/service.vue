@@ -4,7 +4,7 @@
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
         <base-sub-title>サービス一覧</base-sub-title>
-        <v-expansion-panels v-model="panel" accordion multiple="true">
+        <v-expansion-panels v-model="panel" accordion multiple>
           <v-expansion-panel v-for="(item, i) in items" :key="i">
             <v-expansion-panel-header>{{
               item.title
