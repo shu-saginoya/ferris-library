@@ -9,6 +9,7 @@
 
     <v-list>
       <template v-for="info in displayLists">
+        <v-divider :key="'divider' + info.id"></v-divider>
         <v-list-item
           :key="'info' + info.id"
           two-line
