@@ -37,8 +37,5 @@ export default {
     currentPageNum: 1,
     totalPageNum: 0,
   }),
-  mounted() {
-    this.loading = false
-  },
 }
 </script>
