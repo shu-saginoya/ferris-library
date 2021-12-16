@@ -21,28 +21,25 @@
               <v-divider></v-divider>
               <v-list>
                 <template v-for="(item, i) in items">
-                  <template v-if="item.url">
-                    <v-list-item
-                      :key="i"
-                      link
-                      @click="
-                        ;(snackbar = true),
-                          (university = item.name),
-                          (file = item.url)
-                      "
-                    >
-                      <v-list-item-content>
-                        <v-list-item-title
-                          v-text="item.name"
-                        ></v-list-item-title>
-                      </v-list-item-content>
-                      <v-list-item-icon>
-                        <v-icon>mdi-file-pdf-box</v-icon>
-                      </v-list-item-icon>
-                    </v-list-item>
-                  </template>
+                  <v-list-item
+                    v-if="item.url"
+                    :key="'item' + i"
+                    link
+                    @click="
+                      ;(snackbar = true),
+                        (university = item.name),
+                        (file = item.url)
+                    "
+                  >
+                    <v-list-item-content>
+                      <v-list-item-title v-text="item.name"></v-list-item-title>
+                    </v-list-item-content>
+                    <v-list-item-icon>
+                      <v-icon>mdi-file-pdf-box</v-icon>
+                    </v-list-item-icon>
+                  </v-list-item>
 
-                  <v-list-item v-else :key="i">
+                  <v-list-item v-else :key="'item' + i">
                     <v-list-item-content>
                       <v-list-item-title v-text="item.name"></v-list-item-title>
                     </v-list-item-content>
@@ -74,7 +71,6 @@
       </v-col>
     </v-row>
     <v-snackbar
-      :key="i"
       v-model="snackbar"
       :multi-line="multiLine"
       :timeout="timeout"
@@ -98,6 +94,7 @@ export default {
   data: () => ({
     title: '横浜市内大学図書館コンソーシアム',
     show: false,
+    file: '',
     multiLine: true,
     snackbar: false,
     timeout: 6000,

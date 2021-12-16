@@ -60,6 +60,7 @@ export default {
     snackbar: false,
     timeout: 6000,
     fileName: '',
+    multiLine: true,
     url: '',
     items: [
       {

@@ -99,6 +99,7 @@ export default {
     snackbar: false,
     timeout: 6000,
     fileName: '',
+    multiLine: true,
     url: '',
     items: [
       '卒業生・修了生',
