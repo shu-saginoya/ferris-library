@@ -90,20 +90,20 @@ export default {
         image: '/digital-collection/collection03/00.jpg',
         identification: 'collection03',
       },
-      // {
-      //   kind: '貴重資料',
-      //   title: 'Japanese Fairy Tale',
-      //   texts: [
-      //     {
-      //       p: '明治時代に作られた縮緬本（ちりめんぼん）とよばれるシリーズ『Japanese Fairy Tale』をデジタル化しました。「桃太郎」「瘤取り爺」「猿蟹合戦」など、日本を代表する昔話が英語で収録されています。明治十八年（一八八五年）以来、長谷川武次郎が作り、タムスンという宣教師、チェンバレンという学者、作家のラフカディオ・ハーン等が再話しています。イラストレーションは小林永濯（えいたく）という画家です。',
-      //     },
-      //     {
-      //       p: '実物は貴重資料室で保管しています。図書館内でCD-ROMとあわせて利用することができます。',
-      //     },
-      //   ],
-      //   image: '/digital-collection/collection04/e_j24_no02.jpg',
-      //   identification: 'collection04',
-      // },
+      {
+        kind: '貴重資料',
+        title: 'Japanese Fairy Tale',
+        texts: [
+          {
+            p: '明治時代に作られた縮緬本（ちりめんぼん）とよばれるシリーズ『Japanese Fairy Tale』をデジタル化しました。「桃太郎」「瘤取り爺」「猿蟹合戦」など、日本を代表する昔話が英語で収録されています。明治十八年（一八八五年）以来、長谷川武次郎が作り、タムスンという宣教師、チェンバレンという学者、作家のラフカディオ・ハーン等が再話しています。イラストレーションは小林永濯（えいたく）という画家です。',
+          },
+          {
+            p: '実物は貴重資料室で保管しています。図書館内でCD-ROMとあわせて利用することができます。',
+          },
+        ],
+        image: '/digital-collection/collection04/e_j24_no02.jpg',
+        identification: 'collection04',
+      },
       // {
       //   kind: '貴重資料',
       //   title: 'ビアトリクス・ポターの絵本',
