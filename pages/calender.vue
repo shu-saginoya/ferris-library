@@ -46,7 +46,7 @@
             <span>today</span>
           </v-tooltip>
         </v-toolbar>
-        <v-sheet height="600">
+        <v-sheet height="700">
           <v-calendar
             ref="calendar"
             v-model="focus"
@@ -142,6 +142,8 @@ export default {
     selectedOpen: false,
     events: [],
     colors: [
+      'indigo lighten-1',
+      'grey lighten-1',
       'grey lighten-1',
       'blue lighten-1',
       'orange lighten-1',
@@ -151,10 +153,11 @@ export default {
       'deep-orange lighten-1',
       'pink lighten-1',
       'lime lighten-1',
-      'indigo lighten-1',
     ],
     names: [
+      'イベント',
       '閉館',
+      '閉室',
       '8:50～21:00',
       '9:00～19:00',
       '9:00～17:00',
@@ -163,7 +166,6 @@ export default {
       '10:00～15:00',
       '8:50～18:00',
       '10:00～17:00',
-      'イベント',
     ],
   }),
   head() {
@@ -201,7 +203,7 @@ export default {
         if (number >= 0) {
           this.setPlace[i].color = this.colors[number]
         } else {
-          this.setPlace[i].color = this.colors[9]
+          this.setPlace[i].color = this.colors[0]
         }
       }
       this.events = this.setPlace
