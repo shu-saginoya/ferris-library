@@ -104,21 +104,21 @@ export default {
         image: '/digital-collection/collection04/e_j24_no02.jpg',
         identification: 'collection04',
       },
-      // {
-      //   kind: '貴重資料',
-      //   title: 'ビアトリクス・ポターの絵本',
-      //   subtitle: '表紙のみ',
-      //   texts: [
-      //     {
-      //       p: 'このたび出版社のご協力を得て、Beatrix Potterの全作品を電子データ化することができました。当サイト上では、全作品の表紙を見ることができます。最初の作品は、世界中で親しまれているThe Tale of Peter Rabbit (『ピーターラビットのおはなし』)です。',
-      //     },
-      //     {
-      //       p: '図書館で所蔵しているCD-ROMは、研究用としてイラストレーションとテクストを詳しく調査できるようになっています。また、図書館にはシリーズ23冊の英語版、日本語版、また初版本を含む貴重な古書などもそろえてありますので、関心のある方は実際に作品をご覧下さい。',
-      //     },
-      //   ],
-      //   image: '/digital-collection/collection05/01-000.jpg',
-      //   identification: 'collection05',
-      // },
+      {
+        kind: '貴重資料',
+        title: 'ビアトリクス・ポターの絵本',
+        subtitle: '表紙のみ',
+        texts: [
+          {
+            p: 'このたび出版社のご協力を得て、Beatrix Potterの全作品を電子データ化することができました。当サイト上では、全作品の表紙を見ることができます。最初の作品は、世界中で親しまれているThe Tale of Peter Rabbit (『ピーターラビットのおはなし』)です。',
+          },
+          {
+            p: '図書館で所蔵しているCD-ROMは、研究用としてイラストレーションとテクストを詳しく調査できるようになっています。また、図書館にはシリーズ23冊の英語版、日本語版、また初版本を含む貴重な古書などもそろえてありますので、関心のある方は実際に作品をご覧下さい。',
+          },
+        ],
+        image: '/digital-collection/collection05/01-000.jpg',
+        identification: 'collection05',
+      },
       // {
       //   kind: '貴重資料',
       //   title: 'コルデコットの絵本',

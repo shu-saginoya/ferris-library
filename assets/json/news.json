@@ -1,5 +1,29 @@
 [
     {
+        "id": "26",
+        "title": "電子コレクション－ビアトリクス・ポターの絵本ページを制作しました",
+        "date": "2021.12.21",
+        "contents": "<p>電子コレクション－ビアトリクス・ポターの絵本ページを制作しました。</p>",
+        "actions": [
+            {
+                "link": "ビアトリクス・ポターの絵本ページへ",
+                "to": "/digital-collection/collection05"
+            }
+        ]
+    },
+    {
+        "id": "25",
+        "title": "電子コレクション－Japanese Fairy Taleページを制作しました",
+        "date": "2021.12.21",
+        "contents": "<p>電子コレクション－Japanese Fairy Taleページを制作しました。</p>",
+        "actions": [
+            {
+                "link": "Japanese Fairy Taleページへ",
+                "to": "/digital-collection/collection04"
+            }
+        ]
+    },
+    {
         "id": "24",
         "title": "キャリア支援ページを制作しました",
         "date": "2021.12.20",
