@@ -90,9 +90,9 @@
                       >
                     </v-btn>
                   </template>
-                  <v-btn icon absolute bottom right
+                  <!--<v-btn icon absolute bottom right
                     ><v-icon>mdi-heart-outline</v-icon></v-btn
-                  >
+                  >-->
                 </v-card-actions>
               </v-col>
             </v-row>
