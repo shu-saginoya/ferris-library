@@ -70,7 +70,6 @@ export default {
     titleLogo: '/digital-collection/collection03/title-logo.gif',
     topImage: '/digital-collection/collection03/00.jpg',
     index: null,
-    dialog: false,
     topImageCaptions: [
       { p: '大きさ（表紙）タテ23cm×ヨコ17cm' },
       { p: '5帖　秩入り' },
