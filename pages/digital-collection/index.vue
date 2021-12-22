@@ -134,18 +134,18 @@ export default {
         image: '/digital-collection/collection06/13-00.jpg',
         identification: 'collection06',
       },
-      // {
-      //   kind: '貴重資料',
-      //   title: '横浜絵葉書',
-      //   subtitle: '手彩色',
-      //   texts: [
-      //     {
-      //       p: '本学所蔵の『横浜絵葉書（手彩色）』は、明治から大正時代における、横浜市内の名所の数々を描いたもので、国内外から横浜を訪れた多くの人々が買い求めました。現在は関東大震災や戦災で失われた横浜の景観や市民の暮らしを知る上で、貴重な歴史資料となっています。',
-      //     },
-      //   ],
-      //   image: '/digital-collection/collection07/group01/group01_023.jpg',
-      //   identification: 'collection07',
-      // },
+      {
+        kind: '貴重資料',
+        title: '横浜絵葉書',
+        subtitle: '手彩色',
+        texts: [
+          {
+            p: '本学所蔵の『横浜絵葉書（手彩色）』は、明治から大正時代における、横浜市内の名所の数々を描いたもので、国内外から横浜を訪れた多くの人々が買い求めました。現在は関東大震災や戦災で失われた横浜の景観や市民の暮らしを知る上で、貴重な歴史資料となっています。',
+          },
+        ],
+        image: '/digital-collection/collection07/group01/group01_023.jpg',
+        identification: 'collection07',
+      },
       // {
       //   kind: '貴重資料',
       //   title: 'Henry More, The Apology of Dr. Henry More',
