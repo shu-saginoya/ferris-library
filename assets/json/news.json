@@ -1,5 +1,17 @@
 [
     {
+        "id": "29",
+        "title": "電子コレクション－The Apology of Dr. Henry Moreページを制作しました",
+        "date": "2021.12.22",
+        "contents": "<p>電子コレクション－The Apology of Dr. Henry Moreページを制作しました。</p>",
+        "actions": [
+            {
+                "link": "The Apology of Dr. Henry Moreページへ",
+                "to": "/digital-collection/collection08"
+            }
+        ]
+    },
+    {
         "id": "28",
         "title": "電子コレクション－横浜絵葉書ページを制作しました",
         "date": "2021.12.22",
