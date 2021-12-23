@@ -24,15 +24,16 @@
                       <div v-html="commentary2"></div>
                     </template>
                   </base-dialog-default>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on, attrs }">
-                  <v-btn href="/digital-collection/collection08/henry_more.zip" target="_blank" v-bind="attrs" v-on="on">
+                  <v-btn
+                    @click.native="
+                      ;(snackbar = true),
+                        (university = 'ZIP'),
+                        (fileUrl = '/digital-collection/collection08/henry_more.zip')
+                    "
+                  >
                     一括ダウンロード
                     <v-icon right>mdi-tray-arrow-down</v-icon>
                   </v-btn>
-                  </template>
-        <span>ZIPファイル&nbsp;28.3MB</span>
-                  </v-tooltip>
                 </v-card-actions>
               </v-col>
               <v-col cols="12" sm="4">
@@ -74,7 +75,17 @@
         </v-card>
       </v-col>
     </v-row>
-    <Tinybox v-model="index" :images="images" loop></Tinybox>
+    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
+      {{ university }}ファイルを開きますか？
+      <template #action="{ attrs }">
+        <v-btn class="mx-3" :href="fileUrl" target="_blank"
+          >はい<v-icon right>mdi-download</v-icon></v-btn
+        >
+        <v-btn icon v-bind="attrs" @click="snackbar = false">
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 
@@ -85,6 +96,11 @@ export default {
     titleLogo: '/digital-collection/collection08/title-logo.png',
     index: null,
     dialog: false,
+    multiLine: true,
+    snackbar: false,
+    university: '',
+    fileUrl: null,
+    timeout: 6000,
     topImage: '/digital-collection/collection08/eyecatching.png',
     commentary1:
       "<p>Henry More, The Apology of Dr. Henry More, Fellow of Christ's College in Cambridge: Wherein Is Contained as Well a More General Account of the Manner and Scope of His Writings, as a Particular Explication of Several Passages in His Grand Mystery of Godliness （London, 1664）</p>",
