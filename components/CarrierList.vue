@@ -22,15 +22,12 @@
             <v-chip small class="mr-2">アクセス</v-chip>{{ item.access }}
           </v-card-text>
           <v-card-actions v-if="item.links">
-            <v-btn
+            <base-btn-open-in-new
               v-for="(link, j) in item.links"
               :key="'link' + j"
-              text
-              :href="link.url"
-              target="_blank"
-            >
-              {{ link.name }}<v-icon right>mdi-open-in-new</v-icon>
-            </v-btn>
+              :link="link.name"
+              :url="link.url"
+            ></base-btn-open-in-new>
           </v-card-actions>
         </div>
       </v-card>

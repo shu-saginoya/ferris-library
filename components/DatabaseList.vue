@@ -40,38 +40,34 @@
                 <v-card-text v-if="item.access">
                   <p class="my-0">
                     利用可能場所：
-                    <span
-                      v-for="(place, p) in item.available"
-                      :key="'ava' + p"
-                    >
+                    <span v-for="(place, p) in item.available" :key="'ava' + p">
                       {{ place }}
                     </span>
                   </p>
                   <p class="my-0">
                     同時アクセス数：{{ item.access }}
                     <span v-if="item.logout" class="orange--text ml-2">
-                      <v-icon small color="orange">mdi-alert-circle-outline</v-icon>
+                      <v-icon small color="orange"
+                        >mdi-alert-circle-outline</v-icon
+                      >
                       利用後は必ずログアウトしてください
                     </span>
                   </p>
                   <span v-if="item.attention">※{{ item.attention }}</span>
                 </v-card-text>
                 <v-card-actions class="flex-wrap">
-                  <v-btn
+                  <base-btn-open-in-new
                     v-for="(link, k) in item.links"
                     :key="'link' + k"
-                    :href="link.url"
-                    target="_blank"
-                    class="mr-2 mb-2"
-                  >
-                    {{ link.name }}
-                    <v-icon right>mdi-open-in-new</v-icon>
-                  </v-btn>
+                    class="mb-2 mb-sm-0"
+                    :link="link.name"
+                    :url="link.url"
+                  ></base-btn-open-in-new>
                   <template v-if="item.documents">
                     <v-btn
                       v-for="(file, n) in item.documents"
                       :key="'file' + n"
-                      class="mr-2 mb-2"
+                      class="mb-2 mb-sm-0"
                       @click.native="
                         ;(snackbar = true),
                           (university = file.type),

@@ -1,37 +1,44 @@
 <template>
   <v-container>
     <base-page-title>{{ title }}</base-page-title>
-<v-row>
-  <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
-      <v-card height="100%">
-        <v-list-item three-line>
-          <v-list-item-content>
-            <div class="text-overline mb-4">{{ item.kind }}</div>
-            <v-list-item-title class="text-h5 mb-1 wrap-text">
-              {{ item.title }}
-            </v-list-item-title>
-            <v-list-item-subtitle v-if="item.subtitle">
-              {{ item.subtitle }}
-            </v-list-item-subtitle>
-          </v-list-item-content>
-          <v-list-item-avatar tile size="120" color="grey lighten-2">
-            <img :src="item.image" />
-          </v-list-item-avatar>
-        </v-list-item>
-        <v-card-text>
-          <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn v-if="item.identification" :to="'/digital-collection/' + item.identification" outlined color="primary">
-            資料をみる
-          </v-btn>
-          <v-btn v-if="item.link" :href="item.link" target="_blank">
-            資料をみる <v-icon>mdi-open-in-new</v-icon></v-btn
-          >
-        </v-card-actions>
-      </v-card>
-  </v-col>
-</v-row>
+    <v-row>
+      <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
+        <v-card height="100%">
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="text-overline mb-4">{{ item.kind }}</div>
+              <v-list-item-title class="text-h5 mb-1 wrap-text">
+                {{ item.title }}
+              </v-list-item-title>
+              <v-list-item-subtitle v-if="item.subtitle">
+                {{ item.subtitle }}
+              </v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-avatar tile size="120" color="grey lighten-2">
+              <img :src="item.image" />
+            </v-list-item-avatar>
+          </v-list-item>
+          <v-card-text>
+            <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              v-if="item.identification"
+              :to="'/digital-collection/' + item.identification"
+              outlined
+              color="primary"
+            >
+              資料をみる
+            </v-btn>
+            <base-btn-open-in-new
+              v-if="item.link"
+              link="資料をみる"
+              :url="item.link"
+            ></base-btn-open-in-new>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

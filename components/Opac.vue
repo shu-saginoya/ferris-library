@@ -32,18 +32,22 @@
                 clearable
               >
                 <template #append-outer>
-                  <v-btn type="submit" class="submit-btn" small fab icon color="primary"><v-icon>mdi-send</v-icon></v-btn>
+                  <v-btn
+                    type="submit"
+                    class="submit-btn"
+                    small
+                    fab
+                    icon
+                    color="primary"
+                    ><v-icon>mdi-send</v-icon></v-btn
+                  >
                 </template>
               </v-text-field>
             </form>
-
-            <v-btn
-              href="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
-              target="_blank"
-            >
-              詳細検索
-              <v-icon right>mdi-open-in-new</v-icon>
-            </v-btn>
+            <base-btn-open-in-new
+              link="詳細検索"
+              url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
+            ></base-btn-open-in-new>
             <base-btn-my-library></base-btn-my-library>
           </v-card-text>
         </v-card>
@@ -52,10 +56,10 @@
         <v-card flat class="d-md-flex justify-start">
           <div>
             <v-card-text>
-              <v-btn href="http://osirabe.net/opac.ferris/" target="_blank">
-                スマートフォン版OPAC
-                <v-icon right>mdi-open-in-new</v-icon>
-              </v-btn>
+              <base-btn-open-in-new
+                link="スマートフォン版OPAC"
+                url="http://osirabe.net/opac.ferris/"
+              ></base-btn-open-in-new>
             </v-card-text>
           </div>
           <div>
