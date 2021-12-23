@@ -12,7 +12,7 @@
             ><template #name>新着情報</template></news-list
           >
           <div class="text-center mt-6">
-            <v-btn to="news" color="primary" outlined>ニュース一覧へ</v-btn>
+            <base-btn-inside link="ニュース一覧へ" to="news"></base-btn-inside>
           </div>
       </v-col>
       <v-col cols="12" lg="6" xl="4">
@@ -25,8 +25,10 @@
 
 <script>
 import news from '@/assets/json/news.json'
+import BaseBtnInside from '~/components/BaseBtnInside.vue'
 
 export default {
+  components: { BaseBtnInside },
   data: () => ({
     title: 'フェリス女学院大学附属図書館',
     news,

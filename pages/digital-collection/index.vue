@@ -22,14 +22,11 @@
             <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
           </v-card-text>
           <v-card-actions>
-            <v-btn
+            <base-btn-inside
               v-if="item.identification"
+              link="資料をみる"
               :to="'/digital-collection/' + item.identification"
-              outlined
-              color="primary"
-            >
-              資料をみる
-            </v-btn>
+            ></base-btn-inside>
             <base-btn-open-in-new
               v-if="item.link"
               link="資料をみる"
