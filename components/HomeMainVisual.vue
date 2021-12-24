@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'MainVisual',
+  name: 'HomeMainVisual',
   data() {
     return {
       loading: true,

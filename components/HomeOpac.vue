@@ -44,11 +44,11 @@
                 </template>
               </v-text-field>
             </form>
-            <base-btn-open-in-new
+            <btn-open-in-new
               link="詳細検索"
               url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
-            ></base-btn-open-in-new>
-            <base-btn-my-library></base-btn-my-library>
+            ></btn-open-in-new>
+            <btn-my-library></btn-my-library>
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -56,10 +56,10 @@
         <v-card flat class="d-md-flex justify-start">
           <div>
             <v-card-text>
-              <base-btn-open-in-new
+              <btn-open-in-new
                 link="スマートフォン版OPAC"
                 url="http://osirabe.net/opac.ferris/"
-              ></base-btn-open-in-new>
+              ></btn-open-in-new>
             </v-card-text>
           </div>
           <div>
@@ -73,7 +73,7 @@
 
 <script>
 export default {
-  name: 'Opac',
+  name: 'HomeOpac',
   data: () => ({
     tab: null,
   }),

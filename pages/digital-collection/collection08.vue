@@ -18,12 +18,12 @@
                 </v-card-title>
                 <v-card-text v-html="commentary1"> </v-card-text>
                 <v-card-actions>
-                  <base-dialog-default>
+                  <btn-dialog-default>
                     <template #name>解説</template>
                     <template #contents>
                       <div v-html="commentary2"></div>
                     </template>
-                  </base-dialog-default>
+                  </btn-dialog-default>
                   <v-btn
                     @click.native="
                       ;(snackbar = true),
@@ -75,6 +75,7 @@
         </v-card>
       </v-col>
     </v-row>
+    <Tinybox v-model="index" :images="images" loop></Tinybox>
     <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
       {{ university }}ファイルを開きますか？
       <template #action="{ attrs }">

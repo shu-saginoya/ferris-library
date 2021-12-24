@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card>
@@ -38,7 +38,7 @@
                 </p>
               </v-card-text>
               <v-card-actions>
-                <base-btn-my-library></base-btn-my-library>
+                <btn-my-library></btn-my-library>
               </v-card-actions>
             </div>
           </v-expand-transition>
@@ -82,7 +82,7 @@
                 </p>
               </v-card-text>
               <v-card-actions>
-                <base-btn-my-library></base-btn-my-library>
+                <btn-my-library></btn-my-library>
               </v-card-actions>
             </div>
           </v-expand-transition>

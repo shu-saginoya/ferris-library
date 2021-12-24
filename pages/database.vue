@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" xl="8">
         <v-toolbar dense flat>
@@ -22,7 +22,7 @@
         </v-toolbar>
       </v-col>
     </v-row>
-    <database-list :items="listfilter"></database-list>
+    <list-database :items="listfilter"></list-database>
     <v-dialog
       v-model="dialog"
       transition="dialog-bottom-transition"

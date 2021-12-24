@@ -1,9 +1,9 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <base-sub-title>サービス一覧</base-sub-title>
+        <text-sub-title>サービス一覧</text-sub-title>
         <v-expansion-panels v-model="panel" accordion multiple>
           <v-expansion-panel v-for="(item, i) in items" :key="i">
             <v-expansion-panel-header>{{
@@ -21,7 +21,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <base-sub-title>貸出冊数</base-sub-title>
+        <text-sub-title>貸出冊数</text-sub-title>
         <v-data-table
           :headers="headersQuantity"
           :items="quantity"
@@ -36,7 +36,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <base-sub-title>貸出期間</base-sub-title>
+        <text-sub-title>貸出期間</text-sub-title>
         <v-data-table
           :headers="headersPeriod"
           :items="period"
@@ -54,7 +54,7 @@
     </v-row>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <base-sub-title>注意事項</base-sub-title>
+        <text-sub-title>注意事項</text-sub-title>
         <v-alert dense outlined type="error">
           貸出手続きを忘れると出口のアラームが鳴ります。
         </v-alert>

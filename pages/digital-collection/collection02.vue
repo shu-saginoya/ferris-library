@@ -33,12 +33,12 @@
             </v-col>
           </v-row>
           <v-card-actions>
-            <base-dialog-default>
+            <btn-dialog-default>
               <template #name>解説</template>
               <template #contents>
                   <p v-for="(text, k) in commentary2" :key="k">{{ text.p }}</p>
               </template>
-            </base-dialog-default>
+            </btn-dialog-default>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -73,9 +73,7 @@
 </template>
 
 <script>
-import BaseDialogDefault from '~/components/BaseDialogDefault.vue'
 export default {
-  components: { BaseDialogDefault },
   data: () => ({
     title: '竹取物語',
     titleLogo: '/digital-collection/collection02/title-logo.gif',

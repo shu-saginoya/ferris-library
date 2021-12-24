@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'BaseSubTitle',
+  name: 'TextSubTitle',
 }
 </script>

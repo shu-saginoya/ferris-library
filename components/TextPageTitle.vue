@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'BasePageTitle',
+  name: 'TextPageTitle',
 }
 </script>
 

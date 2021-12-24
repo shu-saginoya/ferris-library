@@ -1,15 +1,15 @@
 <template>
     <v-container>
       <template v-if="error.statusCode === 404">
-      <base-page-title>
+      <text-page-title>
         {{ pageNotFound }}
-      </base-page-title>
+      </text-page-title>
       <p>お探しのページは、移動または削除された可能性があります。</p>
       </template>
       <template v-else>
-      <base-page-title>
+      <text-page-title>
         {{ otherError }}
-      </base-page-title>
+      </text-page-title>
       </template>
       <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
     </v-container>

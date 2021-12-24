@@ -56,13 +56,13 @@
                   <span v-if="item.attention">※{{ item.attention }}</span>
                 </v-card-text>
                 <v-card-actions class="flex-wrap">
-                  <base-btn-open-in-new
+                  <btn-open-in-new
                     v-for="(link, k) in item.links"
                     :key="'link' + k"
                     class="mb-2 mb-sm-0"
                     :link="link.name"
                     :url="link.url"
-                  ></base-btn-open-in-new>
+                  ></btn-open-in-new>
                   <template v-if="item.documents">
                     <v-btn
                       v-for="(file, n) in item.documents"
@@ -113,7 +113,7 @@
 
 <script>
 export default {
-  name: 'DatabaseList',
+  name: 'ListDatabase',
   props: {
     items: { type: Array, required: true },
   },

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="6" lg="4" xl="3">
         <v-card height="100%">
@@ -22,16 +22,16 @@
             <p v-for="(text, j) in item.texts" :key="j">{{ text.p }}</p>
           </v-card-text>
           <v-card-actions>
-            <base-btn-inside
+            <btn-inside
               v-if="item.identification"
               link="資料をみる"
               :to="'/digital-collection/' + item.identification"
-            ></base-btn-inside>
-            <base-btn-open-in-new
+            ></btn-inside>
+            <btn-open-in-new
               v-if="item.link"
               link="資料をみる"
               :url="item.link"
-            ></base-btn-open-in-new>
+            ></btn-open-in-new>
           </v-card-actions>
         </v-card>
       </v-col>

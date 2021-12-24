@@ -51,20 +51,20 @@
         </v-card-subtitle>
         <v-card-text class="mt-6" v-html="newsCard.contents"> </v-card-text>
         <v-card-actions v-if="newsCard.actions">
-          <base-btn-inside
+          <btn-inside
             v-for="btn in newsCard.actions"
             :key="btn.id"
             :link="btn.link"
             :to="btn.to"
-          ></base-btn-inside>
+          ></btn-inside>
         </v-card-actions>
         <v-card-actions v-if="newsCard.openinnew">
-          <base-btn-open-in-new
+          <btn-open-in-new
             v-for="btn in newsCard.openinnew"
             :key="btn.id"
             :link="btn.link"
             :url="btn.url"
-          ></base-btn-open-in-new>
+          ></btn-open-in-new>
         </v-card-actions>
         <v-card-actions class="justify-end">
           <v-btn text @click="dialog = false">Close</v-btn>
@@ -78,7 +78,7 @@
 import lists from '@/assets/json/news.json'
 
 export default {
-  name: 'NewsList',
+  name: 'ListNews',
   props: {
     pagination: { type: Boolean, default: false },
     pageSize: { type: Number, default: 10 },

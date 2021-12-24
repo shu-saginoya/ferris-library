@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <p>English page is in preparation.</p>
   </v-container>
 </template>

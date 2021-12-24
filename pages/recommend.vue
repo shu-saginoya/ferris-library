@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="9">
         <v-alert border="top" colored-border type="info" elevation="2">

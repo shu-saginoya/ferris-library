@@ -1,10 +1,10 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <news-list :pagination="true"
-          ><template #name>ニュース一覧</template></news-list
+        <list-news :pagination="true"
+          ><template #name>ニュース一覧</template></list-news
         >
       </v-col>
     </v-row>

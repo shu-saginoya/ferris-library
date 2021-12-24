@@ -47,7 +47,7 @@
 import menus from '@/assets/json/menu.json'
 
 export default {
-  name: 'NavigationDrawer',
+  name: 'LayoutNavigationDrawer',
   data: () => ({
     menus,
   }),

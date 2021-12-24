@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'BaseBtnMyLibrary',
+  name: 'BtnMyLibrary',
 }
 </script>
 

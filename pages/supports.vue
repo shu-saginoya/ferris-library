@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <p>図書館では、障がいのある方に以下の支援を行っています。</p>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">

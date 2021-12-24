@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <p>
       図書館のキャリア支援のコーナーです。就職活動に役立つ契約データベースや図書館資料を紹介します。
     </p>
@@ -13,29 +13,29 @@
     <v-tabs-items v-model="tab">
       <v-tab-item>
         <v-container>
-          <base-sub-title>企業や業種を研究する</base-sub-title>
-          <carrier-list :items="items1"></carrier-list>
+          <text-sub-title>企業や業種を研究する</text-sub-title>
+          <list-carrier :items="items1"></list-carrier>
         </v-container>
       </v-tab-item>
       <v-tab-item>
         <v-container>
-          <base-sub-title>最新の時事情報をつかむ</base-sub-title>
-          <carrier-list :items="items2"></carrier-list>
+          <text-sub-title>最新の時事情報をつかむ</text-sub-title>
+          <list-carrier :items="items2"></list-carrier>
         </v-container>
       </v-tab-item>
       <v-tab-item>
         <v-container>
-          <base-sub-title>職種や資格について調べる</base-sub-title>
-          <carrier-list :items="items3"></carrier-list>
+          <text-sub-title>職種や資格について調べる</text-sub-title>
+          <list-carrier :items="items3"></list-carrier>
         </v-container>
       </v-tab-item>
       <v-tab-item>
         <v-container>
-          <base-sub-title>OPACで関連本を集める</base-sub-title>
+          <text-sub-title>OPACで関連本を集める</text-sub-title>
           <p>
             「就職」「キャリア」「職業」「業種」「企業」「仕事」「就活」などのキーワードで検索してみましょう。
           </p>
-          <base-btn-my-library></base-btn-my-library>
+          <btn-my-library></btn-my-library>
           <v-timeline dense>
             <v-timeline-item>
               <v-img
@@ -61,10 +61,7 @@
 </template>
 
 <script>
-import BaseBtnMyLibrary from '~/components/BaseBtnMyLibrary.vue'
-import BaseSubTitle from '~/components/BaseSubTitle.vue'
 export default {
-  components: { BaseSubTitle, BaseBtnMyLibrary },
   data: () => ({
     title: 'キャリア支援',
     tab: null,

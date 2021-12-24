@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'BaseBtnInside',
+  name: 'BtnInside',
   props: {
     link: {
       type: String,

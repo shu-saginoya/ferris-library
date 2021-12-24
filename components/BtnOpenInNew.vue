@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'BaseBtnOpenInNew',
+  name: 'BtnOpenInNew',
   props: {
     link: {
       type: String,

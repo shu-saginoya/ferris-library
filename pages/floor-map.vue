@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <p>緑園本館・山手分室のフロアマップ、緑園本館の「今どこマップ」です</p>
 
     <v-row>
@@ -16,7 +16,7 @@
               location="/pdf/floor-map/floor-map-ryokuen.pdf"
             ></display-pdf>
             <v-sheet align="center" color="grey lighten-3" class="pa-6">
-              <base-sub-title>今どこマップ</base-sub-title>
+              <text-sub-title>今どこマップ</text-sub-title>
               <p>
                 パワーポイントのファイルをダウンロードしますか？
               </p>
@@ -43,9 +43,7 @@
 </template>
 
 <script>
-import BaseSubTitle from '~/components/BaseSubTitle.vue'
 export default {
-  components: { BaseSubTitle },
   data: () => ({
     title: 'フロアマップ',
     tab: null,

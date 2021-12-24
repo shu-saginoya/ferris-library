@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <base-page-title>{{ title }}</base-page-title>
+    <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col v-for="(item, i) in items" :key="i" cols="12" sm="8" md="6" lg="4">
         <v-card>

@@ -1,13 +1,13 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app>
-      <navigation-drawer />
+      <layout-navigation-drawer />
     </v-navigation-drawer>
 
     <v-app-bar app color="white" elevate-on-scroll>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title><img src="@/assets/image/ferris-logo.png" height="35" class="ferris-logo">Ferris University Library</v-toolbar-title>
+      <v-toolbar-title class="pl-2"><img src="@/assets/image/ferris-logo.png" height="32" class="ferris-logo mr-2">フェリス女学院大学附属図書館</v-toolbar-title>
     </v-app-bar>
     <v-main>
       <Nuxt />
@@ -63,6 +63,5 @@ export default {
 }
 .ferris-logo {
   vertical-align: middle;
-  margin-right: .75em;
 }
 </style>

@@ -22,12 +22,12 @@
             <v-chip small class="mr-2">アクセス</v-chip>{{ item.access }}
           </v-card-text>
           <v-card-actions v-if="item.links">
-            <base-btn-open-in-new
+            <btn-open-in-new
               v-for="(link, j) in item.links"
               :key="'link' + j"
               :link="link.name"
               :url="link.url"
-            ></base-btn-open-in-new>
+            ></btn-open-in-new>
           </v-card-actions>
         </div>
       </v-card>
@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'CarrierList',
+  name: 'ListCarrier',
   props: {
     items: { type: Array, required: true },
   },
