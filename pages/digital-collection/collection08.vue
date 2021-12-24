@@ -332,10 +332,4 @@ export default {
 .titleLogo {
   max-width: 100%;
 }
-.notes {
-  margin: 0;
-}
-.notes span {
-  margin-right: 1em;
-}
 </style>

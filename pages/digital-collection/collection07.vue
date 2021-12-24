@@ -50,7 +50,7 @@
                   </v-list-item-avatar>
 
                   <v-list-item-content>
-                    <v-list-item-title>
+                    <v-list-item-title class="wrap-text">
                       {{ item.title }}
                       <sup>{{ item.notes }}</sup>
                     </v-list-item-title>
@@ -200,5 +200,9 @@ export default {
 }
 .notes span {
   margin-right: 1em;
+}
+.wrap-text {
+  word-break: break-all;
+  white-space: normal;
 }
 </style>
