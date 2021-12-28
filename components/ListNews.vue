@@ -50,7 +50,7 @@
           {{ newsCard.date }}
         </v-card-subtitle>
         <v-card-text class="mt-6" v-html="newsCard.contents"> </v-card-text>
-        <v-card-actions v-if="newsCard.actions">
+        <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
           <btn-inside
             v-for="btn in newsCard.actions"
             :key="btn.id"
@@ -58,7 +58,7 @@
             :to="btn.to"
           ></btn-inside>
         </v-card-actions>
-        <v-card-actions v-if="newsCard.openinnew">
+        <v-card-actions v-if="newsCard.openinnew" class="overflow-x-auto">
           <btn-open-in-new
             v-for="btn in newsCard.openinnew"
             :key="btn.id"
