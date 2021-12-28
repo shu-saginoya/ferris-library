@@ -8,7 +8,7 @@
         <v-card height="100%">
           <v-card-title> 所蔵調査 </v-card-title>
           <v-card-text>
-            ご希望の資料が当図書館にない時、国内外の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryからも調査の依頼ができます。
+            ご希望の資料が当図書館にない時、国内外の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
           </v-card-text>
           <v-card-actions class="d-flex flex-wrap">
             <btn-dialog-default>

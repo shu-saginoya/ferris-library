@@ -18,43 +18,23 @@
             <v-card-title>{{ content.name }}</v-card-title>
             <v-card-text>
               <v-alert
-                v-if="content.replenishment"
+                v-for="(service, index2) in content.service"
+                :key="index + '-' + index2"
                 outlined
-                type="warning"
+                :type="service.type"
                 prominent
               >
-                {{ content.replenishment }}
+                <div v-if="service.title" class="text-h6">
+                  {{ service.title }}
+                </div>
+                <div v-if="service.notes" v-html="service.notes"></div>
               </v-alert>
-              <template v-for="(service, index2) in content.service">
-                <v-alert
-                  v-if="service.judgment"
-                  :key="index2"
-                  outlined
-                  type="success"
-                  prominent
-                >
-                  <div class="text-h6">{{ service.title }}</div>
-                  {{ service.notes }}
-                </v-alert>
-
-                <v-alert
-                  v-else
-                  :key="index2"
-                  color="error"
-                  outlined
-                  icon="mdi-close"
-                  prominent
-                >
-                  <div class="text-h6">{{ service.title }}</div>
-                  {{ service.notes }}
-                </v-alert>
-              </template>
             </v-card-text>
             <v-card-actions>
               <v-list v-if="content.pdfs">
                 <v-list-item
                   v-for="(pdf, index3) in content.pdfs"
-                  :key="index3"
+                  :key="'pdf' + index3"
                   link
                   @click="
                     ;(snackbar = true), (fileName = pdf.title), (url = pdf.url)
@@ -62,11 +42,11 @@
                 >
                   <v-list-item-content>
                     <v-list-item-title class="wrap-text">
-                      {{ content.name }}
+                      {{ pdf.title }}
                     </v-list-item-title>
                   </v-list-item-content>
                   <v-list-item-icon>
-                    <v-icon>mdi-file-pdf-box</v-icon>
+                    <v-icon right>mdi-file-pdf-box</v-icon>
                   </v-list-item-icon>
                 </v-list-item>
               </v-list>
@@ -115,18 +95,18 @@ export default {
         service: [
           {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes: '身分証明書をお持ちください。',
           },
           {
             title: '貸出',
-            judgment: true,
+            type: 'success',
             notes:
               'カウンターでライブラリーカードの発行手続きをしてください。貸出冊数・期間については貸出サービスをご覧ください。',
           },
           {
             title: '複写取り寄せ',
-            judgment: false,
+            type: 'error',
             notes: '直接ご来館の上、複写してください。',
           },
         ],
@@ -136,18 +116,18 @@ export default {
         service: [
           {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes: '身分証明書をお持ちください。',
           },
           {
             title: '貸出',
-            judgment: true,
+            type: 'success',
             notes:
               'カウンターでライブラリーカードの発行手続きをしてください。貸出冊数・期間については貸出サービスをご覧ください。',
           },
           {
             title: '複写取り寄せ',
-            judgment: false,
+            type: 'error',
             notes: '直接ご来館の上、複写してください。',
           },
         ],
@@ -156,25 +136,29 @@ export default {
         name: '他大学所属の教員、学生の方',
         service: [
           {
+            type: 'warning',
+            notes: 'ご所属の大学図書館を通じてお申し込みの上、ご利用ください。',
+          },
+          {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes:
-              '所属の大学図書館発行の紹介状と学生証・身分証明書をお持ちください。また、事前に所属の図書館を通じて来館日と利用資料をお知らせください。',
+              '<strong>所属の大学図書館発行の紹介状</strong>と学生証・身分証明書をお持ちください。また、事前に所属の図書館を通じて来館日と利用資料をお知らせください。',
           },
           {
             title: '貸出',
-            judgment: false,
+            type: 'error',
             notes: '館外貸出はできません。図書館間貸出をご利用ください。',
           },
           {
             title: '複写取り寄せ',
-            judgment: true,
+            type: 'success',
             notes:
               '所属の大学図書館を通じて、著作権の範囲で資料のコピーを取り寄せることが出来ます。',
           },
           {
             title: '図書館間貸出',
-            judgment: true,
+            type: 'success',
             notes:
               '所属の大学図書館に資料をお送りします。楽譜・AV資料・雑誌・貴重書は対象外です。お送りした資料は館内利用（閲覧）のみ可能です。持ち出し、複写はできません。',
           },
@@ -185,13 +169,13 @@ export default {
         service: [
           {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes:
-              '学生は大学院女子学生、学部女子学生に限ります。共通閲覧証と学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため、1月、7月を除きます。',
+              '学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。共通閲覧証と学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため、1月、7月を除きます。',
           },
           {
             title: '貸出',
-            judgment: false,
+            type: 'error',
             notes: '館外貸出はできません。図書館間貸出をご利用ください。',
           },
         ],
@@ -201,37 +185,45 @@ export default {
         service: [
           {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes:
-              '学生は大学院女子学生、学部女子学生に限ります。学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため1月、7月を除きます。',
+              '学生は<strong>大学院女子学生</strong>、<strong>学部女子学生</strong>に限ります。学生証・身分証明書をお持ちの上、直接ご来館ください。定期試験期間のため1月、7月を除きます。',
           },
           {
             title: '貸出',
-            judgment: false,
+            type: 'error',
             notes: '館外貸出はできません。図書館間貸出をご利用ください。',
           },
         ],
         pdfs: [
           {
-            title: 'コンソーシアム利用案内',
+            title: 'フェリス女学院大学附属図書館コンソーシアム利用案内',
             url: 'pdf/consortium/ferris.pdf',
           },
         ],
       },
       {
         name: '一般の方',
-        replenishment:
-          '原則、一般の方のご来館は、ご遠慮いただいております。ただし、特定テーマを持って研究している方で、当館でしか所蔵していない資料を希望する方に限りご利用いただけます。ご来館前に、必ずお近くの公共図書館を通じて「利用希望資料」「利用希望日時」をお知らせ下さい。（2021年5月12日現在）',
         service: [
           {
+            type: 'warning',
+            notes:
+              '現在、コロナウィルス感染拡大防止のため、一般の方のご来館はご遠慮いただいております。（2021年5月12日現在）',
+          },
+          {
+            type: 'warning',
+            notes:
+              '原則、一般の方のご来館は、ご遠慮いただいております。ただし、特定テーマを持って研究している方で、当館でしか所蔵していない資料を希望する方に限りご利用いただけます。ご来館前に、<strong>必ずお近くの公共図書館を通じて「利用希望資料」「利用希望日時」をお知らせ下さい。</strong>',
+          },
+          {
             title: '来館 館内複写',
-            judgment: true,
+            type: 'success',
             notes:
               '「利用希望資料」「利用希望日時」を明記した公共図書館など公的機関発行の紹介状と、身分証明書をお持ちください。',
           },
           {
             title: '貸出',
-            judgment: false,
+            type: 'error',
             notes: '館外貸出はできません。',
           },
         ],
