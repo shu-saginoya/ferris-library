@@ -5,6 +5,9 @@
         <home-main-visual></home-main-visual>
       </v-col>
       <v-col cols="12" xl="8">
+        <home-calender></home-calender>
+      </v-col>
+      <v-col cols="12" xl="8">
         <info-covid-19></info-covid-19>
       </v-col>
     </v-row>
