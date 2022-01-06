@@ -30,7 +30,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-pdf.js', mode: 'client' },
     { src: '~/plugins/tinybox.js', mode: 'client' },
-    '~plugins/day.js'
+    { src: '~/plugins/day.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
