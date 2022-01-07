@@ -11,7 +11,10 @@
         <v-card-text>
           <p class="library-name">緑園本館</p>
           <ul class="events">
-            <li v-for="(item, i) in ryokuenEvents" :key="'ryokuen' + i">
+            <li
+              v-for="(item, i) in todayEvents('ryokuen')"
+              :key="'ryokuen' + i"
+            >
               {{ item }}
             </li>
           </ul>
@@ -21,7 +24,7 @@
         <v-card-text>
           <p class="library-name">山手分室</p>
           <ul class="events">
-            <li v-for="(item, i) in yamateEvents" :key="'ryokuen' + i">
+            <li v-for="(item, i) in todayEvents('yamate')" :key="'yamate' + i">
               {{ item }}
             </li>
           </ul>
@@ -46,42 +49,26 @@ export default {
     ryokuen,
     yamate,
   }),
-  computed: {
-    ryokuenEvents() {
-      const events = this.ryokuen
+  methods: {
+    todayEvents(libraryName) {
+      let events = []
       const todayEvents = []
-      const self = this
+      const today = this.$dayjs()
+      switch (libraryName) {
+        case 'ryokuen':
+          events = this.ryokuen
+          break
+        case 'yamate':
+          events = this.yamate
+          break
+      }
       events.forEach(function (value) {
-        if (
-          value.end !== undefined &&
-          self.$dayjs().isBetween(value.start, value.end, null, '[]')
-        ) {
-          todayEvents.push(value.name)
-        }
-        else if (
-          value.end === undefined &&
-          self.$dayjs().isBetween(value.start, value.start, null, '[]')
-        ) {
-          todayEvents.push(value.name)
-        }
-      })
-      return todayEvents
-    },
-    yamateEvents() {
-      const events = this.yamate
-      const todayEvents = []
-      const self = this
-      events.forEach(function (value) {
-        if (
-          value.end !== undefined &&
-          self.$dayjs().isBetween(value.start, value.end, null, '[]')
-        ) {
-          todayEvents.push(value.name)
-        }
-        else if (
-          value.end === undefined &&
-          self.$dayjs().isBetween(value.start, value.start, null, '[]')
-        ) {
+        const start = new Date(value.start)
+        start.setHours(0, 0, 0)
+        const end =
+          value.end !== undefined ? new Date(value.end) : new Date(value.start)
+        end.setHours(23, 59, 59)
+        if (today.isBetween(start, end, null, '[)')) {
           todayEvents.push(value.name)
         }
       })
@@ -100,7 +87,7 @@ export default {
   border-radius: 4px;
   padding: 4px;
   margin: 0;
-  background-color: #B71C1C;
+  background-color: #b71c1c;
   color: white;
 }
 .events {
