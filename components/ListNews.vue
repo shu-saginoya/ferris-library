@@ -1,15 +1,12 @@
 <template>
   <v-card>
     <v-skeleton-loader
-      type="list-item, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line"
+      type="list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line"
       :loading="loading"
     >
-      <v-subheader><slot name="name">News</slot></v-subheader>
-    </v-skeleton-loader>
-
     <v-list>
-      <template v-for="info in displayLists">
-        <v-divider :key="'divider' + info.id"></v-divider>
+      <template v-for="(info, index) in displayLists">
+        <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
         <v-list-item
           :key="'info' + info.id"
           two-line
@@ -33,6 +30,7 @@
         </v-list-item>
       </template>
     </v-list>
+    </v-skeleton-loader>
     <v-card-text v-if="pagination">
       <v-pagination
         v-model="page"
