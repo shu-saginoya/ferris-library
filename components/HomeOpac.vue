@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-tabs v-model="tab">
-      <v-tab> 検索フォーム </v-tab>
+      <v-tab> 検索 </v-tab>
       <v-tab> スマートフォン </v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">

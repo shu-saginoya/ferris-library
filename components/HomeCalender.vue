@@ -1,42 +1,51 @@
 <template>
-  <v-card>
-    <v-row class="text-center">
-      <v-col cols="3">
-        <v-card-text>
-          <p class="today">{{ $dayjs().format('YYYY年M月D日dddd') }}</p>
-          <p>本日の開館時間</p>
-        </v-card-text>
+  <v-container class="grey lighten-3">
+    <v-row justify="center" dense>
+      <v-col cols="12" md="4">
+        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+          <v-card-text class="text-center pb-0">
+            <div class="text-h6"><v-icon left>mdi-calendar-multiselect</v-icon>本日の開館時間</div>
+            <p class="mb-0">{{ $dayjs().format('YYYY年M月D日（dd）') }}</p>
+          </v-card-text>
+          <v-card-actions class="justify-center">
+            <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
+          </v-card-actions>
+        </v-card>
       </v-col>
-      <v-col cols="3">
-        <v-card-text>
-          <p class="library-name">緑園本館</p>
-          <ul class="events">
-            <li
-              v-for="(item, i) in todayEvents('ryokuen')"
-              :key="'ryokuen' + i"
-            >
-              {{ item }}
-            </li>
-          </ul>
-        </v-card-text>
+      <v-col cols="12" sm="6" md="4">
+        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+          <v-card-text class="text-center">
+            <p class="text-h6 mb-0">緑園本館</p>
+            <ul class="events">
+              <li
+                v-for="(item, i) in todayEvents('ryokuen')"
+                :key="'ryokuen' + i"
+                class="grey lighten-4"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
       </v-col>
-      <v-col cols="3">
-        <v-card-text>
-          <p class="library-name">山手分室</p>
-          <ul class="events">
-            <li v-for="(item, i) in todayEvents('yamate')" :key="'yamate' + i">
-              {{ item }}
-            </li>
-          </ul>
-        </v-card-text>
-      </v-col>
-      <v-col cols="3">
-        <v-card-actions>
-          <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
-        </v-card-actions>
+      <v-col cols="12" sm="6" md="4">
+        <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
+          <v-card-text class="text-center">
+            <p class="text-h6 mb-0">山手分室</p>
+            <ul class="events">
+              <li
+                v-for="(item, i) in todayEvents('yamate')"
+                :key="'yamate' + i"
+                class="grey lighten-4"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </v-card-text>
+        </v-card>
       </v-col>
     </v-row>
-  </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -68,7 +77,7 @@ export default {
         const end =
           value.end !== undefined ? new Date(value.end) : new Date(value.start)
         end.setHours(23, 59, 59)
-        if (today.isBetween(start, end, null, '[)')) {
+        if (today.isBetween(start, end, null, '[]')) {
           todayEvents.push(value.name)
         }
       })
@@ -79,23 +88,11 @@ export default {
 </script>
 
 <style scoped>
-.today {
-  font-weight: bold;
-  color: gray;
-}
-.library-name {
-  border-radius: 4px;
-  padding: 4px;
-  margin: 0;
-  background-color: #b71c1c;
-  color: white;
-}
 .events {
   list-style-type: none;
   padding: 0;
 }
 .events li {
-  border: gray 1px solid;
   border-radius: 4px;
   padding: 4px;
   margin: 4px 0;
