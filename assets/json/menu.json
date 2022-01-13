@@ -6,7 +6,7 @@
         "push": "/"
     },
     {
-        "category": "施設案内",
+        "category": "施設について",
         "category-eng": "Facility",
         "icon": "mdi-library",
         "contents": [
@@ -21,11 +21,6 @@
                 "push": "/calender"
             },
             {
-                "title": "ラーニングコモンズ",
-                "eng": "Learning commons",
-                "push": "/learning-commons"
-            },
-            {
                 "title": "年間予定",
                 "eng": "Schedule",
                 "push": "/schedule"
@@ -34,6 +29,11 @@
                 "title": "フロアマップ",
                 "eng": "Floor map",
                 "push": "/floor-map"
+            },
+            {
+                "title": "ラーニングコモンズ",
+                "eng": "Learning commons",
+                "push": "/learning-commons"
             },
             {
                 "title": "パンフレット（学生対象）",
