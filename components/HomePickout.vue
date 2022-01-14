@@ -1,13 +1,7 @@
 <template>
-  <v-row no-gutters>
-    <v-col
-      v-for="(item, index) in pickOut"
-      :key="'pickout-' + index"
-      cols="12"
-      sm="6"
-      md="4"
-    >
-      <v-card height="100%" tile outlined :to="item.to" hover>
+  <v-slide-group multiple show-arrows>
+    <v-slide-item v-for="(item, index) in pickOut" :key="'pickout-' + index">
+      <v-card outlined :to="item.to" hover class="mx-1" width="240">
         <v-img
           :src="item.image"
           height="160px"
@@ -18,8 +12,8 @@
         </v-img>
         <v-card-text>{{ item.text }}</v-card-text>
       </v-card>
-    </v-col>
-  </v-row>
+    </v-slide-item>
+  </v-slide-group>
 </template>
 
 <script>
@@ -44,6 +38,12 @@ export default {
         to: '/digital-collection',
         text: '図書館所蔵の貴重な資料をWEBから閲覧できます',
         image: require(`@/assets/image/pickout/home-pickout-digital-collection.png`),
+      },
+      {
+        name: 'レファレンスサービス',
+        to: '/reference',
+        text: 'ご希望の資料が当図書館にない場合も資料を探すお手伝いができます',
+        image: require(`@/assets/image/pickout/home-pickout-reference.png`),
       },
     ],
   }),
