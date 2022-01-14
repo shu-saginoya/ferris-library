@@ -13,30 +13,25 @@
         </template>
 
         <template v-for="(content, j) in menu.contents">
-        <v-list-item
-          v-if="content.push"
-          :key="i + j"
-          :to="content.push"
-          link
-        >
-          <v-list-item-title v-text="content.title"></v-list-item-title>
-          <v-list-item-icon v-if="content.icon">
-            <v-icon v-text="content.icon"></v-icon>
-          </v-list-item-icon>
-        </v-list-item>
+          <v-list-item v-if="content.push" :key="i + j" :to="content.push" link>
+            <v-list-item-title v-text="content.title"></v-list-item-title>
+            <v-list-item-icon v-if="content.icon">
+              <v-icon v-text="content.icon"></v-icon>
+            </v-list-item-icon>
+          </v-list-item>
 
-        <v-list-item
-          v-if="content.href"
-          :key="i + j"
-          :href="content.href"
-          target="_blank"
-          link
-        >
-          <v-list-item-title v-text="content.title"></v-list-item-title>
-          <v-list-item-icon v-if="content.icon">
-            <v-icon v-text="content.icon"></v-icon>
-          </v-list-item-icon>
-        </v-list-item>
+          <v-list-item
+            v-if="content.href"
+            :key="i + j"
+            :href="content.href"
+            target="_blank"
+            link
+          >
+            <v-list-item-title v-text="content.title"></v-list-item-title>
+            <v-list-item-icon v-if="content.icon">
+              <v-icon v-text="content.icon"></v-icon>
+            </v-list-item-icon>
+          </v-list-item>
         </template>
       </v-list-group>
     </template>
