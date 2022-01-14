@@ -2,7 +2,9 @@
   <v-card outlined color="grey lighten-3">
     <v-card-actions>
       <v-btn block text @click="show = !show">
-        新型コロナウイルス関連のお知らせ
+        <v-skeleton-loader type="text" :loading="loading">
+          新型コロナウイルス関連のお知らせ
+        </v-skeleton-loader>
         <v-spacer></v-spacer>
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
@@ -91,6 +93,7 @@
 export default {
   name: 'TextCovid19',
   data: () => ({
+    loading: true,
     show: false,
     subContentsDialog: false,
     subContentsCard: [],
@@ -166,11 +169,14 @@ export default {
         actions: [
           {
             link: '学外から受けられるサポート',
-            to: '/off-campus'
-          }
-        ]
+            to: '/off-campus',
+          },
+        ],
       },
     ],
   }),
+  mounted() {
+    this.loading = false
+  },
 }
 </script>

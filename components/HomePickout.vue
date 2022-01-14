@@ -2,15 +2,17 @@
   <v-slide-group multiple show-arrows>
     <v-slide-item v-for="(item, index) in pickOut" :key="'pickout-' + index">
       <v-card outlined :to="item.to" hover class="mx-1" width="240">
-        <v-img
-          :src="item.image"
-          height="160px"
-          class="align-end"
-          gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
-        >
-          <v-card-title>{{ item.name }}</v-card-title>
-        </v-img>
-        <v-card-text>{{ item.text }}</v-card-text>
+        <v-skeleton-loader type="card" :loading="loading">
+          <v-img
+            :src="item.image"
+            height="160px"
+            class="align-end"
+            gradient="to bottom, rgba(255,255,255,.2), rgba(255,255,255,1)"
+          >
+            <v-card-title>{{ item.name }}</v-card-title>
+          </v-img>
+          <v-card-text>{{ item.text }}</v-card-text>
+        </v-skeleton-loader>
       </v-card>
     </v-slide-item>
   </v-slide-group>
@@ -20,6 +22,7 @@
 export default {
   name: 'HomePickout',
   data: () => ({
+    loading: true,
     pickOut: [
       {
         name: '貸出サービス',
@@ -47,5 +50,8 @@ export default {
       },
     ],
   }),
+  mounted() {
+    this.loading = false
+  },
 }
 </script>
