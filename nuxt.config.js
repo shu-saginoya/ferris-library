@@ -71,5 +71,13 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  // Nuxt ルーター (vue-router)をカスタマイズ
+  router: {
+    // ページ間のスクロール位置について強制的にトップまでスクロールさせる
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   }
 }
