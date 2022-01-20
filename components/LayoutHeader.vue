@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-navigation-drawer v-model="drawer" app>
-      <layout-navigation-drawer></layout-navigation-drawer>
+      <layout-navigation-drawer :english-page="englishPage"></layout-navigation-drawer>
     </v-navigation-drawer>
     <v-app-bar app color="white" elevate-on-scroll>
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
@@ -12,7 +12,7 @@
           height="32"
           class="ferris-logo mr-2"
         />
-        {{ siteTitle }}
+         {{ siteTitle }}
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -22,14 +22,20 @@
 export default {
   name: 'LayoutHeader',
   props: {
-    siteTitle: {
-      type: String,
-      default: 'フェリス女学院大学附属図書館',
-    }
+    englishPage: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     drawer: null,
+    siteTitle: '',
   }),
+  mounted() {
+    this.siteTitle = this.englishPage
+      ? 'Ferris University Library'
+      : 'フェリス女学院大学附属図書館'
+  },
 }
 </script>
 

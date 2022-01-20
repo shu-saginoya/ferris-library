@@ -1,0 +1,95 @@
+[
+    {
+        "category": "Home",
+        "id": "home",
+        "icon": "mdi-home",
+        "push": "/english"
+    },
+    {
+        "category": "Facility",
+        "id": "facility",
+        "icon": "mdi-library",
+        "contents": [
+            {
+                "title": "Contact",
+                "id": "contact",
+                "push": "/english/contact"
+            },
+            {
+                "title": "Library Carendar",
+                "id": "calender",
+                "push": "/english/calender"
+            },
+            {
+                "title": "Locations of materials and facilities",
+                "id": "floorMap",
+                "push": "/english/floor-map"
+            }
+        ]
+    },
+    {
+        "category": "Service",
+        "id": "service",
+        "icon": "mdi-information",
+        "contents": [
+            {
+                "title": "Lending Service",
+                "id": "lendingService",
+                "push": "/english/service"
+            },
+            {
+                "title": "Reference Service",
+                "id": "reference",
+                "push": "/english/reference"
+            },
+            {
+                "title": "Tour and Guidance",
+                "id": "tour",
+                "push": "/english/tour"
+            },
+            {
+                "title": "Various application form",
+                "id": "application",
+                "href": "https://www2.library.ferris.ac.jp/gate?module=portal&path=ml/top&method=open",
+                "icon": "mdi-open-in-new"
+            }
+        ]
+    },
+    {
+        "category": "Information search",
+        "id": "retrieval",
+        "icon": "mdi-text-box-search-outline",
+        "push": "/english/retrieval"
+    },
+    {
+        "category": "Links",
+        "id": "links",
+        "icon": "mdi-connection",
+        "contents": [
+            {
+                "title": "OPAC",
+                "id": "opac",
+                "href": "https://www2.library.ferris.ac.jp/top/index?method=change&langMode=ENG",
+                "icon": "mdi-open-in-new"
+            },
+            {
+                "title": "FAIR：Ferris Academic Intelligence repository",
+                "id": "fair",
+                "href": "https://ferris.repo.nii.ac.jp/",
+                "icon": "mdi-open-in-new"
+            },
+            {
+                "title": "Ferris University",
+                "id": "ferrisUniversity",
+                "href": "https://www.ferris.ac.jp/en/",
+                "icon": "mdi-open-in-new"
+            }
+        ]
+    },
+    {
+        "category": "日本語ページ",
+        "id": "japanese",
+        "icon": "mdi-translate",
+        "push": "/"
+    }
+]
