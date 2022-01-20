@@ -39,7 +39,6 @@ export default {
   layout: 'english',
   data: () => ({
     title: 'Reference Service',
-    show: false,
     items: [
       {
         title: '',
