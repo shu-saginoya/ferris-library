@@ -11,7 +11,7 @@
       :height="height"
     >
       <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
-        <v-row class="fill-height" align="center" justify="center">
+        <v-row v-if="!englishPage" class="fill-height" align="center" justify="center">
           <img src="@/assets/image/site-logo.png" width="350" height="113" />
         </v-row>
       </v-carousel-item>
@@ -22,6 +22,12 @@
 <script>
 export default {
   name: 'HomeMainVisual',
+  props: {
+    englishPage: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       loading: true,

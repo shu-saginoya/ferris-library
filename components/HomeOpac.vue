@@ -2,8 +2,8 @@
   <v-card>
     <v-skeleton-loader type="article" :loading="loading">
       <v-tabs v-model="tab">
-        <v-tab> 検索 </v-tab>
-        <v-tab> スマートフォン </v-tab>
+        <v-tab v-text="englishPage ? 'Search' : '検索'"></v-tab>
+        <v-tab v-text="englishPage ? 'Smartphone' : 'スマートフォン'"></v-tab>
       </v-tabs>
       <v-tabs-items v-model="tab">
         <v-tab-item>
@@ -24,8 +24,8 @@
                 <v-text-field
                   id="QSearch"
                   name="word"
-                  label="クイックリサーチ"
-                  placeholder="キーワードを入力してください"
+                  :label="englishPage ? 'Quick research' : 'クイックリサーチ'"
+                  :placeholder="englishPage ? 'Please enter a keyword' : 'キーワードを入力してください'"
                   outlined
                   dense
                   append-icon="mdi-open-in-new"
@@ -46,7 +46,7 @@
                 </v-text-field>
               </form>
               <btn-open-in-new
-                link="詳細検索"
+                :link="englishPage ? 'Detailed search' : '詳細検索'"
                 url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
               ></btn-open-in-new>
               <btn-my-library></btn-my-library>
@@ -58,7 +58,7 @@
             <div>
               <v-card-text>
                 <btn-open-in-new
-                  link="スマートフォン版OPAC"
+                  :link="englishPage ? 'Smartphone OPAC' : 'スマートフォン版OPAC'"
                   url="http://osirabe.net/opac.ferris/"
                 ></btn-open-in-new>
               </v-card-text>
@@ -76,6 +76,12 @@
 <script>
 export default {
   name: 'HomeOpac',
+  props: {
+    englishPage: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     loading: true,
     tab: null,
