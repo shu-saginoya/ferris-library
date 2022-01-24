@@ -11,7 +11,7 @@
         "icon": "mdi-library",
         "contents": [
             {
-                "title": "Contact",
+                "title": "Contact Us",
                 "id": "contact",
                 "push": "/english/contact"
             },
