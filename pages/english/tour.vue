@@ -10,7 +10,7 @@
         lg="8"
         xl="6"
       >
-        <card-tour :item="item" englishPage="true"></card-tour>
+        <card-tour :item="item" :english-page="true"></card-tour>
       </v-col>
     </v-row>
   </v-container>

@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12" xl="8">
-        <home-main-visual english-page="true"></home-main-visual>
+        <home-main-visual :english-page="true"></home-main-visual>
       </v-col>
     </v-row>
     <v-row>
