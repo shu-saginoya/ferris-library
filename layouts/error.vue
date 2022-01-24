@@ -11,12 +11,15 @@
         {{ otherError }}
       </text-page-title>
       </template>
-      <v-btn depressed color="primary" to="/"> ホームへもどる </v-btn>
+      <btn-inside link="ホームへもどる" to="/" class="mb-2"></btn-inside>
+      <btn-inside link="Return to home page" to="/english" class="mb-2"></btn-inside>
     </v-container>
 </template>
 
 <script>
+import BtnInside from '~/components/BtnInside.vue'
 export default {
+  components: { BtnInside },
   props: {
     error: {
       type: Object,
