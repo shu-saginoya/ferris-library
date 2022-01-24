@@ -1,9 +1,5 @@
 <template>
   <v-card>
-    <v-skeleton-loader
-      type="list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line, divider, list-item-two-line"
-      :loading="loading"
-    >
     <v-list>
       <template v-for="(info, index) in displayLists">
         <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
@@ -20,7 +16,6 @@
             <v-list-item-subtitle>
               {{ info.date }}
             </v-list-item-subtitle>
-            
           </v-list-item-content>
           <v-list-item-action>
             <v-icon color="grey lighten-1"
@@ -30,7 +25,6 @@
         </v-list-item>
       </template>
     </v-list>
-    </v-skeleton-loader>
     <v-card-text v-if="pagination">
       <v-pagination
         v-model="page"
@@ -82,7 +76,6 @@ export default {
     pageSize: { type: Number, default: 10 },
   },
   data: () => ({
-    loading: true,
     page: 1,
     length: 0,
     lists,
@@ -91,8 +84,6 @@ export default {
     newsCard: [],
   }),
   mounted() {
-    this.loading = false
-
     this.length = Math.ceil(this.lists.length / this.pageSize)
 
     this.displayLists = this.lists.slice(

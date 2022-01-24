@@ -3,53 +3,47 @@
     <v-row justify="center" dense>
       <v-col cols="12" md="4">
         <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
-          <v-skeleton-loader type="article" :loading="loading">
-            <v-card-text class="text-center pb-0">
-              <div class="text-h6">
-                <v-icon left>mdi-calendar-multiselect</v-icon>本日の開館時間
-              </div>
-              <p class="mb-0">{{ $dayjs().format('YYYY年M月D日（dd）') }}</p>
-            </v-card-text>
-            <v-card-actions class="justify-center">
-              <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
-            </v-card-actions>
-          </v-skeleton-loader>
+          <v-card-text class="text-center pb-0">
+            <div class="text-h6">
+              <v-icon left>mdi-calendar-multiselect</v-icon>本日の開館時間
+            </div>
+            <p class="mb-0">{{ $dayjs().format('YYYY年M月D日（dd）') }}</p>
+          </v-card-text>
+          <v-card-actions class="justify-center">
+            <btn-inside link="カレンダーをみる" to="/calender"></btn-inside>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
         <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
-          <v-skeleton-loader type="article" :loading="loading">
-            <v-card-text class="text-center">
-              <p class="text-h6 mb-0">緑園本館</p>
-              <ul class="events">
-                <li
-                  v-for="(item, i) in todayEvents('ryokuen')"
-                  :key="'ryokuen' + i"
-                  class="grey lighten-4"
-                >
-                  {{ item }}
-                </li>
-              </ul>
-            </v-card-text>
-          </v-skeleton-loader>
+          <v-card-text class="text-center">
+            <p class="text-h6 mb-0">緑園本館</p>
+            <ul class="events">
+              <li
+                v-for="(item, i) in todayEvents('ryokuen')"
+                :key="'ryokuen' + i"
+                class="grey lighten-4"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6" md="4">
         <v-card height="100%" color="rgba(255, 255, 255, 0.8)" outlined tile>
-          <v-skeleton-loader type="article" :loading="loading">
-            <v-card-text class="text-center">
-              <p class="text-h6 mb-0">山手分室</p>
-              <ul class="events">
-                <li
-                  v-for="(item, i) in todayEvents('yamate')"
-                  :key="'yamate' + i"
-                  class="grey lighten-4"
-                >
-                  {{ item }}
-                </li>
-              </ul>
-            </v-card-text>
-          </v-skeleton-loader>
+          <v-card-text class="text-center">
+            <p class="text-h6 mb-0">山手分室</p>
+            <ul class="events">
+              <li
+                v-for="(item, i) in todayEvents('yamate')"
+                :key="'yamate' + i"
+                class="grey lighten-4"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -65,11 +59,7 @@ export default {
   data: () => ({
     ryokuen,
     yamate,
-    loading: true,
   }),
-  mounted() {
-    this.loading = false
-  },
   methods: {
     todayEvents(libraryName) {
       let events = []

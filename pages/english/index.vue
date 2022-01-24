@@ -1,20 +1,23 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col cols="12" xl="8">
-        <home-main-visual :english-page="true"></home-main-visual>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" xl="8">
-        <div class="text-center text-md-left text-h5 mb-2">
-          <v-skeleton-loader type="heading" :loading="loading">
+    <v-skeleton-loader
+      type="image, card-heading, list-item-two-line, list-item-two-line, list-item-two-line"
+      :loading="loading"
+    >
+      <v-row>
+        <v-col cols="12" xl="8">
+          <home-main-visual :english-page="true"></home-main-visual>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="12" xl="8">
+          <div class="text-center text-md-left text-h5 mb-2">
             <v-icon left>mdi-library-shelves</v-icon>OPAC Detailed search
-          </v-skeleton-loader>
-        </div>
-        <home-opac english-page="true"></home-opac>
-      </v-col>
-    </v-row>
+          </div>
+          <home-opac english-page="true"></home-opac>
+        </v-col>
+      </v-row>
+    </v-skeleton-loader>
   </v-container>
 </template>
 

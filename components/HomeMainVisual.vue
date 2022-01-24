@@ -1,22 +1,21 @@
 <template>
-  <v-skeleton-loader
+  <v-carousel
+    cycle
+    hide-delimiter-background
+    show-arrows-on-hover
     :height="height"
-    type="image"
-    :loading="loading"
   >
-    <v-carousel
-      cycle
-      hide-delimiter-background
-      show-arrows-on-hover
-      :height="height"
-    >
-      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
-        <v-row v-if="!englishPage" class="fill-height" align="center" justify="center">
-          <img src="@/assets/image/site-logo.png" width="350" height="113" />
-        </v-row>
-      </v-carousel-item>
-    </v-carousel>
-  </v-skeleton-loader>
+    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+      <v-row
+        v-if="!englishPage"
+        class="fill-height"
+        align="center"
+        justify="center"
+      >
+        <img src="@/assets/image/site-logo.png" width="350" height="113" />
+      </v-row>
+    </v-carousel-item>
+  </v-carousel>
 </template>
 
 <script>
@@ -30,7 +29,6 @@ export default {
   },
   data() {
     return {
-      loading: true,
       height: '260',
       items: [
         {
@@ -59,9 +57,6 @@ export default {
         },
       ],
     }
-  },
-  mounted() {
-    this.loading = false
   },
 }
 </script>
