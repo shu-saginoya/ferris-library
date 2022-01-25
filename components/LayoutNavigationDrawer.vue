@@ -14,7 +14,7 @@
 
         <template v-for="content in menu.contents">
           <v-list-item
-            :key="menu.id + content.id"
+            :key="content.id"
             :to="content.push ? content.push : false"
             :href="content.href ? content.href : false"
             :target="content.href ? '_blank' : false"

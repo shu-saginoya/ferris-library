@@ -11,19 +11,14 @@
         "icon": "mdi-library",
         "contents": [
             {
-                "title": "Contact Us",
+                "title": "Contact / Access",
                 "id": "contact",
                 "push": "/english/contact"
             },
             {
-                "title": "Library Carendar",
+                "title": "Carendar",
                 "id": "calender",
                 "push": "/english/calender"
-            },
-            {
-                "title": "Locations of materials and facilities",
-                "id": "floorMap",
-                "push": "/english/floor-map"
             }
         ]
     },
@@ -57,9 +52,9 @@
     },
     {
         "category": "Information search",
-        "id": "retrieval",
+        "id": "informationSearch",
         "icon": "mdi-text-box-search-outline",
-        "push": "/english/retrieval"
+        "push": "/english/information-search"
     },
     {
         "category": "Links",

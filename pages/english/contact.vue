@@ -13,7 +13,7 @@
 export default {
   layout: 'english',
   data: () => ({
-    title: 'Contact Us',
+    title: 'Contact / Access',
     items: [
       {
         name: 'Ryokuen Library',
