@@ -1,41 +1,7 @@
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
-    <v-stepper v-model="active" vertical non-linear>
-      <template v-for="(item, i) in items">
-        <v-stepper-step
-          :key="'item' + i"
-          editable
-          :complete="active > item.step"
-          :step="item.step"
-        >
-          {{ item.subTitle }}
-        </v-stepper-step>
-        <v-stepper-content :key="'itemContent' + i" :step="item.step">
-          <ul class="link-list">
-            <li v-for="(listItem, j) in item.list" :key="'listItem' + i + j">
-              <v-btn
-                :to="listItem.push"
-                :href="listItem.href"
-                :target="listItem.href ? '_blank' : '_self'"
-                outlined
-              >
-                {{ listItem.name }}
-                <v-icon v-show="listItem.icon" right>
-                  {{ listItem.icon }}</v-icon
-                >
-              </v-btn>
-              <p class="grey--text">{{ listItem.comment }}</p>
-            </li>
-          </ul>
-          <div class="text-right">
-            <v-btn color="primary" @click="active = item.step + 1">
-              つぎへ
-            </v-btn>
-          </div>
-        </v-stepper-content>
-      </template>
-    </v-stepper>
+    <list-information-search :items="items"></list-information-search>
   </v-container>
 </template>
 
@@ -43,7 +9,6 @@
 export default {
   data: () => ({
     title: '情報検索',
-    active: 1,
     items: [
       {
         subTitle: '学内の図書、雑誌、新聞を探す',
