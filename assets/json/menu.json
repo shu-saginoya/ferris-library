@@ -125,6 +125,16 @@
                 "id": "newspaper",
                 "push": "/newspaper",
                 "icon": "mdi-file-pdf-box"
+            },
+            {
+                "title": "一次情報リンク集",
+                "id": "linksCollection1",
+                "push": "/links-collection-1"
+            },
+            {
+                "title": "二次情報リンク集",
+                "id": "linksCollection2",
+                "push": "/links-collection-2"
             }
         ]
     },
