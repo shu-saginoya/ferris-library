@@ -23,7 +23,6 @@
 
 <script>
 export default {
-  layout: 'english',
   data: () => ({
     title: 'Ferris University Library',
     englishPage: true,
