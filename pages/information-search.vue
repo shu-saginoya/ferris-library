@@ -85,10 +85,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.link-list {
-  list-style: none;
-  padding-left: 0;
-}
-</style>

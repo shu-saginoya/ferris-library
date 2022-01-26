@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  layout: 'english',
   data: () => ({
     title: 'Information search',
     items: [
@@ -87,10 +88,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.link-list {
-  list-style: none;
-  padding-left: 0;
-}
-</style>
