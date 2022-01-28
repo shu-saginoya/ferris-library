@@ -1,5 +1,17 @@
 [
     {
+        "id": "36",
+        "title": "電子ブック「Japanese Fairy Tale」の画像を差し替えました",
+        "date": "2022.1.28",
+        "contents": "<p>電子ブック「Japanese Fairy Tale」について提供いただいたPDFファイルから変換して画像を差し替えいたしました。</p>",
+        "actions": [
+            {
+                "link": "Japanese Fairy Taleページ",
+                "to": "/digital-collection/collection04"
+            }
+        ]
+    },
+    {
         "id": "35",
         "title": "二次情報リンク集のページを制作しました",
         "date": "2022.1.26",
