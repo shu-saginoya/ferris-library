@@ -16,7 +16,7 @@
                 "push": "/english/contact"
             },
             {
-                "title": "Carendar",
+                "title": "Calendar",
                 "id": "calender",
                 "push": "/english/calender"
             }
