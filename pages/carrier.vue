@@ -90,7 +90,7 @@ export default {
         links: [
           {
             name: 'アクセス',
-            url: 'http://web.nichigai.co.jp/nga_presen/entrance.do?userName=FRA&mngConfId=FRA&page=initializeMagazine.do'
+            url: 'https://web.nichigai.jp/magazine?user_id=FRA'
           }
         ]
       },
@@ -104,7 +104,7 @@ export default {
         links: [
           {
             name: 'アクセス',
-            url: 'http://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi'
+            url: 'https://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi'
           }
         ]
       },
@@ -148,7 +148,7 @@ export default {
         links: [
           {
             name: 'アクセス',
-            url: 'http://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi'
+            url: 'https://www.db-month.biglobe.ne.jp/cgi-bin/telcom21/ferris/enter.cgi'
           }
         ]
       },
