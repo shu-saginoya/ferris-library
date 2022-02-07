@@ -21,11 +21,6 @@
                 "push": "/calender"
             },
             {
-                "title": "年間予定",
-                "id": "schedule",
-                "push": "/schedule"
-            },
-            {
                 "title": "フロアマップ",
                 "id": "floorMap",
                 "push": "/floor-map"
