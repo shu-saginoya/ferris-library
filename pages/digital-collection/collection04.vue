@@ -78,7 +78,7 @@ export default {
         p: 'このシリーズは貴重本ですので、今回、データ・ベース化することになりました。関心のある人は、図書館で電子化されたものを見ることができます。複製本（CD-ROM版）も二部用意されています。実物は図書館貴重資料室に保管されていますが、たいへん貴重なものですから、取り扱いは図書館員の指示のもと、慎重に行って下さい。',
       },
       {
-        p: 'フェリス女学院大学文学部英文学科教授　藤本朝巳',
+        p: '藤本朝巳',
       },
     ],
     commentary2: [
@@ -110,7 +110,7 @@ export default {
       {
         num: 'E/H51/C',
         src: '/digital-collection/collection04/e_h51_c.jpg',
-        caption: '	E/H51/C Japanese Fairy Tale CHIN CHIN KOBAKAMA',
+        caption: 'Japanese Fairy Tale CHIN CHIN KOBAKAMA',
       },
       {
         num: 'E/H51/F',
@@ -146,7 +146,7 @@ export default {
       {
         num: 'E/J24/No5',
         src: '/digital-collection/collection04/e_j24_no05.jpg',
-        caption: 'Japanese Fairy Tale KACHI-KACHI MOUTAIN',
+        caption: 'Japanese Fairy Tale KACHI-KACHI MOUNTAIN',
       },
       {
         num: 'E/J24/No6',
