@@ -29,14 +29,14 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <v-btn fab text small color="grey darken-2" @click="prev">
+      <v-btn fab text small color="grey darken-2" @click="prev()">
         <v-icon small> mdi-chevron-left </v-icon>
       </v-btn>
-      <v-btn fab text small color="grey darken-2" @click="next">
+      <v-btn fab text small color="grey darken-2" @click="next()">
         <v-icon small> mdi-chevron-right </v-icon>
       </v-btn>
       <v-toolbar-title v-if="$refs.calendar" class="wrap-text">
-        {{ $refs.calendar.title }}
+        {{ englishPage ? $refs.calendar.title : title }}
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tooltip bottom>
@@ -143,6 +143,12 @@ export default {
     locale() {
       return this.englishPage ? 'en' : 'ja'
     },
+    title() {
+      const date = new Date(this.$refs.calendar.renderProps.start.date)
+      const year = date.getFullYear()
+      const month = date.getMonth() + 1
+      return year + '年' + month + '月'
+    }
   },
   mounted() {
     this.$refs.calendar.checkChange()
