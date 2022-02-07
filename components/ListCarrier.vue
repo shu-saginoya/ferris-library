@@ -16,6 +16,9 @@
               利用後は必ずログアウトしてください
             </span>
           </p>
+          <p v-if="item.type==='雑誌'">
+            ※雑誌は公式Webサイトで記事の一部を読むことができる場合がありますのでアクセスしてみてください
+          </p>
         </v-card-text>
         <div class="d-flex">
           <v-card-text>

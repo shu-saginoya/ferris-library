@@ -236,7 +236,7 @@ export default {
       {
         name: '「なるにはbooks」シリーズ',
         type: '図書',
-        logout: true,
+        logout: false,
         content:
           '専門家の視点からその仕事の魅力を紹介する職業ガイドブックシリーズです。',
         access: '緑園図書館3階 請求記号（背ラベルの番号）：366.29||N53',
