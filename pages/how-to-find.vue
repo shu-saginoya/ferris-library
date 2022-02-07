@@ -107,7 +107,7 @@ export default {
             url: '/pdf/how-to-find/advice-for-international-students.pdf',
           },
           {
-            target: '留学生向け',
+            target: '学部生向け',
             name: 'かしこい図書館の使い方ちょっとアドバイス会（卒論準備編）',
             date: '2021年7月6日実施',
             url: '/pdf/how-to-find/graduation-thesis-advice.pdf',
