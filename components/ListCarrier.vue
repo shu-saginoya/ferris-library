@@ -1,7 +1,12 @@
 <template>
   <v-row dense>
     <v-col v-for="(item, i) in items" :key="'item' + i" cols="12" lg="6">
-      <v-card>
+      <v-card v-if="item.heading" color="grey lighten-4" flat>
+        <v-card-text>
+          <span class="font-weight-bold">{{ item.name }}</span><span class="ml-4">{{ item.content }}</span>
+        </v-card-text>
+      </v-card>
+      <v-card v-else>
         <v-card-title>
           {{ item.name }}
         </v-card-title>
@@ -15,9 +20,6 @@
               <v-icon small color="orange">mdi-alert-circle-outline</v-icon>
               利用後は必ずログアウトしてください
             </span>
-          </p>
-          <p v-if="item.type==='雑誌'">
-            ※雑誌は公式Webサイトで記事の一部を読むことができる場合がありますのでアクセスしてみてください
           </p>
         </v-card-text>
         <div class="d-flex">

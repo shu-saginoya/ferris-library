@@ -111,6 +111,11 @@ export default {
     ],
     items2: [
       {
+        name: 'データベース',
+        heading: true,
+        content: ''
+      },
+      {
         name: '聞蔵Ⅱビジュアル',
         type: 'データベース',
         logout: true,
@@ -165,6 +170,11 @@ export default {
             url: 'https://database.yomiuri.co.jp/rekishikan/'
           }
         ]
+      },
+      {
+        name: '雑誌',
+        heading: true,
+        content: '※雑誌は公式Webサイトで記事の一部を読むことができる場合がありますのでアクセスしてみてください'
       },
       {
         name: 'AERA',
