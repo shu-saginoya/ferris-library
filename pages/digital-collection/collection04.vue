@@ -40,7 +40,10 @@
               </v-row>
             </template>
           </v-img>
-          <v-card-text>{{ image.caption }}</v-card-text>
+          <v-card-text>
+            <p class="mb-0">Japanese Fairy Tale</p>
+            <p class="mb-0">{{ image.caption }}</p>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -105,118 +108,118 @@ export default {
       {
         num: 'E/H51/B',
         src: '/digital-collection/collection04/e_h51_b.jpg',
-        caption: 'Japanese Fairy Tale The Boy WHO DREW CATS',
+        caption: 'The Boy WHO DREW CATS',
       },
       {
         num: 'E/H51/C',
         src: '/digital-collection/collection04/e_h51_c.jpg',
-        caption: 'Japanese Fairy Tale CHIN CHIN KOBAKAMA',
+        caption: 'CHIN CHIN KOBAKAMA',
       },
       {
         num: 'E/H51/F',
         src: '/digital-collection/collection04/e_h51_f.jpg',
-        caption: 'Japanese Fairy Tale The FOUNTAIN OF YOUTH',
+        caption: 'The FOUNTAIN OF YOUTH',
       },
       {
         num: 'E/H51/G',
         src: '/digital-collection/collection04/e_h51_g.jpg',
-        caption: 'Japanese Fairy Tale THE GOBLIN SPIDER',
+        caption: 'THE GOBLIN SPIDER',
       },
       {
         num: 'E/J24/No1',
         src: '/digital-collection/collection04/e_j24_no01.jpg',
-        caption: 'Japanese Fairy Tale MOMOTARO',
+        caption: 'MOMOTARO',
       },
       {
         num: 'E/J24/No2',
         src: '/digital-collection/collection04/e_j24_no02.jpg',
-        caption: 'Japanese Fairy Tale THE TONGUE-CUT SPARROW',
+        caption: 'THE TONGUE-CUT SPARROW',
       },
       {
         num: 'E/J24/No3',
         src: '/digital-collection/collection04/e_j24_no03.jpg',
-        caption: 'Japanese Fairy Tale BATTLE OF THE MONKEY AND THE CRAB',
+        caption: 'BATTLE OF THE MONKEY AND THE CRAB',
       },
       {
         num: 'E/J24/No4',
         src: '/digital-collection/collection04/e_j24_no04.jpg',
         caption:
-          'Japanese Fairy Tale The Old Man Who Made The Dead Trees Blossom',
+          'The Old Man Who Made The Dead Trees Blossom',
       },
       {
         num: 'E/J24/No5',
         src: '/digital-collection/collection04/e_j24_no05.jpg',
-        caption: 'Japanese Fairy Tale KACHI-KACHI MOUNTAIN',
+        caption: 'KACHI-KACHI MOUNTAIN',
       },
       {
         num: 'E/J24/No6',
         src: '/digital-collection/collection04/e_j24_no06.jpg',
-        caption: "Japanese Fairy TaleThe MOUSE'S WEDDING",
+        caption: "The MOUSE'S WEDDING",
       },
       {
         num: 'E/J24/No7',
         src: '/digital-collection/collection04/e_j24_no07.jpg',
-        caption: 'Japanese Fairy Tale THE OLD MAN & THE DEVILS',
+        caption: 'THE OLD MAN & THE DEVILS',
       },
       {
         num: 'E/J24/No8',
         src: '/digital-collection/collection04/e_j24_no08.jpg',
-        caption: 'Japanese Fairy Tale THE FISHER BOY URASHIMA',
+        caption: 'THE FISHER BOY URASHIMA',
       },
       {
         num: 'E/J24/No9',
         src: '/digital-collection/collection04/e_j24_no09.jpg',
-        caption: 'Japanese Fairy Tale THE SERPENT WITH EIGHT HEADS',
+        caption: 'THE SERPENT WITH EIGHT HEADS',
       },
       {
         num: 'E/J24/No10',
         src: '/digital-collection/collection04/e_j24_no10.jpg',
-        caption: 'Japanese Fairy Tale THE MATSUYAMA MIRROR',
+        caption: 'THE MATSUYAMA MIRROR',
       },
       {
         num: 'E/J24/No11',
         src: '/digital-collection/collection04/e_j24_no11.jpg',
-        caption: 'Japanese Fairy Tale THE HARE OF INABA',
+        caption: 'THE HARE OF INABA',
       },
       {
         num: 'E/J24/No12',
         src: '/digital-collection/collection04/e_j24_no12.jpg',
-        caption: "Japanese Fairy Tale THE CAB'S TRIUMPH",
+        caption: "THE CAB'S TRIUMPH",
       },
       {
         num: 'E/J24/No13',
         src: '/digital-collection/collection04/e_j24_no13.jpg',
-        caption: 'Japanese Fairy Tale THE SILLY JELLY-FISH',
+        caption: 'THE SILLY JELLY-FISH',
       },
       {
         num: 'E/J24/No15',
         src: '/digital-collection/collection04/e_j24_no15.jpg',
-        caption: "Japanese Fairy Tale MY LORD BAG-O'RICE",
+        caption: "MY LORD BAG-O'RICE",
       },
       {
         num: 'E/J24/No16',
         src: '/digital-collection/collection04/e_j24_no16.jpg',
-        caption: 'Japanese Fairy Tale THE WONDERFULL TEA-KETTLE',
+        caption: 'THE WONDERFULL TEA-KETTLE',
       },
       {
         num: 'E/J24/No17',
         src: '/digital-collection/collection04/e_j24_no17.jpg',
-        caption: 'Japanese Fairy Tale SCHIPPEITARO',
+        caption: 'SCHIPPEITARO',
       },
       {
         num: 'E/J24/No18',
         src: '/digital-collection/collection04/e_j24_no18.jpg',
-        caption: 'Japanese Fairy Tale THE OGRES ARM',
+        caption: 'THE OGRES ARM',
       },
       {
         num: 'E/J24/No19',
         src: '/digital-collection/collection04/e_j24_no19.jpg',
-        caption: 'Japanese Fairy Tale The OGRES of OYEYAMA',
+        caption: 'The OGRES of OYEYAMA',
       },
       {
         num: 'E/J24/No20',
         src: '/digital-collection/collection04/e_j24_no20.jpg',
-        caption: 'Japanese Fairy Tale The Enchanted Waterfall',
+        caption: 'The Enchanted Waterfall',
       },
     ],
   }),

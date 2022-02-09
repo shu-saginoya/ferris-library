@@ -139,12 +139,12 @@ export default {
       },
       {
         src: '/digital-collection/collection05/02-003.jpg',
-        caption: '『ペンジャミンバニーのおはなし』（1904年刊）',
+        caption: '『ベンジャミンバニーのおはなし』（1904年刊）',
         cover: false,
       },
       {
         src: '/digital-collection/collection05/02-004.jpg',
-        caption: '『ペンジャミンバニーのおはなし』（1904年刊）',
+        caption: '『ベンジャミンバニーのおはなし』（1904年刊）',
         cover: false,
       },
       {

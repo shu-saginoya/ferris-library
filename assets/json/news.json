@@ -1,5 +1,29 @@
 [
     {
+        "id": "37",
+        "title": "2月2日にいただいた修正依頼について対応いたしました",
+        "date": "2022.2.9",
+        "contents": "<p>2月2日にいただいた修正依頼について対応いたしました</p>",
+        "actions": [
+            {
+                "link": "電子コレクション",
+                "to": "/digital-collection"
+            },
+            {
+                "link": "キャリア支援",
+                "to": "/carrier"
+            },
+            {
+                "link": "カレンダー",
+                "to": "/calender"
+            },
+            {
+                "link": "資料の探し方",
+                "to": "/how-to-find"
+            }
+        ]
+    },
+    {
         "id": "36",
         "title": "電子ブック「Japanese Fairy Tale」の画像を差し替えました",
         "date": "2022.1.28",
