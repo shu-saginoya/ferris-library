@@ -23,6 +23,7 @@
               <v-text-field
                 id="QSearch"
                 name="word"
+                maxlength="128"
                 :label="englishPage ? 'Quick research' : 'クイックリサーチ'"
                 :placeholder="
                   englishPage
