@@ -16,8 +16,8 @@
         >
           <v-card
             height="100%"
-            :href="content.link ? content.link : false"
-            :target="content.link ? '_blank' : false"
+            :href="content.link ? content.link : null"
+            :target="content.link ? '_blank' : '_self'"
             :link="content.link ? true : false"
           >
             <v-card-title>

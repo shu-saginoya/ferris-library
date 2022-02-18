@@ -15,9 +15,9 @@
         <template v-for="content in menu.contents">
           <v-list-item
             :key="content.id"
-            :to="content.push ? content.push : false"
-            :href="content.href ? content.href : false"
-            :target="content.href ? '_blank' : false"
+            :to="content.push ? content.push : null"
+            :href="content.href ? content.href : null"
+            :target="content.href ? '_blank' : '_self'"
             link
           >
             <v-list-item-title class="wrap-text" v-text="content.title"></v-list-item-title>
