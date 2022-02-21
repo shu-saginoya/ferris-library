@@ -13,8 +13,7 @@
             <v-list-item-title class="wrap-text">{{
               info.title
             }}</v-list-item-title>
-            <v-list-item-subtitle>
-              {{ info.date }}
+            <v-list-item-subtitle v-text="$dayjs(info.date).format('YYYY-MM-DD')">
             </v-list-item-subtitle>
           </v-list-item-content>
           <v-list-item-action>
@@ -32,36 +31,8 @@
         @input="pageChange"
       ></v-pagination>
     </v-card-text>
-    <v-dialog v-model="dialog" max-width="600">
-      <v-card>
-        <v-system-bar color="primary" dark> News </v-system-bar>
-        <v-card-title>
-          {{ newsCard.title }}
-        </v-card-title>
-        <v-card-subtitle>
-          {{ newsCard.date }}
-        </v-card-subtitle>
-        <v-card-text class="mt-6" v-html="newsCard.contents"> </v-card-text>
-        <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
-          <btn-inside
-            v-for="btn in newsCard.actions"
-            :key="btn.id"
-            :link="btn.link"
-            :to="btn.to"
-          ></btn-inside>
-        </v-card-actions>
-        <v-card-actions v-if="newsCard.openinnew" class="overflow-x-auto">
-          <btn-open-in-new
-            v-for="btn in newsCard.openinnew"
-            :key="btn.id"
-            :link="btn.link"
-            :url="btn.url"
-          ></btn-open-in-new>
-        </v-card-actions>
-        <v-card-actions class="justify-end">
-          <v-btn text @click="dialog = false">Close</v-btn>
-        </v-card-actions>
-      </v-card>
+    <v-dialog v-model="dialog" max-width="800">
+      <card-news :news-card="newsCard" @dialogClose="dialogClose"></card-news>
     </v-dialog>
   </v-card>
 </template>
@@ -98,6 +69,9 @@ export default {
         this.pageSize * pageNumber
       )
     },
+    dialogClose() {
+      this.dialog = false
+    }
   },
 }
 </script>
