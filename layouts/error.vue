@@ -17,9 +17,8 @@
 </template>
 
 <script>
-import BtnInside from '~/components/BtnInside.vue'
 export default {
-  components: { BtnInside },
+  name: 'LayoutError',
   props: {
     error: {
       type: Object,
