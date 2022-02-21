@@ -2,7 +2,7 @@
   <v-card>
     <v-list>
       <template v-for="(info, index) in displayLists">
-        <v-divider v-show="index !== 0 && displayLists.length > 1" :key="'divider' + info.id"></v-divider>
+        <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
         <v-list-item
           v-show="$dayjs(info.date) < $dayjs() || privateMode === 'true'"
           :key="'info' + info.id"
