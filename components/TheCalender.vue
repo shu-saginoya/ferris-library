@@ -88,7 +88,7 @@ import ryokuen from '@/assets/json/calender-ryokuen.json'
 import yamate from '@/assets/json/calender-yamate.json'
 
 export default {
-  name: 'Calender',
+  name: 'TheCalender',
   props: {
     englishPage: {
       type: Boolean,
