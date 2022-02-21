@@ -2,17 +2,19 @@
   <v-card>
     <v-list>
       <template v-for="(info, index) in displayLists">
-        <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
+        <v-divider v-show="index !== 0 && displayLists.length > 1" :key="'divider' + info.id"></v-divider>
         <v-list-item
+          v-show="$dayjs(info.date) < $dayjs() || privateMode === 'true'"
           :key="'info' + info.id"
           two-line
           link
           @click.native=";(dialog = true), (newsCard = info)"
         >
           <v-list-item-content>
-            <v-list-item-title class="wrap-text">{{
-              info.title
-            }}</v-list-item-title>
+            <v-list-item-title class="wrap-text">
+              <span v-show="$dayjs(info.date) > $dayjs()">予約投稿：</span>
+              {{ info.title }}
+            </v-list-item-title>
             <v-list-item-subtitle v-text="$dayjs(info.date).format('YYYY-MM-DD')">
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -53,6 +55,7 @@ export default {
     displayLists: [],
     dialog: false,
     newsCard: [],
+    privateMode: undefined,
   }),
   mounted() {
     this.length = Math.ceil(this.lists.length / this.pageSize)
@@ -61,6 +64,8 @@ export default {
       this.pageSize * (this.page - 1),
       this.pageSize * this.page
     )
+
+    this.privateMode = this.$route.query.privateMode
   },
   methods: {
     pageChange(pageNumber) {
