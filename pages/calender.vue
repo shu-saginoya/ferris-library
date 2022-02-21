@@ -3,7 +3,7 @@
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" xl="8">
-        <calender></calender>
+        <the-calender></the-calender>
       </v-col>
       <v-col>
         <info-covid-19></info-covid-19>
