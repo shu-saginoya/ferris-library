@@ -44,6 +44,7 @@
 
 <script>
 export default {
+  name: 'PageFloorMap',
   data: () => ({
     title: 'フロアマップ',
     tab: null,

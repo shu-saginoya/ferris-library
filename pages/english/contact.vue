@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishContact',
   layout: 'english',
   data: () => ({
     title: 'Contact / Access',

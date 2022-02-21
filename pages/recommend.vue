@@ -72,6 +72,7 @@
 
 <script>
 export default {
+  name: 'PageRecommend',
   data: () => ({
     title: '学科推奨図書',
     snackbar: false,

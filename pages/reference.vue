@@ -264,6 +264,7 @@
 
 <script>
 export default {
+  name: 'PageReference',
   data: () => ({
     title: 'レファレンスサービス',
     show: false,

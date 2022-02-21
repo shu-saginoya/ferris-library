@@ -91,6 +91,7 @@
 
 <script>
 export default {
+  name: 'PageConsortium',
   data: () => ({
     title: '横浜市内大学図書館コンソーシアム',
     show: false,

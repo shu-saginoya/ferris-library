@@ -7,6 +7,7 @@
 
 <script>
 export default {
+  name: 'PageQuestion',
   data: () => ({
       title: 'Q&A'
   }),

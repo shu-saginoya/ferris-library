@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'PageContact',
   data: () => ({
     title: 'アクセス・問い合わせ',
     items: [

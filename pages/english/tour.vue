@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishTour',
   layout: 'english',
   data: () => ({
     title: 'Tour and Guidance Workshops',

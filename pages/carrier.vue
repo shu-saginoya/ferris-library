@@ -62,6 +62,7 @@
 
 <script>
 export default {
+  name: 'PageCarrier',
   data: () => ({
     title: 'キャリア支援',
     tab: null,

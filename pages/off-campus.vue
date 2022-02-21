@@ -55,6 +55,7 @@
 
 <script>
 export default {
+  name: 'PageOffCampus',
   data: () => ({
     title: '学外から受けられるサポート',
     snackbar: false,

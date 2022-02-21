@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'PageNewspaper',
   data: () => ({
     title: '新聞（緑園キャンパス）',
     location: 'pdf/newspaper.pdf',

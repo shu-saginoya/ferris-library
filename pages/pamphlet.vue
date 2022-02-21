@@ -28,6 +28,7 @@
 
 <script>
 export default {
+  name: 'PagePamphlet',
   data: () => ({
     title: '学生向けパンフレット',
     tab: null,

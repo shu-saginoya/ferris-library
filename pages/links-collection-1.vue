@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: 'PageLinksCollection1',
   data: () => ({
     title: '一次情報リンク集',
     comment:

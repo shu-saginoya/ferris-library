@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishIndex',
   layout: 'english',
   data: () => ({
     title: 'Ferris University Library',

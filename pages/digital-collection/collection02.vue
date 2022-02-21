@@ -74,6 +74,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection02',
   data: () => ({
     title: '竹取物語',
     titleLogo: '/digital-collection/collection02/title-logo.gif',

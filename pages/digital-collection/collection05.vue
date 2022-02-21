@@ -89,6 +89,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection05',
   data: () => ({
     title: 'ビアトリクス・ポターの絵本',
     titleLogo: '/digital-collection/collection05/title-logo.gif',

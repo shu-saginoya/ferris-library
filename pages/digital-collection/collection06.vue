@@ -47,6 +47,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection06',
   data: () => ({
     title: 'コルデコットの絵本',
     titleLogo: '/digital-collection/collection06/title-logo.jpg',

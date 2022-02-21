@@ -127,6 +127,7 @@
 import database from '@/assets/json/database.json'
 
 export default {
+  name: 'PageDatabase',
   data: () => ({
     title: 'データベース・電子ブック',
     database,

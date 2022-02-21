@@ -84,6 +84,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishTadoku',
   data: () => ({
     title: '英語多読図書',
   }),

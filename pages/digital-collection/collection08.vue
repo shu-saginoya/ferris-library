@@ -92,6 +92,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection08',
   data: () => ({
     title: 'Henry More, The Apology of Dr. Henry More',
     titleLogo: '/digital-collection/collection08/title-logo.png',

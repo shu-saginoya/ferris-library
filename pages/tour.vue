@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  name: 'PageTour',
   data: () => ({
     title: 'ツアー・ガイダンス',
     items: [

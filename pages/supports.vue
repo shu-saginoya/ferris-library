@@ -94,6 +94,7 @@
 
 <script>
 export default {
+  name: 'PageSupports',
   data: () => ({
     title: '障がいのある方への支援',
     show: true,

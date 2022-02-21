@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  name: 'PageIndex',
   data: () => ({
     title: 'フェリス女学院大学附属図書館',
     loading: true,

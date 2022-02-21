@@ -20,6 +20,7 @@
 
 <script>
 export default {
+  name: 'PageLearningCommons',
   data: () => ({
     title: 'ラーニングコモンズ',
     items: [

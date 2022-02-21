@@ -53,6 +53,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection04',
   data: () => ({
     title: 'Japanese Fairy Tale',
     titleLogo: '/digital-collection/collection04/title-logo.gif',

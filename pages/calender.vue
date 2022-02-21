@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: 'PageCalender',
   data: () => ({
     title: '開館カレンダー・開館時間',
   }),

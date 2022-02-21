@@ -55,6 +55,7 @@
 
 <script>
 export default {
+  name: 'PageHowToFind',
   data: () => ({
     title: '資料の探し方',
     snackbar: false,

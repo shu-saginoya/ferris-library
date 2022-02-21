@@ -8,6 +8,7 @@
 <script>
 export default {
   data: () => ({
+    name: 'PageInformationSearch',
     title: '情報検索',
     items: [
       {

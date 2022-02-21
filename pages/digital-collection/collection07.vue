@@ -112,6 +112,7 @@
 import imageList from '@/static/digital-collection/collection07/imageList.json'
 
 export default {
+  name: 'PageDigitalCollection07',
   data: () => ({
     title: '横浜絵葉書（手彩色）',
     titleLogo: '/digital-collection/collection07/title-logo.png',

@@ -73,6 +73,7 @@
 
 <script>
 export default {
+  name: 'PageVisitor',
   data: () => ({
     title: '学外の方へ',
     selected: '',

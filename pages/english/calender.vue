@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishCalender',
   layout: 'english',
   data: () => ({
     title: 'Calendar',

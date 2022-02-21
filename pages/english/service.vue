@@ -43,6 +43,7 @@
 
 <script>
 export default {
+  name: 'PageEnglishService',
   layout: 'english',
   data: () => ({
     title: 'Lending Service',

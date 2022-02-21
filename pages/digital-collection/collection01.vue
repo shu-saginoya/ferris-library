@@ -73,6 +73,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollection01',
   data: () => ({
     title: '新三十六歌仙画帖',
     titleLogo: '/digital-collection/collection01/title-logo.gif',

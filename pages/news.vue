@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: 'PageNews',
   data: () => ({
     title: 'News',
   }),

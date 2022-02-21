@@ -77,6 +77,7 @@
 
 <script>
 export default {
+  name: 'PageService',
   data: () => ({
     title: '貸出サービス',
     panel: [0, 1],

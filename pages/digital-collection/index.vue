@@ -41,6 +41,7 @@
 
 <script>
 export default {
+  name: 'PageDigitalCollectionIndex',
   data: () => ({
     title: '電子コレクション',
     reveal: false,
