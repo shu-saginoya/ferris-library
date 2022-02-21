@@ -12,7 +12,7 @@
           height="32"
           class="ferris-logo mr-2"
         />
-         {{ siteTitle }}
+         <span class="site-title grey--text text--darken-1">{{ siteTitle }}</span>
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -42,5 +42,8 @@ export default {
 <style scoped>
 .ferris-logo {
   vertical-align: middle;
+}
+.site-title {
+  font-feature-settings: "palt";
 }
 </style>
