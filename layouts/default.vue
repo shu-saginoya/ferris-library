@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .fade-page-enter-active {
-  transition: opacity 1s;
+  transition: opacity 1s ease-in;
 }
 .fade-page-enter {
   opacity: 0;
