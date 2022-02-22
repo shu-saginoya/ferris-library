@@ -36,9 +36,7 @@
                   v-for="(pdf, index3) in content.pdfs"
                   :key="'pdf' + index3"
                   link
-                  @click="
-                    ;(snackbar = true), (fileName = pdf.title), (url = pdf.url)
-                  "
+                  @click="openConfirmDownload(pdf)"
                 >
                   <v-list-item-content>
                     <v-list-item-title class="wrap-text">
@@ -55,19 +53,7 @@
         </template>
       </v-col>
     </v-row>
-
-    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
-      {{ fileName }}のPDFファイルを開きますか？
-
-      <template #action="{ attrs }">
-        <v-btn class="mx-3" :href="url" target="_blank"
-          >はい<v-icon right>mdi-download</v-icon></v-btn
-        >
-        <v-btn icon v-bind="attrs" @click="snackbar = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
 
@@ -77,11 +63,7 @@ export default {
   data: () => ({
     title: '学外の方へ',
     selected: '',
-    snackbar: false,
-    timeout: 6000,
-    fileName: '',
-    multiLine: true,
-    url: '',
+    openFile: {},
     items: [
       '卒業生・修了生',
       '定年退職教職員',
@@ -200,6 +182,8 @@ export default {
           {
             title: 'フェリス女学院大学附属図書館コンソーシアム利用案内',
             url: 'pdf/consortium/ferris.pdf',
+            name: 'コンソーシアム利用案内',
+            type: 'pdf',
           },
         ],
       },
@@ -235,6 +219,12 @@ export default {
     return {
       title: this.title,
     }
+  },
+  methods: {
+    openConfirmDownload(content) {
+      this.openFile = content
+      this.$refs.confirmDownload.dialogOpen()
+    },
   },
 }
 </script>

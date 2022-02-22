@@ -11,11 +11,7 @@
               v-for="(content, j) in item.contents"
               :key="j"
               link
-              @click="
-                ;(snackbar = true),
-                  (fileName = content.name),
-                  (url = content.url)
-              "
+              @click="openConfirmDownload(content)"
             >
               <v-list-item-content>
                 <v-list-item-subtitle v-if="content.target" class="mb-2">
@@ -38,18 +34,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
-      {{ fileName }}のPDFファイルを開きますか？
-
-      <template #action="{ attrs }">
-        <v-btn class="mx-3" :href="url" target="_blank"
-          >はい<v-icon right>mdi-download</v-icon></v-btn
-        >
-        <v-btn icon v-bind="attrs" @click="snackbar = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
 
@@ -58,11 +43,7 @@ export default {
   name: 'PageOffCampus',
   data: () => ({
     title: '学外から受けられるサポート',
-    snackbar: false,
-    timeout: 6000,
-    fileName: '',
-    multiLine: true,
-    url: '',
+    openFile: {},
     items: [
       {
         category: '新型コロナウイルス感染拡大防止措置：宅配による貸出',
@@ -71,26 +52,31 @@ export default {
           {
             name: '宅配による貸出について',
             url: '/pdf/off-campus/delivery-01.pdf',
+            type: 'pdf',
           },
           {
             target: '学部生',
             name: 'MyLibraryで文献複写を申し込む',
             url: '/pdf/off-campus/delivery-02.pdf',
+            type: 'pdf',
           },
           {
             target: '大学院生',
             name: '文献複写を申し込む',
             url: '/pdf/off-campus/delivery-03.pdf',
+            type: 'pdf',
           },
           {
             target: 'Ｑ＆Ａ',
             name: '宅配貸出について',
             url: '/pdf/off-campus/delivery-04.pdf',
+            type: 'pdf',
           },
           {
             target: 'Ｑ＆Ａ',
             name: '返却期限の延長等について',
             url: '/pdf/off-campus/delivery-05.pdf',
+            type: 'pdf',
           },
         ],
       },
@@ -100,6 +86,12 @@ export default {
     return {
       title: this.title,
     }
+  },
+  methods: {
+    openConfirmDownload(content) {
+      this.openFile = content
+      this.$refs.confirmDownload.dialogOpen()
+    },
   },
 }
 </script>

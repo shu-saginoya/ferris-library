@@ -35,11 +35,7 @@
               v-for="(content, j) in item.contents"
               :key="j"
               link
-              @click="
-                ;(snackbar = true),
-                  (fileName = content.name),
-                  (url = content.url)
-              "
+              @click="openConfirmDownload(content)"
             >
               <v-list-item-content>
                 <v-list-item-title class="wrap-text">
@@ -54,19 +50,7 @@
         </v-card>
       </v-col>
     </v-row>
-
-    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
-      {{ fileName }}のPDFファイルを開きますか？
-
-      <template #action="{ attrs }">
-        <v-btn class="mx-3" :href="url" target="_blank"
-          >はい<v-icon right>mdi-download</v-icon></v-btn
-        >
-        <v-btn icon v-bind="attrs" @click="snackbar = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
 </template>
 
@@ -75,11 +59,7 @@ export default {
   name: 'PageRecommend',
   data: () => ({
     title: '学科推奨図書',
-    snackbar: false,
-    timeout: 6000,
-    fileName: '',
-    multiLine: true,
-    url: '',
+    openFile: {},
     items: [
       {
         category: '文学部',
@@ -87,14 +67,17 @@ export default {
           {
             name: '英語英米文学科',
             url: '/pdf/recommend/recommend-english-literature.pdf',
+            type: 'PDF',
           },
           {
             name: '日本語日本文学科',
             url: '/pdf/recommend/recommend-japanese-literature.pdf',
+            type: 'PDF',
           },
           {
             name: 'コミュニケーション学科',
             url: '/pdf/recommend/recommend-communication.pdf',
+            type: 'PDF',
           },
         ],
       },
@@ -104,6 +87,7 @@ export default {
           {
             name: '音楽芸術学科',
             url: '/pdf/recommend/recommend-musical-art.pdf',
+            type: 'PDF',
           },
         ],
       },
@@ -113,6 +97,7 @@ export default {
           {
             name: '国際交流学科',
             url: '/pdf/recommend/recommend-international-exchange.pdf',
+            type: 'PDF',
           },
         ],
       },
@@ -122,6 +107,12 @@ export default {
     return {
       title: this.title,
     }
+  },
+  methods: {
+    openConfirmDownload(content) {
+      this.openFile = content
+      this.$refs.confirmDownload.dialogOpen()
+    },
   },
 }
 </script>

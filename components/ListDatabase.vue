@@ -68,11 +68,7 @@
                       v-for="(file, n) in item.documents"
                       :key="'file' + n"
                       class="mb-2 mb-sm-0"
-                      @click.native="
-                        ;(snackbar = true),
-                          (university = file.type),
-                          (fileUrl = file.url)
-                      "
+                      @click.native="openConfirmDownload(file)"
                     >
                       {{ file.name }}
                       <v-icon v-if="file.type == 'PDF'" dark right
@@ -96,18 +92,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
-      {{ university }}ファイルを開きますか？
-
-      <template #action="{ attrs }">
-        <v-btn class="mx-3" :href="fileUrl" target="_blank"
-          >はい<v-icon right>mdi-download</v-icon></v-btn
-        >
-        <v-btn icon v-bind="attrs" @click="snackbar = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </div>
 </template>
 
@@ -118,12 +103,14 @@ export default {
     items: { type: Array, required: true },
   },
   data: () => ({
-    multiLine: true,
-    snackbar: false,
-    university: '',
-    fileUrl: null,
-    timeout: 6000,
+    openFile: {},
   }),
+  methods: {
+    openConfirmDownload(content) {
+      this.openFile = content
+      this.$refs.confirmDownload.dialogOpen()
+    },
+  },
 }
 </script>
 
