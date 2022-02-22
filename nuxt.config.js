@@ -27,7 +27,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-pdf.js', mode: 'client' },
     { src: '~/plugins/tinybox.js', mode: 'client' },
-    { src: '~/plugins/day.js' }
+    { src: '~/plugins/day.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -39,6 +39,16 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // Google Fonts
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: { 'Noto+Sans+JP': true },
+        display: 'block',
+        download: true,
+        inject: true,
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,8 +73,8 @@ export default {
         light: {
           primary: colors.red.darken4,
           accent: colors.grey.darken4,
-        }
-      }
+        },
+      },
     },
     options: { customProperties: true },
   },
