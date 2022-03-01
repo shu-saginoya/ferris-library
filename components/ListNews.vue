@@ -4,7 +4,6 @@
       <template v-for="(info, index) in displayLists">
         <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
         <v-list-item
-          v-show="$dayjs(info.date) < $dayjs() || privateMode === 'true'"
           :key="'info' + info.id"
           two-line
           link
@@ -15,7 +14,9 @@
               <span v-show="$dayjs(info.date) > $dayjs()">予約投稿：</span>
               {{ info.title }}
             </v-list-item-title>
-            <v-list-item-subtitle v-text="$dayjs(info.date).format('YYYY-MM-DD')">
+            <v-list-item-subtitle
+              v-text="$dayjs(info.date).format('YYYY年M月D日')"
+            >
             </v-list-item-subtitle>
           </v-list-item-content>
           <v-list-item-action>
@@ -33,7 +34,7 @@
         @input="pageChange"
       ></v-pagination>
     </v-card-text>
-    <v-dialog v-model="dialog" max-width="800">
+    <v-dialog v-model="dialog" max-width="600">
       <card-news :news-card="newsCard" @dialogClose="dialogClose"></card-news>
     </v-dialog>
   </v-card>
@@ -55,17 +56,26 @@ export default {
     displayLists: [],
     dialog: false,
     newsCard: [],
-    privateMode: undefined,
+    mode: undefined,
   }),
   mounted() {
+    // 非公開モードのチェック
+    this.privateMode = this.$route.query.mode
+
     this.length = Math.ceil(this.lists.length / this.pageSize)
 
-    this.displayLists = this.lists.slice(
+    if (this.privateMode !== 'private') {
+      this.displayLists = this.lists.filter((element) => {
+        return new Date() >= new Date(element.date)
+      })
+    }
+    else {
+      this.displayLists = this.lists
+    }
+    this.displayLists = this.displayLists.slice(
       this.pageSize * (this.page - 1),
       this.pageSize * this.page
     )
-
-    this.privateMode = this.$route.query.privateMode
   },
   methods: {
     pageChange(pageNumber) {
@@ -76,7 +86,7 @@ export default {
     },
     dialogClose() {
       this.dialog = false
-    }
+    },
   },
 }
 </script>

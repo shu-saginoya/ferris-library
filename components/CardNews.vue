@@ -4,7 +4,7 @@
     <v-card-title>
       {{ newsCard.title }}
     </v-card-title>
-    <v-card-subtitle v-text="$dayjs(newsCard.date).format('YYYY-MM-DD')">
+    <v-card-subtitle v-text="$dayjs(newsCard.date).format('YYYY年M月D日')">
     </v-card-subtitle>
     <v-card-text class="mt-6 news-contents" v-html="newsCard.contents">
     </v-card-text>
