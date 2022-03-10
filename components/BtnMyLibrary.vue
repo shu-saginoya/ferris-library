@@ -4,7 +4,7 @@
     target="_blank"
     class="my-library ma-2"
   >
-    My Library login
+    MyLibrary login
     <v-icon right>mdi-open-in-new</v-icon>
   </v-btn>
 </template>

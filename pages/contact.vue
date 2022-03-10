@@ -26,7 +26,7 @@ export default {
         image: require(`@/assets/image/contact-ryokuen.jpg`),
         accesses: [
           {
-            transportation: '相鉄いずみの線',
+            transportation: '相鉄いずみ野線',
             root: '「緑園都市」下車徒歩3分',
             icon: 'mdi-train'
           },

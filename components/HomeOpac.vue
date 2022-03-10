@@ -24,7 +24,7 @@
                 id="QSearch"
                 name="word"
                 maxlength="128"
-                :label="englishPage ? 'Quick research' : 'クイックリサーチ'"
+                :label="englishPage ? 'Quick search' : 'クイックサーチ'"
                 :placeholder="
                   englishPage
                     ? 'Please enter a keyword'

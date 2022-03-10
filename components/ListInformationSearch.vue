@@ -13,6 +13,7 @@
         <ul class="link-list">
           <li v-for="(listItem, j) in item.list" :key="'listItem' + i + j">
             <v-btn
+              v-if="listItem.name"
               class="text-none"
               :to="listItem.push"
               :href="listItem.href"

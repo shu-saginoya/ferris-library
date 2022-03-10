@@ -6,9 +6,17 @@
     <v-row dense>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card height="100%">
+          <v-card-title> 事項調査 </v-card-title>
+          <v-card-text>
+            調べものをしていてどの資料を見れば良いのか分からないとき、資料の探し方や、テーマにあったデータベース、検索ツールなどをご紹介します。学部生はMyLibraryからも調査の依頼ができます。
+          </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <v-card height="100%">
           <v-card-title> 所蔵調査 </v-card-title>
           <v-card-text>
-            ご希望の資料が当図書館にない時、国内外の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
+            ご希望の資料が当図書館にない時、他の図書館や資料館の所蔵調査をいたします。学部生はMyLibraryにログインして調査の依頼ができます。
           </v-card-text>
           <v-card-actions class="d-flex flex-wrap">
             <btn-dialog-default>
@@ -221,10 +229,19 @@
       </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-card height="100%">
-          <v-card-title> 事項調査 </v-card-title>
+          <v-card-title>
+            横浜市内コンソーシアム加盟大学の図書館を利用する
+          </v-card-title>
           <v-card-text>
-            調べものをしていてどの資料を見れば良いのか分からないとき、適切な資料をご紹介します。学部生はMyLibraryからも調査の依頼ができます。
+            横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br />
+            手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
           </v-card-text>
+          <v-card-actions>
+            <btn-inside
+              link="コンソーシアムページへ"
+              to="/consortium"
+            ></btn-inside>
+          </v-card-actions>
         </v-card>
       </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
@@ -237,23 +254,6 @@
             <btn-inside
               link="ツアー・ガイダンスページへ"
               to="/tour"
-            ></btn-inside>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-      <v-col cols="12" md="10" lg="8" xl="6">
-        <v-card height="100%">
-          <v-card-title>
-            横浜市内コンソーシアム加盟大学の図書館を利用する
-          </v-card-title>
-          <v-card-text>
-            横浜市内大学図書館コンソーシアムの加盟館は、原則として学生証又は大学発行の身分証明書を提示して手続きすることで、紹介状なしで館内利用ができます。<br />
-            手続き方法、利用できるサービスについては大学によって異なりますので、必ず各館のホームページで条件を確認してください。
-          </v-card-text>
-          <v-card-actions>
-            <btn-inside
-              link="コンソーシアムページへ"
-              to="/consortium"
             ></btn-inside>
           </v-card-actions>
         </v-card>

@@ -58,6 +58,9 @@ export default {
             comment: '国立国会図書館',
             icon: 'mdi-open-in-new',
           },
+          {
+            comment: '※その他　カウンターに問い合わせる',
+          },
         ],
       },
       {
