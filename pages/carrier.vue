@@ -39,7 +39,7 @@
           <v-timeline dense>
             <v-timeline-item>
               <v-img
-                :src="require(`@/assets/image/carrier/carrier-01.gif`)"
+                :src="require(`@/assets/images/carrier/carrier-01.gif`)"
                 max-width="676"
                 contain
               ></v-img>
@@ -47,7 +47,7 @@
             </v-timeline-item>
             <v-timeline-item>
               <v-img
-                :src="require(`@/assets/image/carrier/carrier-02.gif`)"
+                :src="require(`@/assets/images/carrier/carrier-02.gif`)"
                 max-width="676"
                 contain
               ></v-img>

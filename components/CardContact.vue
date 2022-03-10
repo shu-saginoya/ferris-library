@@ -85,7 +85,7 @@ export default {
         tel: '000 (000) 0000',
         fax: '000 (000) 0000',
         eMali: 'sample@sample.jp',
-        image: require(`@/assets/image/contact/contact-ryokuen.jpg`),
+        image: require(`@/assets/images/contact/contact-ryokuen.jpg`),
         accesses: [
           {
             transportation: '路線名',

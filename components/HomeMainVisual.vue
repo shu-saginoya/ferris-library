@@ -12,7 +12,7 @@
         align="center"
         justify="center"
       >
-        <img src="@/assets/image/layouts/site-logo.png" width="350" height="113" />
+        <img src="@/assets/images/layouts/site-logo.png" width="350" height="113" />
       </v-row>
     </v-carousel-item>
   </v-carousel>
@@ -32,28 +32,28 @@ export default {
       height: '260',
       items: [
         {
-          src: require('@/assets/image/main-visual/main-visual-01.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-01.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-02.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-02.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-03.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-03.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-04.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-04.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-06.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-06.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-05.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-05.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-07.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-07.jpg'),
         },
         {
-          src: require('@/assets/image/main-visual/main-visual-08.jpg'),
+          src: require('@/assets/images/main-visual/main-visual-08.jpg'),
         },
       ],
     }
