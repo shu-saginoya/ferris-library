@@ -8,7 +8,7 @@
 
       <v-toolbar-title class="pl-2">
         <img
-          src="@/assets/image/ferris-logo.png"
+          src="@/assets/image/layouts/ferris-logo.png"
           height="32"
           class="ferris-logo mr-2"
         />

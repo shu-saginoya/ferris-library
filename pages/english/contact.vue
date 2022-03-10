@@ -24,7 +24,7 @@ export default {
         tel: '045 (812) 6999',
         fax: '045 (812) 9772',
         eMali: 'r_library@ferris.ac.jp',
-        image: require(`@/assets/image/contact-ryokuen.jpg`),
+        image: require(`@/assets/image/contact/contact-ryokuen.jpg`),
         accesses: [
           {
             transportation: 'Sotetsu Izumino Line',
@@ -46,7 +46,7 @@ export default {
         tel: '045 (681) 5149',
         fax: '045 (681) 5188',
         eMali: 'y_library@ferris.ac.jp',
-        image: require(`@/assets/image/contact-yamate.jpg`),
+        image: require(`@/assets/image/contact/contact-yamate.jpg`),
         accesses: [
           {
             transportation: 'JR-EAST Keihin Tohoku Line',

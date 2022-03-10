@@ -68,7 +68,7 @@
             </v-card-text>
           </div>
           <div>
-            <img src="@/assets/image/qr.gif" />
+            <img src="@/assets/image/opac/qr.gif" />
           </div>
         </v-card>
       </v-tab-item>

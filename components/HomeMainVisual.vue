@@ -12,7 +12,7 @@
         align="center"
         justify="center"
       >
-        <img src="@/assets/image/site-logo.png" width="350" height="113" />
+        <img src="@/assets/image/layouts/site-logo.png" width="350" height="113" />
       </v-row>
     </v-carousel-item>
   </v-carousel>
