@@ -95,7 +95,7 @@ export default {
   name: 'PageDigitalCollection08',
   data: () => ({
     title: 'Henry More, The Apology of Dr. Henry More',
-    titleLogo: '/digital-collection/collection08/title-logo.png',
+    titleLogo: '/images/digital-collection/collection08/title-logo.png',
     index: null,
     dialog: false,
     multiLine: true,
@@ -103,7 +103,7 @@ export default {
     university: '',
     fileUrl: null,
     timeout: 6000,
-    topImage: '/digital-collection/collection08/eyecatching.png',
+    topImage: '/images/digital-collection/collection08/eyecatching.png',
     commentary1:
       "<p>Henry More, The Apology of Dr. Henry More, Fellow of Christ's College in Cambridge: Wherein Is Contained as Well a More General Account of the Manner and Scope of His Writings, as a Particular Explication of Several Passages in His Grand Mystery of Godliness （London, 1664）</p>",
     commentary2:
@@ -122,199 +122,199 @@ export default {
     ],
     images: [
       {
-        src: '/digital-collection/collection08/henrymore002.jpg',
+        src: '/images/digital-collection/collection08/henrymore002.jpg',
         caption: 'The Apology of Dr. Henry More',
       },
       {
-        src: '/digital-collection/collection08/henrymore003.jpg',
+        src: '/images/digital-collection/collection08/henrymore003.jpg',
         caption: '(pp.478-479)',
       },
       {
-        src: '/digital-collection/collection08/henrymore004.jpg',
+        src: '/images/digital-collection/collection08/henrymore004.jpg',
         caption: '(pp.480)-481',
       },
       {
-        src: '/digital-collection/collection08/henrymore005.jpg',
+        src: '/images/digital-collection/collection08/henrymore005.jpg',
         caption: 'pp.482-483',
       },
       {
-        src: '/digital-collection/collection08/henrymore006.jpg',
+        src: '/images/digital-collection/collection08/henrymore006.jpg',
         caption: 'pp.484-485',
       },
       {
-        src: '/digital-collection/collection08/henrymore007.jpg',
+        src: '/images/digital-collection/collection08/henrymore007.jpg',
         caption: 'pp.486-487',
       },
       {
-        src: '/digital-collection/collection08/henrymore008.jpg',
+        src: '/images/digital-collection/collection08/henrymore008.jpg',
         caption: 'pp.488-489',
       },
       {
-        src: '/digital-collection/collection08/henrymore009.jpg',
+        src: '/images/digital-collection/collection08/henrymore009.jpg',
         caption: 'pp.490-491',
       },
       {
-        src: '/digital-collection/collection08/henrymore010.jpg',
+        src: '/images/digital-collection/collection08/henrymore010.jpg',
         caption: 'pp.492-493',
       },
       {
-        src: '/digital-collection/collection08/henrymore011.jpg',
+        src: '/images/digital-collection/collection08/henrymore011.jpg',
         caption: 'pp.494-495',
       },
       {
-        src: '/digital-collection/collection08/henrymore012.jpg',
+        src: '/images/digital-collection/collection08/henrymore012.jpg',
         caption: 'pp.496-497',
       },
       {
-        src: '/digital-collection/collection08/henrymore013.jpg',
+        src: '/images/digital-collection/collection08/henrymore013.jpg',
         caption: 'pp.498-499',
       },
       {
-        src: '/digital-collection/collection08/henrymore014.jpg',
+        src: '/images/digital-collection/collection08/henrymore014.jpg',
         caption: 'pp.500-501',
       },
       {
-        src: '/digital-collection/collection08/henrymore015.jpg',
+        src: '/images/digital-collection/collection08/henrymore015.jpg',
         caption: 'pp.502-503',
       },
       {
-        src: '/digital-collection/collection08/henrymore016.jpg',
+        src: '/images/digital-collection/collection08/henrymore016.jpg',
         caption: 'pp.504-505',
       },
       {
-        src: '/digital-collection/collection08/henrymore017.jpg',
+        src: '/images/digital-collection/collection08/henrymore017.jpg',
         caption: 'pp.506-507',
       },
       {
-        src: '/digital-collection/collection08/henrymore018.jpg',
+        src: '/images/digital-collection/collection08/henrymore018.jpg',
         caption: 'pp.508-509',
       },
       {
-        src: '/digital-collection/collection08/henrymore019.jpg',
+        src: '/images/digital-collection/collection08/henrymore019.jpg',
         caption: 'pp.510-511',
       },
       {
-        src: '/digital-collection/collection08/henrymore020.jpg',
+        src: '/images/digital-collection/collection08/henrymore020.jpg',
         caption: 'pp.512-513',
       },
       {
-        src: '/digital-collection/collection08/henrymore021.jpg',
+        src: '/images/digital-collection/collection08/henrymore021.jpg',
         caption: 'pp.514-515',
       },
       {
-        src: '/digital-collection/collection08/henrymore022.jpg',
+        src: '/images/digital-collection/collection08/henrymore022.jpg',
         caption: 'pp.516-517',
       },
       {
-        src: '/digital-collection/collection08/henrymore023.jpg',
+        src: '/images/digital-collection/collection08/henrymore023.jpg',
         caption: 'pp.518-519',
       },
       {
-        src: '/digital-collection/collection08/henrymore024.jpg',
+        src: '/images/digital-collection/collection08/henrymore024.jpg',
         caption: 'pp.520-521',
       },
       {
-        src: '/digital-collection/collection08/henrymore025.jpg',
+        src: '/images/digital-collection/collection08/henrymore025.jpg',
         caption: 'pp.522-523',
       },
       {
-        src: '/digital-collection/collection08/henrymore026.jpg',
+        src: '/images/digital-collection/collection08/henrymore026.jpg',
         caption: 'pp.524-525',
       },
       {
-        src: '/digital-collection/collection08/henrymore027.jpg',
+        src: '/images/digital-collection/collection08/henrymore027.jpg',
         caption: 'pp.526-527',
       },
       {
-        src: '/digital-collection/collection08/henrymore028.jpg',
+        src: '/images/digital-collection/collection08/henrymore028.jpg',
         caption: 'pp.528-529',
       },
       {
-        src: '/digital-collection/collection08/henrymore029.jpg',
+        src: '/images/digital-collection/collection08/henrymore029.jpg',
         caption: 'pp.530-531',
       },
       {
-        src: '/digital-collection/collection08/henrymore030.jpg',
+        src: '/images/digital-collection/collection08/henrymore030.jpg',
         caption: 'pp.532-533',
       },
       {
-        src: '/digital-collection/collection08/henrymore031.jpg',
+        src: '/images/digital-collection/collection08/henrymore031.jpg',
         caption: 'pp.534-535',
       },
       {
-        src: '/digital-collection/collection08/henrymore032.jpg',
+        src: '/images/digital-collection/collection08/henrymore032.jpg',
         caption: 'pp.536-537',
       },
       {
-        src: '/digital-collection/collection08/henrymore033.jpg',
+        src: '/images/digital-collection/collection08/henrymore033.jpg',
         caption: 'pp.538-539',
       },
       {
-        src: '/digital-collection/collection08/henrymore034.jpg',
+        src: '/images/digital-collection/collection08/henrymore034.jpg',
         caption: 'pp.540-541',
       },
       {
-        src: '/digital-collection/collection08/henrymore035.jpg',
+        src: '/images/digital-collection/collection08/henrymore035.jpg',
         caption: 'pp.542-543',
       },
       {
-        src: '/digital-collection/collection08/henrymore036.jpg',
+        src: '/images/digital-collection/collection08/henrymore036.jpg',
         caption: 'pp.544-545',
       },
       {
-        src: '/digital-collection/collection08/henrymore037.jpg',
+        src: '/images/digital-collection/collection08/henrymore037.jpg',
         caption: 'pp.546-547',
       },
       {
-        src: '/digital-collection/collection08/henrymore038.jpg',
+        src: '/images/digital-collection/collection08/henrymore038.jpg',
         caption: 'pp.548-549',
       },
       {
-        src: '/digital-collection/collection08/henrymore039.jpg',
+        src: '/images/digital-collection/collection08/henrymore039.jpg',
         caption: 'pp.550-551',
       },
       {
-        src: '/digital-collection/collection08/henrymore040.jpg',
+        src: '/images/digital-collection/collection08/henrymore040.jpg',
         caption: 'pp.552-553',
       },
       {
-        src: '/digital-collection/collection08/henrymore041.jpg',
+        src: '/images/digital-collection/collection08/henrymore041.jpg',
         caption: 'pp.554-555',
       },
       {
-        src: '/digital-collection/collection08/henrymore042.jpg',
+        src: '/images/digital-collection/collection08/henrymore042.jpg',
         caption: 'pp.556-557',
       },
       {
-        src: '/digital-collection/collection08/henrymore043.jpg',
+        src: '/images/digital-collection/collection08/henrymore043.jpg',
         caption: 'pp.558-559',
       },
       {
-        src: '/digital-collection/collection08/henrymore044.jpg',
+        src: '/images/digital-collection/collection08/henrymore044.jpg',
         caption: 'pp.560-561',
       },
       {
-        src: '/digital-collection/collection08/henrymore045.jpg',
+        src: '/images/digital-collection/collection08/henrymore045.jpg',
         caption: 'pp.562-563',
       },
       {
-        src: '/digital-collection/collection08/henrymore046.jpg',
+        src: '/images/digital-collection/collection08/henrymore046.jpg',
         caption: 'pp.564-565',
       },
       {
-        src: '/digital-collection/collection08/henrymore047.jpg',
+        src: '/images/digital-collection/collection08/henrymore047.jpg',
         caption: 'pp.566-567',
       },
       {
-        src: '/digital-collection/collection08/henrymore048.jpg',
+        src: '/images/digital-collection/collection08/henrymore048.jpg',
         caption: 'The Cotents of the Apology',
       },
       {
-        src: '/digital-collection/collection08/henrymore049.jpg',
+        src: '/images/digital-collection/collection08/henrymore049.jpg',
         caption: 'The Cotents of the Apology (next page)',
       },
       {
-        src: '/digital-collection/collection08/henrymore001.jpg',
+        src: '/images/digital-collection/collection08/henrymore001.jpg',
         caption: 'A Modest Enquiry into the Mystery of Iniquity',
       },
     ],

@@ -109,15 +109,15 @@
 </template>
 
 <script>
-import imageList from '@/static/digital-collection/collection07/imageList.json'
+import imageList from '@/assets/json/digital-collection/collection07.json'
 
 export default {
   name: 'PageDigitalCollection07',
   data: () => ({
     title: '横浜絵葉書（手彩色）',
-    titleLogo: '/digital-collection/collection07/title-logo.png',
+    titleLogo: '/images/digital-collection/collection07/title-logo.png',
     index: null,
-    topImage: '/digital-collection/collection07/group01/group01_023.jpg',
+    topImage: '/images/digital-collection/collection07/group01/group01_023.jpg',
     commentary1:
       '<p>絵葉書は、明治33（1900）年9月1日に私製葉書の作成と使用が認められ、逓信省が日露戦争記念絵葉書を発行したのを契機にブームとなりました。当初は一色刷り（墨摺り）であった絵葉書に、筆やステンシルを使って着色したものが手彩色です。本学所蔵の『横浜絵葉書（手彩色）』は、明治から大正時代における、横浜市内の名所の数々を描いたもので、国内外から横浜を訪れた多くの人々が買い求めました。現在は、関東大震災や戦災で失われた横浜の景観や市民の暮らしを知る上で、貴重な歴史資料となっています。</p>',
     commentary2:
@@ -139,7 +139,7 @@ export default {
         title: '横浜本町通り、横浜馬車道通り、横浜居留地',
         quantity: 132,
         notes: '※1 ※2',
-        avatar: '/digital-collection/collection07/group01/group01_023.jpg',
+        avatar: '/images/digital-collection/collection07/group01/group01_023.jpg',
         group: 'group01',
       },
       { divider: true, inset: true },
@@ -147,7 +147,7 @@ export default {
         title: '横浜山手英国病院他',
         quantity: 187,
         notes: '※2',
-        avatar: '/digital-collection/collection07/group02/group02_1004.jpg',
+        avatar: '/images/digital-collection/collection07/group02/group02_1004.jpg',
         group: 'group02',
       },
       { divider: true, inset: true },
@@ -155,7 +155,7 @@ export default {
         title: '海岸通り、桟橋、根岸、元町、伊勢佐木町、三渓園他',
         quantity: 106,
         notes: '※2',
-        avatar: '/digital-collection/collection07/group03/group03_2083.jpg',
+        avatar: '/images/digital-collection/collection07/group03/group03_2083.jpg',
         group: 'group03',
       },
     ],

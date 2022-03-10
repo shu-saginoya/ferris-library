@@ -76,8 +76,8 @@ export default {
   name: 'PageDigitalCollection01',
   data: () => ({
     title: '新三十六歌仙画帖',
-    titleLogo: '/digital-collection/collection01/title-logo.gif',
-    topImage: '/digital-collection/collection01/01.jpg',
+    titleLogo: '/images/digital-collection/collection01/title-logo.gif',
+    topImage: '/images/digital-collection/collection01/01.jpg',
     index: null,
     flag: null,
     topImageCaptions: [
@@ -122,7 +122,7 @@ export default {
       {
         num: '1',
         alt: '順徳院',
-        src: '/digital-collection/collection01/02.jpg',
+        src: '/images/digital-collection/collection01/02.jpg',
         caption: '1 順徳院',
         lr: '左 順徳院',
         poem: 'ほのぼのと明行やまのさくらばなかつふりまさる雪かとぞみる',
@@ -130,7 +130,7 @@ export default {
       {
         num: '1',
         alt: '順徳院',
-        src: '/digital-collection/collection01/38.jpg',
+        src: '/images/digital-collection/collection01/38.jpg',
         caption:
           '左 順徳院（ほのぼのと明行やまのさくらばなかつふりまさる雪かとぞみる）',
         lr: '左 順徳院',
@@ -139,7 +139,7 @@ export default {
       {
         num: '2',
         alt: '藤原秀能',
-        src: '/digital-collection/collection01/03.jpg',
+        src: '/images/digital-collection/collection01/03.jpg',
         caption: '2 藤原秀能',
         lr: '右 藤原秀能',
         poem: 'あし曳の山のしたみち跡たえて尾上のかねに月ぞのこれる',
@@ -147,7 +147,7 @@ export default {
       {
         num: '2',
         alt: '藤原秀能',
-        src: '/digital-collection/collection01/39.jpg',
+        src: '/images/digital-collection/collection01/39.jpg',
         caption:
           '右 藤原秀能 （あし曳の山のしたみち跡たえて尾上のかねに月ぞのこれる）',
         lr: '右 藤原秀能',
@@ -156,7 +156,7 @@ export default {
       {
         num: '3',
         alt: '宮内卿',
-        src: '/digital-collection/collection01/04.jpg',
+        src: '/images/digital-collection/collection01/04.jpg',
         caption: '3 宮内卿',
         lr: '左 宮内卿',
         poem: 'かきくらしなをふるさとの雪のうちにあとこそみえねはなは散りけり',
@@ -164,7 +164,7 @@ export default {
       {
         num: '3',
         alt: '宮内卿',
-        src: '/digital-collection/collection01/40.jpg',
+        src: '/images/digital-collection/collection01/40.jpg',
         caption:
           '左 宮内卿（かきくらしなをふるさとの雪のうちにあとこそみえねはなは散りけり）',
         lr: '左 宮内卿',
@@ -173,7 +173,7 @@ export default {
       {
         num: '4',
         alt: '西行',
-        src: '/digital-collection/collection01/05.jpg',
+        src: '/images/digital-collection/collection01/05.jpg',
         caption: '4 西行',
         lr: '右 西行',
         poem: 'をしなべて花のさかりになりにけり山のはごとにかゝるしら雲',
@@ -181,7 +181,7 @@ export default {
       {
         num: '4',
         alt: '西行',
-        src: '/digital-collection/collection01/41.jpg',
+        src: '/images/digital-collection/collection01/41.jpg',
         caption:
           '右 西行法師 （をしなべて花のさかりになりにけり山のはごとにかゝるしら雲）',
         lr: '右 西行法師',
@@ -190,7 +190,7 @@ export default {
       {
         num: '5',
         alt: '藤原実定',
-        src: '/digital-collection/collection01/06.jpg',
+        src: '/images/digital-collection/collection01/06.jpg',
         caption: '5 藤原実定',
         lr: '左 後徳大寺左大臣',
         poem: 'なごの海の霞のまよりながむれば入日をあらふおきつしら浪',
@@ -198,7 +198,7 @@ export default {
       {
         num: '5',
         alt: '藤原実定',
-        src: '/digital-collection/collection01/42.jpg',
+        src: '/images/digital-collection/collection01/42.jpg',
         caption:
           '左 後徳大寺左大臣（なごの海の霞のまよりながむれば入日をあらふおきつしら浪）',
         lr: '左 後徳大寺左大臣',
@@ -207,7 +207,7 @@ export default {
       {
         num: '6',
         alt: '藤原隆祐',
-        src: '/digital-collection/collection01/07.jpg',
+        src: '/images/digital-collection/collection01/07.jpg',
         caption: '6 藤原隆祐',
         lr: '右 藤原隆祐朝臣',
         poem: 'けふはなをみやこもちかし逢坂のせきのあなたにしる人もがな',
@@ -215,7 +215,7 @@ export default {
       {
         num: '6',
         alt: '藤原隆祐',
-        src: '/digital-collection/collection01/43.jpg',
+        src: '/images/digital-collection/collection01/43.jpg',
         caption:
           '右 藤原隆祐朝臣 （けふはなをみやこもちかし逢坂のせきのあなたにしる人もがな）',
         lr: '右 藤原隆祐朝臣',
@@ -224,7 +224,7 @@ export default {
       {
         num: '7',
         alt: '藤原公経',
-        src: '/digital-collection/collection01/08.jpg',
+        src: '/images/digital-collection/collection01/08.jpg',
         caption: '7 藤原公経',
         lr: '左 西園寺入道前太政大臣',
         poem: '桜花みねにも尾にもうへをかむ見ぬ世の春を人やしのぶと',
@@ -232,7 +232,7 @@ export default {
       {
         num: '7',
         alt: '藤原公経',
-        src: '/digital-collection/collection01/44.jpg',
+        src: '/images/digital-collection/collection01/44.jpg',
         caption:
           '左 西園寺入道前太政大臣（桜花みねにも尾にもうへをかむ見ぬ世の春を人やしのぶと）',
         lr: '左 西園寺入道前太政大臣',
@@ -241,7 +241,7 @@ export default {
       {
         num: '8',
         alt: '源通具',
-        src: '/digital-collection/collection01/10.jpg',
+        src: '/images/digital-collection/collection01/10.jpg',
         caption: '9 源通具',
         lr: '右 右衛門督通具',
         poem: 'いそのかみふる野のさくらたれうへて春はわすれぬかたみなるらむ',
@@ -249,7 +249,7 @@ export default {
       {
         num: '8',
         alt: '源通具',
-        src: '/digital-collection/collection01/45.jpg',
+        src: '/images/digital-collection/collection01/45.jpg',
         caption:
           '右 右衛門督通具（いそのかみふる野のさくらたれうへて春はわすれぬかたみなるらむ）',
         lr: '右 右衛門督通具',
@@ -258,7 +258,7 @@ export default {
       {
         num: '9',
         alt: '藤原俊成',
-        src: '/digital-collection/collection01/09.jpg',
+        src: '/images/digital-collection/collection01/09.jpg',
         caption: '9 藤原俊成',
         lr: '左 皇太后宮大夫俊成',
         poem: 'またやみむかたのゝみ野のさくらがり花の雪ちるはるのあけぼの',
@@ -266,7 +266,7 @@ export default {
       {
         num: '9',
         alt: '藤原俊成',
-        src: '/digital-collection/collection01/46.jpg',
+        src: '/images/digital-collection/collection01/46.jpg',
         caption:
           '左 皇太后宮大夫俊成（またやみむかたのゝみ野のさくらがり花の雪ちるはるのあけぼの）',
         lr: '左 皇太后宮大夫俊成',
@@ -275,7 +275,7 @@ export default {
       {
         num: '10',
         alt: '二条院讃岐',
-        src: '/digital-collection/collection01/11.jpg',
+        src: '/images/digital-collection/collection01/11.jpg',
         caption: '10 二条院讃岐',
         lr: '右 二條院讃岐',
         poem: '山たかみ嶺の嵐にちるはなの月にあまぎる明けがたのそら',
@@ -283,7 +283,7 @@ export default {
       {
         num: '10',
         alt: '二条院讃岐',
-        src: '/digital-collection/collection01/47.jpg',
+        src: '/images/digital-collection/collection01/47.jpg',
         caption:
           '右 二條院讃岐 （山たかみ嶺の嵐にちるはなの月にあまぎる明けがたのそら）',
         lr: '右 二條院讃岐',
@@ -292,7 +292,7 @@ export default {
       {
         num: '11',
         alt: '藤原良経',
-        src: '/digital-collection/collection01/12.jpg',
+        src: '/images/digital-collection/collection01/12.jpg',
         caption: '11 藤原良経',
         lr: '左 後京極摂政殿前太政大臣',
         poem: 'そらはなをかすみもやらずかぜさえてゆきげにくもる春の夜の月',
@@ -300,7 +300,7 @@ export default {
       {
         num: '11',
         alt: '藤原良経',
-        src: '/digital-collection/collection01/48.jpg',
+        src: '/images/digital-collection/collection01/48.jpg',
         caption:
           '左 後京極摂政殿前太政大臣（そらはなをかすみもやらずかぜさえてゆきげにくもる春の夜の月）',
         lr: '左 後京極摂政殿前太政大臣',
@@ -309,7 +309,7 @@ export default {
       {
         num: '12',
         alt: '小侍従',
-        src: '/digital-collection/collection01/13.jpg',
+        src: '/images/digital-collection/collection01/13.jpg',
         caption: '12 小侍従',
         lr: '右 小侍従',
         poem: 'いかなればそのかみやまのあふひ草としはふれどもふた葉なるらむ',
@@ -317,7 +317,7 @@ export default {
       {
         num: '12',
         alt: '小侍従',
-        src: '/digital-collection/collection01/49.jpg',
+        src: '/images/digital-collection/collection01/49.jpg',
         caption:
           '右 小侍従 （いかなればそのかみやまのあふひ草としはふれどもふた葉なるらむ）',
         lr: '右 小侍従',
@@ -326,7 +326,7 @@ export default {
       {
         num: '13',
         alt: '藤原基家',
-        src: '/digital-collection/collection01/14.jpg',
+        src: '/images/digital-collection/collection01/14.jpg',
         caption: '13 藤原基家',
         lr: '左 権大納言其家',
         poem: '秋ふかきもみぢの庭のまつの戸はたがすむ峯のいほりなるらむ',
@@ -334,7 +334,7 @@ export default {
       {
         num: '13',
         alt: '藤原基家',
-        src: '/digital-collection/collection01/50.jpg',
+        src: '/images/digital-collection/collection01/50.jpg',
         caption:
           '左 権大納言其家（秋ふかきもみぢの庭のまつの戸はたがすむ峯のいほりなるらむ）',
         lr: '左 権大納言其家',
@@ -343,7 +343,7 @@ export default {
       {
         num: '14',
         alt: '式子内親王',
-        src: '/digital-collection/collection01/15.jpg',
+        src: '/images/digital-collection/collection01/15.jpg',
         caption: '14 式子内親王',
         lr: '右 式子内親王',
         poem: 'ながむれは衣手すゞしひさかたのあまの河原の秋のはつかぜ',
@@ -351,7 +351,7 @@ export default {
       {
         num: '14',
         alt: '式子内親王',
-        src: '/digital-collection/collection01/51.jpg',
+        src: '/images/digital-collection/collection01/51.jpg',
         caption:
           '右 式子内親王 （ながむれは衣手すゞしひさかたのあまの河原の秋のはつかぜ）',
         lr: '右 式子内親王',
@@ -360,7 +360,7 @@ export default {
       {
         num: '15',
         alt: '後鳥羽院',
-        src: '/digital-collection/collection01/16.jpg',
+        src: '/images/digital-collection/collection01/16.jpg',
         caption: '15 後鳥羽院',
         lr: '左 後鳥羽院',
         poem: '龍田姫かぜもしらべもこゑたてつ秋や来ぬらむ岡の邊のまつ',
@@ -368,7 +368,7 @@ export default {
       {
         num: '15',
         alt: '後鳥羽院',
-        src: '/digital-collection/collection01/52.jpg',
+        src: '/images/digital-collection/collection01/52.jpg',
         caption:
           '左 後鳥羽院（龍田姫かぜもしらべもこゑたてつ秋や来ぬらむ岡の邊のまつ）',
         lr: '左 後鳥羽院',
@@ -377,7 +377,7 @@ export default {
       {
         num: '16',
         alt: '慈円',
-        src: '/digital-collection/collection01/17.jpg',
+        src: '/images/digital-collection/collection01/17.jpg',
         caption: '16 慈円',
         lr: '右 前大僧正慈鎮',
         poem: '身にとまるおもひを萩ぼうはばにてこのころうれし夕ぐれのそら',
@@ -385,7 +385,7 @@ export default {
       {
         num: '16',
         alt: '慈円',
-        src: '/digital-collection/collection01/53.jpg',
+        src: '/images/digital-collection/collection01/53.jpg',
         caption:
           '右 前大僧正慈鎮 （身にとまるおもひを萩ぼうはばにてこのころうれし夕ぐれのそら）',
         lr: '右 前大僧正慈鎮',
@@ -394,7 +394,7 @@ export default {
       {
         num: '17',
         alt: '藤原定家',
-        src: '/digital-collection/collection01/18.jpg',
+        src: '/images/digital-collection/collection01/18.jpg',
         caption: '17 藤原定家',
         lr: '左 前中納言定家',
         poem: 'しら玉のをだえのはしの名もつらしみだれてをつる　袖のなみだに',
@@ -402,7 +402,7 @@ export default {
       {
         num: '17',
         alt: '藤原定家',
-        src: '/digital-collection/collection01/54.jpg',
+        src: '/images/digital-collection/collection01/54.jpg',
         caption:
           '左 前中納言定家（しら玉のをだえのはしの名もつらしみだれてをつる　袖のなみだに）',
         lr: '左 前中納言定家',
@@ -411,7 +411,7 @@ export default {
       {
         num: '18',
         alt: '藤原忠良',
-        src: '/digital-collection/collection01/19.jpg',
+        src: '/images/digital-collection/collection01/19.jpg',
         caption: '17 藤原忠良',
         lr: '右 前大納言忠良',
         poem: 'ゆふづく日さすやいほりのしばの戸にさびしくもあるかひぐらしのこゑ',
@@ -419,7 +419,7 @@ export default {
       {
         num: '18',
         alt: '藤原忠良',
-        src: '/digital-collection/collection01/55.jpg',
+        src: '/images/digital-collection/collection01/55.jpg',
         caption:
           '右 前大納言忠良（ゆふづく日さすやいほりのしばの戸にさびしくもあるかひぐらしのこゑ）',
         lr: '右 前大納言忠良',
@@ -428,7 +428,7 @@ export default {
       {
         num: '19',
         alt: '源家長',
-        src: '/digital-collection/collection01/20.jpg',
+        src: '/images/digital-collection/collection01/20.jpg',
         caption: '18 源家長',
         lr: '左 家長朝臣',
         poem: '春雨に野沢の水はまさらねどもえいづるくさぞふかくなりゆく',
@@ -436,7 +436,7 @@ export default {
       {
         num: '19',
         alt: '源家長',
-        src: '/digital-collection/collection01/56.jpg',
+        src: '/images/digital-collection/collection01/56.jpg',
         caption:
           '左 家長朝臣 （春雨に野沢の水はまさらねどもえいづるくさぞふかくなりゆく）',
         lr: '左 家長朝臣',
@@ -445,7 +445,7 @@ export default {
       {
         num: '20',
         alt: '源通光',
-        src: '/digital-collection/collection01/21.jpg',
+        src: '/images/digital-collection/collection01/21.jpg',
         caption: '19 源通光',
         lr: '右 前内大臣',
         poem: '雲のゐる遠山姫のはなかつら霞をかけてにほふ春風',
@@ -453,7 +453,7 @@ export default {
       {
         num: '20',
         alt: '源通光',
-        src: '/digital-collection/collection01/57.jpg',
+        src: '/images/digital-collection/collection01/57.jpg',
         caption:
           '右 前内大臣（雲のゐる遠山姫のはなかつら霞をかけてにほふ春風）',
         lr: '右 前内大臣',
@@ -462,7 +462,7 @@ export default {
       {
         num: '21',
         alt: '藤原為家',
-        src: '/digital-collection/collection01/22.jpg',
+        src: '/images/digital-collection/collection01/22.jpg',
         caption: '21 藤原為家',
         lr: '左 前大納言為家',
         poem: '立のこす梢も見えす山さくらはなのあたりにかかるしらくも',
@@ -470,7 +470,7 @@ export default {
       {
         num: '21',
         alt: '藤原為家',
-        src: '/digital-collection/collection01/58.jpg',
+        src: '/images/digital-collection/collection01/58.jpg',
         caption:
           '左 前大納言為家（立のこす梢も見えす山さくらはなのあたりにかかるしらくも）',
         lr: '左 前大納言為家',
@@ -479,7 +479,7 @@ export default {
       {
         num: '22',
         alt: '源通親',
-        src: '/digital-collection/collection01/24.jpg',
+        src: '/images/digital-collection/collection01/24.jpg',
         caption: '22 源通親',
         lr: '右 土御門内大臣',
         poem: 'おりしもあれ月はにしにも入ぬらんくもの南のはつかりのこゑ',
@@ -487,7 +487,7 @@ export default {
       {
         num: '22',
         alt: '源通親',
-        src: '/digital-collection/collection01/59.jpg',
+        src: '/images/digital-collection/collection01/59.jpg',
         caption:
           '右 土御門内大臣 （おりしもあれ月はにしにも入ぬらんくもの南のはつかりのこゑ）',
         lr: '右 土御門内大臣',
@@ -496,7 +496,7 @@ export default {
       {
         num: '23',
         alt: '藤原信実',
-        src: '/digital-collection/collection01/23.jpg',
+        src: '/images/digital-collection/collection01/23.jpg',
         caption: '23 藤原信実',
         lr: '左 信実朝臣',
         poem: 'あけて見ぬたが玉章もいたづらにまた夜をこめて帰るかりがね',
@@ -504,7 +504,7 @@ export default {
       {
         num: '23',
         alt: '藤原信実',
-        src: '/digital-collection/collection01/60.jpg',
+        src: '/images/digital-collection/collection01/60.jpg',
         caption:
           '左 信実朝臣（あけて見ぬたが玉章もいたづらにまた夜をこめて帰るかりがね）',
         lr: '左 信実朝臣',
@@ -513,7 +513,7 @@ export default {
       {
         num: '24',
         alt: '源具親',
-        src: '/digital-collection/collection01/25.jpg',
+        src: '/images/digital-collection/collection01/25.jpg',
         caption: '24 源具親',
         lr: '右 源具親朝臣',
         poem: 'はれくもる影をみやこにさきだてゝしぐるとつぐる山の端の月',
@@ -521,7 +521,7 @@ export default {
       {
         num: '24',
         alt: '源具親',
-        src: '/digital-collection/collection01/61.jpg',
+        src: '/images/digital-collection/collection01/61.jpg',
         caption:
           '右 源具親朝臣 （はれくもる影をみやこにさきだてゝしぐるとつぐる山の端の月）',
         lr: '右 源具親朝臣',
@@ -530,7 +530,7 @@ export default {
       {
         num: '25',
         alt: '道助法親王',
-        src: '/digital-collection/collection01/26.jpg',
+        src: '/images/digital-collection/collection01/26.jpg',
         caption: '25 道助法親王',
         lr: '左 仁和寺宮',
         poem: '萩の葉にかぜの音せぬあきもあらばなみだのほかに月はみてまし',
@@ -538,7 +538,7 @@ export default {
       {
         num: '25',
         alt: '道助法親王',
-        src: '/digital-collection/collection01/62.jpg',
+        src: '/images/digital-collection/collection01/62.jpg',
         caption:
           '左 仁和寺宮（萩の葉にかぜの音せぬあきもあらばなみだのほかに月はみてまし）',
         lr: '左 仁和寺宮',
@@ -547,7 +547,7 @@ export default {
       {
         num: '26',
         alt: '俊恵',
-        src: '/digital-collection/collection01/27.jpg',
+        src: '/images/digital-collection/collection01/27.jpg',
         caption: '26 俊恵',
         lr: '右 俊恵法師',
         poem: 'ふるさとの板井の清水みくさゐて月さへすまずなりにけるかな',
@@ -555,7 +555,7 @@ export default {
       {
         num: '26',
         alt: '俊恵',
-        src: '/digital-collection/collection01/63.jpg',
+        src: '/images/digital-collection/collection01/63.jpg',
         caption:
           '右 俊恵法師 （ふるさとの板井の清水みくさゐて月さへすまずなりにけるかな）',
         lr: '右 俊恵法師',
@@ -564,7 +564,7 @@ export default {
       {
         num: '27',
         alt: '藤原兼実',
-        src: '/digital-collection/collection01/28.jpg',
+        src: '/images/digital-collection/collection01/28.jpg',
         caption: '27 藤原兼実',
         lr: '左 後九条入道前関白太政大臣',
         poem: 'かすみしくはるのしほぢをみわたせばみどりをわくるおきつしら波',
@@ -572,7 +572,7 @@ export default {
       {
         num: '27',
         alt: '藤原兼実',
-        src: '/digital-collection/collection01/64.jpg',
+        src: '/images/digital-collection/collection01/64.jpg',
         caption:
           '左 後九条入道前関白太政大臣（かすみしくはるのしほぢをみわたせばみどりをわくるおきつしら波）',
         lr: '左 後九条入道前関白太政大臣',
@@ -581,7 +581,7 @@ export default {
       {
         num: '28',
         alt: '宜秋門院丹後',
-        src: '/digital-collection/collection01/29.jpg',
+        src: '/images/digital-collection/collection01/29.jpg',
         caption: '28 宜秋門院丹後',
         lr: '右 宜秋門院丹後',
         poem: '吹払ふ嵐のゝちのたかねより木の葉雲らで月やいづらむ',
@@ -589,7 +589,7 @@ export default {
       {
         num: '28',
         alt: '宜秋門院丹後',
-        src: '/digital-collection/collection01/65.jpg',
+        src: '/images/digital-collection/collection01/65.jpg',
         caption:
           '右 宜秋門院丹後 （吹払ふ嵐のゝちのたかねより木の葉雲らで月やいづらむ）',
         lr: '右 宜秋門院丹後',
@@ -598,7 +598,7 @@ export default {
       {
         num: '29',
         alt: '土御門院',
-        src: '/digital-collection/collection01/30.jpg',
+        src: '/images/digital-collection/collection01/30.jpg',
         caption: '29 土御門院',
         lr: '左 土御門院',
         poem: '伊勢の海のあまのはらなるあさがすみそらにしほやく烟とぞ見る',
@@ -606,7 +606,7 @@ export default {
       {
         num: '29',
         alt: '土御門院',
-        src: '/digital-collection/collection01/66.jpg',
+        src: '/images/digital-collection/collection01/66.jpg',
         caption:
           '左 土御門院（伊勢の海のあまのはらなるあさがすみそらにしほやく烟とぞ見る）',
         lr: '左 土御門院',
@@ -615,7 +615,7 @@ export default {
       {
         num: '30',
         alt: '藤原清輔',
-        src: '/digital-collection/collection01/31.jpg',
+        src: '/images/digital-collection/collection01/31.jpg',
         caption: '30 藤原清輔',
         lr: '右 藤原清輔朝臣',
         poem: '柴の戸に入日のかげはさしながらいかにしぐるゝ山べなるらむ',
@@ -623,7 +623,7 @@ export default {
       {
         num: '30',
         alt: '藤原清輔',
-        src: '/digital-collection/collection01/67.jpg',
+        src: '/images/digital-collection/collection01/67.jpg',
         caption:
           '右 藤原清輔朝臣 （柴の戸に入日のかげはさしながらいかにしぐるゝ山べなるらむ）',
         lr: '右 藤原清輔朝臣',
@@ -632,7 +632,7 @@ export default {
       {
         num: '31',
         alt: '藤原有家',
-        src: '/digital-collection/collection01/32.jpg',
+        src: '/images/digital-collection/collection01/32.jpg',
         caption: '31 藤原有家',
         lr: '左 藤原有家朝臣',
         poem: '朝日影にほへる山のさくらばなつれなくきえぬ雪かとぞみる',
@@ -640,7 +640,7 @@ export default {
       {
         num: '31',
         alt: '藤原有家',
-        src: '/digital-collection/collection01/68.jpg',
+        src: '/images/digital-collection/collection01/68.jpg',
         caption:
           '左 藤原有家朝臣（朝日影にほへる山のさくらばなつれなくきえぬ雪かとぞみる）',
         lr: '左 藤原有家朝臣',
@@ -649,7 +649,7 @@ export default {
       {
         num: '32',
         alt: '藤原家隆',
-        src: '/digital-collection/collection01/34.jpg',
+        src: '/images/digital-collection/collection01/34.jpg',
         caption: '32 藤原家隆',
         lr: '右 従二位家隆',
         poem: 'かぎりあれば明なんとする鐘の音になをながき夜の月ぞのこれる',
@@ -657,7 +657,7 @@ export default {
       {
         num: '32',
         alt: '藤原家隆',
-        src: '/digital-collection/collection01/69.jpg',
+        src: '/images/digital-collection/collection01/69.jpg',
         caption:
           '右 従二位家隆 （かぎりあれば明なんとする鐘の音になをながき夜の月ぞのこれる）',
         lr: '右 従二位家隆',
@@ -666,7 +666,7 @@ export default {
       {
         num: '33',
         alt: '殷冨門院大輔',
-        src: '/digital-collection/collection01/33.jpg',
+        src: '/images/digital-collection/collection01/33.jpg',
         caption: '33 殷冨門院大輔',
         lr: '左 殷冨門院大輔',
         poem: 'はるかぜのかすみふきとくたえまよりみだれてなびくあをやぎのいと',
@@ -674,7 +674,7 @@ export default {
       {
         num: '33',
         alt: '殷冨門院大輔',
-        src: '/digital-collection/collection01/70.jpg',
+        src: '/images/digital-collection/collection01/70.jpg',
         caption:
           '左 殷冨門院大輔（はるかぜのかすみふきとくたえまよりみだれてなびくあをやぎのいと）',
         lr: '左 殷冨門院大輔',
@@ -683,7 +683,7 @@ export default {
       {
         num: '34',
         alt: '寂蓮',
-        src: '/digital-collection/collection01/35.jpg',
+        src: '/images/digital-collection/collection01/35.jpg',
         caption: '34 寂蓮',
         lr: '右 寂蓮法師',
         poem: 'かづらきやたかまの桜さきにけり龍田のおくにかかるしら雲',
@@ -691,7 +691,7 @@ export default {
       {
         num: '34',
         alt: '寂蓮',
-        src: '/digital-collection/collection01/71.jpg',
+        src: '/images/digital-collection/collection01/71.jpg',
         caption:
           '右 寂蓮法師 （かづらきやたかまの桜さきにけり龍田のおくにかかるしら雲）',
         lr: '右 寂蓮法師',
@@ -700,7 +700,7 @@ export default {
       {
         num: '35',
         alt: '藤原雅経',
-        src: '/digital-collection/collection01/37.jpg',
+        src: '/images/digital-collection/collection01/37.jpg',
         caption: '35 藤原雅経',
         lr: '左 参議雅経',
         poem: 'しら雲の絶間になびく青柳のかづらき山に春風ぞふく',
@@ -708,7 +708,7 @@ export default {
       {
         num: '35',
         alt: '藤原雅経',
-        src: '/digital-collection/collection01/72.jpg',
+        src: '/images/digital-collection/collection01/72.jpg',
         caption:
           '左 参議雅経（しら雲の絶間になびく青柳のかづらき山に春風ぞふく）',
         lr: '左 参議雅経',
@@ -717,7 +717,7 @@ export default {
       {
         num: '36',
         alt: '俊成卿女',
-        src: '/digital-collection/collection01/36.jpg',
+        src: '/images/digital-collection/collection01/36.jpg',
         caption: '36 俊成卿女',
         lr: '右 俊成卿女',
         poem: 'したもゑにおもひ消なむけぶりだにあとなきくものはてぞかなしき',
@@ -725,7 +725,7 @@ export default {
       {
         num: '36',
         alt: '俊成卿女',
-        src: '/digital-collection/collection01/73.jpg',
+        src: '/images/digital-collection/collection01/73.jpg',
         caption:
           '右 俊成卿女 （したもゑにおもひ消なむけぶりだにあとなきくものはてぞかなしき）',
         lr: '右 俊成卿女',
