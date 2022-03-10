@@ -57,7 +57,7 @@ export default {
             p: '本学所蔵の画帖は、江戸時代初期の画家、狩野洞雲によって描かれた三十六人の歌仙の画像と和歌を折帖に装丁したものです。本画帖に撰ばれた新三十六歌仙は、三十六歌仙の鎌倉時代版です。後鳥羽院、式子内親王、藤原定家といった、鎌倉時代を代表する歌人たちの肖像画とその和歌が貼り合わされた、豪華で貴重な資料です。',
           },
         ],
-        image: '/digital-collection/collection01/01.jpg',
+        image: '/images/digital-collection/collection01/01.jpg',
         identification: 'collection01',
       },
       {
@@ -77,7 +77,7 @@ export default {
             p: '失敗の顛末の忠実な絵画化を始め、竹取物語享受史にとっても興味深い第一級の資料です。',
           },
         ],
-        image: '/digital-collection/collection02/00.jpg',
+        image: '/images/digital-collection/collection02/00.jpg',
         identification: 'collection02',
       },
       {
@@ -92,7 +92,7 @@ export default {
             p: '各巻に収められた挿絵は、いずれも金砂子の工霞に縁どられ、王朝世界の華やかさが感じられます。',
           },
         ],
-        image: '/digital-collection/collection03/00.jpg',
+        image: '/images/digital-collection/collection03/00.jpg',
         identification: 'collection03',
       },
       {
@@ -106,7 +106,7 @@ export default {
             p: '実物は貴重資料室で保管しています。図書館内でCD-ROMとあわせて利用することができます。',
           },
         ],
-        image: '/digital-collection/collection04/e_j24_no02.jpg',
+        image: '/images/digital-collection/collection04/e_j24_no02.jpg',
         identification: 'collection04',
       },
       {
@@ -121,7 +121,7 @@ export default {
             p: '図書館で所蔵しているCD-ROMは、研究用としてイラストレーションとテクストを詳しく調査できるようになっています。また、図書館にはシリーズ23冊の英語版、日本語版、また初版本を含む貴重な古書などもそろえてありますので、関心のある方は実際に作品をご覧下さい。',
           },
         ],
-        image: '/digital-collection/collection05/01-000.jpg',
+        image: '/images/digital-collection/collection05/01-000.jpg',
         identification: 'collection05',
       },
       {
@@ -136,7 +136,7 @@ export default {
             p: 'コールデコット以前に、子ども向けに描かれた絵は、言葉によって伝達される物語を、そのまま繰り返し絵で示したものにすぎませんでした。しかし彼は、テキスト（ことば）とイメージ（絵）の働き合う関係を発展させ、さらに、当時の人々の生活の様子を躍動感あふれる筆致で描きました。その手法は後の画家たちに多大な影響を与え、彼は現代絵本の祖と呼ばれています。そして、その名を冠したアメリカのコールデコット賞は、権威ある絵本賞として、毎年優れた絵本画家たちに与えられています。',
           },
         ],
-        image: '/digital-collection/collection06/13-00.jpg',
+        image: '/images/digital-collection/collection06/13-00.jpg',
         identification: 'collection06',
       },
       {
@@ -148,7 +148,7 @@ export default {
             p: '本学所蔵の『横浜絵葉書（手彩色）』は、明治から大正時代における、横浜市内の名所の数々を描いたもので、国内外から横浜を訪れた多くの人々が買い求めました。現在は関東大震災や戦災で失われた横浜の景観や市民の暮らしを知る上で、貴重な歴史資料となっています。',
           },
         ],
-        image: '/digital-collection/collection07/group01/group01_023.jpg',
+        image: '/images/digital-collection/collection07/group01/group01_023.jpg',
         identification: 'collection07',
       },
       {
@@ -159,7 +159,7 @@ export default {
             p: 'ヘンリー・モアは17世紀イギリスの哲学者・神学者です。この著『ヘンリー・モア博士の弁明』は、彼のプラトン派思想――人の誕生以前の魂の存在を信じる、など――や広教派信仰が批判された際の弁明の書であり、1660年代前半のモアの思想をまとめたものです。EEBO（Early English Books Online）未収録のその全文をPDF化して世界初公開。',
           },
         ],
-        image: '/digital-collection/collection08/eyecatching.png',
+        image: '/images/digital-collection/collection08/eyecatching.png',
         identification: 'collection08',
       },
       {
