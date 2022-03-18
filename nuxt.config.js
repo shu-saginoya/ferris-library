@@ -48,6 +48,12 @@ export default {
         download: true,
         inject: true,
       },
+      {
+        families: { 'Noto+Serif+JP': true },
+        display: 'block',
+        download: true,
+        inject: true,
+      },
     ],
   ],
 
