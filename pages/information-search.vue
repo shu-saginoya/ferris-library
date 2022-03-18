@@ -34,6 +34,12 @@ export default {
             name: 'オンラインデータベース一覧',
             push: '/database',
           },
+          {
+            name: 'CiNii Research',
+            href: 'https://cir.nii.ac.jp/',
+            comment: '国立情報学研究所',
+            icon: 'mdi-open-in-new',
+          },
         ],
       },
       {
