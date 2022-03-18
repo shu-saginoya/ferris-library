@@ -8,11 +8,12 @@
 
       <v-toolbar-title class="pl-2">
         <img
-          src="@/assets/images/layouts/ferris-logo.png"
-          height="32"
-          class="ferris-logo mr-2"
+          src="@/assets/images/layouts/site-logo2.jpg"
+          width="264"
+          height="22"
+          class="ferris-logo"
         />
-         <span class="site-title grey--text text--darken-4">{{ siteTitle }}</span>
+         <!-- <span class="site-title grey--text text--darken-4">{{ siteTitle }}</span> -->
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -41,7 +42,8 @@ export default {
 
 <style scoped>
 .ferris-logo {
-  vertical-align: middle;
+  vertical-align: baseline;
+  max-width: 100%;
 }
 .site-title {
   font-feature-settings: "palt";
