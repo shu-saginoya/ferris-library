@@ -12,7 +12,7 @@
           height="32"
           class="ferris-logo mr-2"
         />
-         <span class="site-title grey--text text--darken-1">{{ siteTitle }}</span>
+         <span class="site-title grey--text text--darken-4">{{ siteTitle }}</span>
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -45,5 +45,7 @@ export default {
 }
 .site-title {
   font-feature-settings: "palt";
+  font-family: "Noto Serif Japanese", serif;
+  font-weight: bold;
 }
 </style>
