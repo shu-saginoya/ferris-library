@@ -37,6 +37,12 @@ export default {
             push: '/database',
             comment: 'This is only a Japanese page',
           },
+          {
+            name: 'CiNii Research',
+            href: 'https://cir.nii.ac.jp/',
+            comment: 'operated by the National Institute of Informatics',
+            icon: 'mdi-open-in-new',
+          },
         ],
       },
       {
