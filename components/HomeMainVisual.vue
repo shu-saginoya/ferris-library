@@ -6,14 +6,14 @@
     :height="height"
   >
     <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
-      <v-row
+      <!-- <v-row
         v-if="!englishPage"
         class="fill-height"
         align="center"
         justify="center"
       >
         <img src="@/assets/images/layouts/site-logo.png" width="350" height="113" />
-      </v-row>
+      </v-row> -->
     </v-carousel-item>
   </v-carousel>
 </template>
