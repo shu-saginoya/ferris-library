@@ -11,7 +11,7 @@
         >
           <v-list-item-content>
             <v-list-item-title class="wrap-text">
-              <span v-show="$dayjs(info.date) > $dayjs()">予約投稿：</span>
+              <span v-show="$dayjs(info.date) > $dayjs()" class="red--text text--lighten-2">予約投稿：</span>
               {{ info.title }}
             </v-list-item-title>
             <v-list-item-subtitle
