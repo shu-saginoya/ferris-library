@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <layout-header-test-1 :english-page="true"></layout-header-test-1>
+    <layout-header :english-page="true"></layout-header>
     <v-main>
       <transition name="fade-page">
         <Nuxt />
