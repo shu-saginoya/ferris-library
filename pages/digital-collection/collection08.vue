@@ -117,7 +117,7 @@ export default {
       {
         text: 'Henry More, The Apology of Dr. Henry More',
         disabled: true,
-        href: '/collection08',
+        href: '/digital-collection/collection08',
       },
     ],
     images: [

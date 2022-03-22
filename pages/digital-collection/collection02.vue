@@ -128,7 +128,7 @@ export default {
       {
         text: '竹取物語',
         disabled: true,
-        href: 'collection02',
+        href: '/digital-collection/collection02',
       },
     ],
     images: [

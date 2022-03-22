@@ -115,7 +115,7 @@ export default {
       {
         text: '新三十六歌仙画帖',
         disabled: true,
-        href: 'collection01',
+        href: '/digital-collection/collection01',
       },
     ],
     images: [

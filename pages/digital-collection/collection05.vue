@@ -110,7 +110,7 @@ export default {
       {
         text: 'ビアトリクス・ポターの絵本',
         disabled: true,
-        href: '/collection05',
+        href: '/digital-collection/collection05',
       },
     ],
     images: [

@@ -95,7 +95,7 @@ export default {
       {
         text: '大和物語',
         disabled: true,
-        href: '/collection03',
+        href: '/digital-collection/collection03',
       },
     ],
     images: [

@@ -131,7 +131,7 @@ export default {
       {
         text: '横浜絵葉書（手彩色）',
         disabled: true,
-        href: '/collection07',
+        href: '/digital-collection/collection07',
       },
     ],
     list: [

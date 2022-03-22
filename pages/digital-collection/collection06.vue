@@ -63,7 +63,7 @@ export default {
       {
         text: 'コルデコットの絵本',
         disabled: true,
-        href: '/collection06',
+        href: '/digital-collection/collection06',
       },
     ],
     images: [

@@ -102,7 +102,7 @@ export default {
       {
         text: 'Japanese Fairy Tale',
         disabled: true,
-        href: '/collection04',
+        href: '/digital-collection/collection04',
       },
     ],
     images: [
