@@ -8,11 +8,12 @@
 
       <v-toolbar-title class="pl-2">
         <img
-          src="@/assets/images/layouts/site-logo.png"
+          :src="siteTitle.img"
           class="ferris-logo"
-          width="200"
+          :width="siteTitle.width"
+          :height="siteTitle.height"
+          :alt="siteTitle.name"
         />
-         <!-- <span class="site-title grey--text text--darken-4">{{ siteTitle }}</span> -->
       </v-toolbar-title>
     </v-app-bar>
   </div>
@@ -33,8 +34,18 @@ export default {
   }),
   mounted() {
     this.siteTitle = this.englishPage
-      ? 'Ferris University Library'
-      : 'フェリス女学院大学附属図書館'
+      ? { 
+          name: 'Ferris University Library',
+          img: require('@/assets/images/layouts/site-logo-english.png'),
+          width: '120',
+          height: '34'
+        }
+      : {
+          name: 'フェリス女学院大学附属図書館',
+          img: require('@/assets/images/layouts/site-logo.png'),
+          width: '200',
+          height: '65'
+        }
   },
 }
 </script>
