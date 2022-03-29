@@ -3,7 +3,7 @@
     <v-card-actions>
       <v-btn block text @click="show = !show">
         <v-skeleton-loader type="text" :loading="loading">
-          新型コロナウイルス関連のお知らせ
+          新型コロナウイルスによる入館制限について
         </v-skeleton-loader>
         <v-spacer></v-spacer>
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
@@ -103,7 +103,7 @@ export default {
         contents: [
           {
             subtitle: 'ご利用いただける方',
-            text: '学部生、大学院生、専任教員、2021年度ご出講の非常勤講師、事務職員（副手を含む）',
+            text: '学部生、大学院生、専任教員、2022年度ご出講の非常勤講師、事務職員（副手を含む）',
           },
           {
             subtitle: 'ご予約によりご利用いただける方',
@@ -116,7 +116,7 @@ export default {
             text: '今後の予定は状況により予告なく変更することがあります。今後のスケジュールにつきましては、学生：FerrisPassport、教職員：グループウェアでご確認ください。',
           },
         ],
-        date: '2022年1月5日現在',
+        date: '2022年4月1日現在',
       },
     ],
     subContents: [
@@ -146,10 +146,10 @@ export default {
         date: '2021年5月12日',
       },
       {
-        title: '2021年度後期の宅配貸出について',
+        title: '2022年度前期の宅配貸出について',
         contents: [
           {
-            text: '新型コロナ感染対策等のためキャンパス入構が困難な学部生及び大学院生については、後期（2021/09/23（木）～）も引き続き宅配貸出を行います。',
+            text: '新型コロナ感染対策等のためキャンパス入構が困難な学部生及び大学院生については、前期（2022/04/01（金）～）も引き続き宅配貸出を行います。',
           },
           {
             subtitle: '申込み',
