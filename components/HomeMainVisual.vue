@@ -3,17 +3,9 @@
     cycle
     hide-delimiter-background
     show-arrows-on-hover
-    :height="height"
+    :height="carouselHeight"
   >
-    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
-      <!-- <v-row
-        v-if="!englishPage"
-        class="fill-height"
-        align="center"
-        justify="center"
-      >
-        <img src="@/assets/images/layouts/site-logo.png" width="350" height="113" />
-      </v-row> -->
+    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src" class="imageFilter">
     </v-carousel-item>
   </v-carousel>
 </template>
@@ -21,18 +13,12 @@
 <script>
 export default {
   name: 'HomeMainVisual',
-  props: {
-    englishPage: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data() {
     return {
-      height: '260',
       items: [
         {
           src: require('@/assets/images/main-visual/main-visual-01.jpg'),
+          note: '緑園本館　外観',
         },
         {
           src: require('@/assets/images/main-visual/main-visual-02.jpg'),
@@ -58,5 +44,38 @@ export default {
       ],
     }
   },
+  computed: {
+    carouselHeight() {
+      let height
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          height = 260
+          break
+        case 'sm':
+          height = 310
+          break
+        case 'md':
+          height = 360
+          break
+        case 'lg':
+          height = 460
+          break
+        case 'xl':
+          height = 560
+          break
+      }
+      return height
+    },
+  },
 }
 </script>
+
+<style scoped>
+.imageFilter {
+  filter: grayscale(20%);
+}
+.imageFilter:hover{
+  filter: grayscale(0%);
+  transition: all 1s;
+}
+</style>
