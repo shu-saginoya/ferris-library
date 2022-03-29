@@ -57,7 +57,6 @@ export default {
 }
 .site-title {
   font-feature-settings: "palt";
-  font-family: "Noto Serif Japanese", serif;
   font-weight: bold;
 }
 </style>
