@@ -12,12 +12,12 @@
     <v-tabs-items v-model="tab">
       <v-tab-item>
         <display-pdf
-          location="/documents/pdf/pamphlet/pamphlet_ryokuen.pdf"
+          location="/documents/pamphlet/pamphlet_ryokuen.pdf"
         ></display-pdf>
       </v-tab-item>
       <v-tab-item>
         <display-pdf
-          location="/documents/pdf/pamphlet/pamphlet_yamate.pdf"
+          location="/documents/pamphlet/pamphlet_yamate.pdf"
         ></display-pdf>
       </v-tab-item>
     </v-tabs-items>

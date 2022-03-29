@@ -80,42 +80,42 @@ export default {
     items: [
       {
         name: '神奈川大学図書館',
-        url: '/documents/pdf/consortium/kanagawa.pdf',
+        url: '/documents/consortium/kanagawa.pdf',
         type: 'PDF',
       },
       {
         name: '関東学院大学図書館',
-        url: '/documents/pdf/consortium/kangaku_hon.pdf',
+        url: '/documents/consortium/kangaku_hon.pdf',
         type: 'PDF',
       },
       {
         name: '慶應義塾大学日吉メディアセンター',
-        url: '/documents/pdf/consortium/keio.pdf',
+        url: '/documents/consortium/keio.pdf',
         type: 'PDF',
       },
       {
         name: '國學院大學たまプラーザ図書館',
-        url: '/documents/pdf/consortium/kokugakuin.pdf',
+        url: '/documents/consortium/kokugakuin.pdf',
         type: 'PDF',
       },
       {
         name: '鶴見大学図書館',
-        url: '/documents/pdf/consortium/turumi.pdf',
+        url: '/documents/consortium/turumi.pdf',
         type: 'PDF',
       },
       {
         name: '桐蔭横浜大学大学情報センター',
-        url: '/documents/pdf/consortium/toin.pdf',
+        url: '/documents/consortium/toin.pdf',
         type: 'PDF',
       },
       {
         name: '東京都市大学横浜キャンパス図書館',
-        url: '/documents/pdf/consortium/toshi.pdf',
+        url: '/documents/consortium/toshi.pdf',
         type: 'PDF',
       },
       {
         name: '東洋英和女学院大学図書館',
-        url: '/documents/pdf/consortium/toyoeiwa.pdf',
+        url: '/documents/consortium/toyoeiwa.pdf',
         type: 'PDF',
       },
       {
@@ -123,22 +123,22 @@ export default {
       },
       {
         name: '明治学院大学横浜校舎図書館',
-        url: '/documents/pdf/consortium/meigaku.pdf',
+        url: '/documents/consortium/meigaku.pdf',
         type: 'PDF',
       },
       {
         name: '横浜国立大学附属図書館',
-        url: '/documents/pdf/consortium/yokokoku.pdf',
+        url: '/documents/consortium/yokokoku.pdf',
         type: 'PDF',
       },
       {
         name: '横浜商科大学図書館',
-        url: '/documents/pdf/consortium/yokosho.pdf',
+        url: '/documents/consortium/yokosho.pdf',
         type: 'PDF',
       },
       {
         name: '横浜市立大学学術情報センター',
-        url: '/documents/pdf/consortium/yokoichi.pdf',
+        url: '/documents/consortium/yokoichi.pdf',
         type: 'PDF',
       },
     ],

@@ -51,31 +51,31 @@ export default {
         contents: [
           {
             name: '宅配による貸出について',
-            url: '/documents/pdf/off-campus/delivery-01.pdf',
+            url: '/documents/off-campus/delivery-01.pdf',
             type: 'PDF',
           },
           {
             target: '学部生',
             name: 'MyLibraryで文献複写を申し込む',
-            url: '/documents/pdf/off-campus/delivery-02.pdf',
+            url: '/documents/off-campus/delivery-02.pdf',
             type: 'PDF',
           },
           {
             target: '大学院生',
             name: '文献複写を申し込む',
-            url: '/documents/pdf/off-campus/delivery-03.pdf',
+            url: '/documents/off-campus/delivery-03.pdf',
             type: 'PDF',
           },
           {
             target: 'Ｑ＆Ａ',
             name: '宅配貸出について',
-            url: '/documents/pdf/off-campus/delivery-04.pdf',
+            url: '/documents/off-campus/delivery-04.pdf',
             type: 'PDF',
           },
           {
             target: 'Ｑ＆Ａ',
             name: '返却期限の延長等について',
-            url: '/documents/pdf/off-campus/delivery-05.pdf',
+            url: '/documents/off-campus/delivery-05.pdf',
             type: 'PDF',
           },
         ],

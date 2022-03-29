@@ -65,7 +65,7 @@ export default {
         files: [
           {
             name: 'リクエストカード',
-            url: '/documents/pdf/application-form/app-request.pdf',
+            url: '/documents/application-form/app-request.pdf',
             type: 'PDF',
           },
         ],
@@ -76,13 +76,13 @@ export default {
         files: [
           {
             name: '山手分室取り寄せ連絡票',
-            url: '/documents/pdf/application-form/app-send-yamate.pdf',
+            url: '/documents/application-form/app-send-yamate.pdf',
             type: 'PDF',
             note: '山手から緑園に取り寄せる',
           },
           {
             name: '本館資料取り寄せ連絡票',
-            url: '/documents/pdf/application-form/app-send-ryokuen.pdf',
+            url: '/documents/application-form/app-send-ryokuen.pdf',
             type: 'PDF',
             note: '緑園から山手に取り寄せる',
           },
@@ -95,7 +95,7 @@ export default {
         files: [
           {
             name: '文献複写申込書',
-            url: '/documents/pdf/application-form/app-copy.pdf',
+            url: '/documents/application-form/app-copy.pdf',
             type: 'PDF',
           },
         ],
@@ -107,7 +107,7 @@ export default {
         files: [
           {
             name: '現物貸借申込書',
-            url: '/documents/pdf/application-form/app-borrow.pdf',
+            url: '/documents/application-form/app-borrow.pdf',
             type: 'PDF',
           },
         ],
@@ -118,7 +118,7 @@ export default {
         files: [
           {
             name: '複写申込書',
-            url: '/documents/pdf/application-form/app-copy-kokkai.pdf',
+            url: '/documents/application-form/app-copy-kokkai.pdf',
             type: 'PDF',
           },
         ],
@@ -129,12 +129,12 @@ export default {
         files: [
           {
             name: 'ガイダンス申込書（PDF版）',
-            url: '/documents/pdf/application-form/app-guidance.pdf',
+            url: '/documents/application-form/app-guidance.pdf',
             type: 'PDF',
           },
           {
             name: 'ガイダンス申込書（Word版）',
-            url: '/documents/pdf/application-form/app-guidance.docx',
+            url: '/documents/application-form/app-guidance.docx',
             type: 'Word',
           },
         ],
@@ -145,12 +145,12 @@ export default {
         files: [
           {
             name: '図書館ツアー申込書（PDF版）',
-            url: '/documents/pdf/application-form/app-tours.pdf',
+            url: '/documents/application-form/app-tours.pdf',
             type: 'PDF',
           },
           {
             name: '図書館ツアー申込書（Word版）',
-            url: '/documents/pdf/application-form/app-tours.docx',
+            url: '/documents/application-form/app-tours.docx',
             type: 'Word',
           },
         ],

@@ -14,7 +14,7 @@ export default {
   name: 'PageNewspaper',
   data: () => ({
     title: '新聞（緑園キャンパス）',
-    location: '/documents/pdf/newspaper.pdf',
+    location: '/documents/newspaper.pdf',
     name: 'newspaper.pdf',
   }),
   head() {
