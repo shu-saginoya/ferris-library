@@ -16,7 +16,7 @@
                 <img :src="titleLogo" :alt="title" class="titleLogo" />
               </v-card-title>
               <v-card-text>
-                <p v-for="(text, i) in commentary" :key="i">{{ text.p }}</p>
+                <p v-for="(text, i) in commentary" :key="i">{{ text }}</p>
               </v-card-text>
                             <v-card-text>
                 <p
@@ -24,7 +24,7 @@
                   :key="j"
                   class="caption"
                 >
-                  {{ caption.p }}
+                  {{ caption }}
                 </p>
               </v-card-text>
             </v-col>
@@ -72,19 +72,15 @@ export default {
     topImage: '/images/digital-collection/collection03/00.jpg',
     index: null,
     topImageCaptions: [
-      { p: '大きさ（表紙）タテ23cm×ヨコ17cm' },
-      { p: '5帖　秩入り' },
-      { p: '列帖装' },
-      { p: '各帖挿絵7枚' },
-      { p: '製作年代不明' },
+      '大きさ（表紙）タテ23cm×ヨコ17cm',
+      '5帖　秩入り',
+      '列帖装',
+      '各帖挿絵7枚',
+      '製作年代不明',
     ],
     commentary: [
-      {
-        p: '当WEBサイト上にある情報や画像などはフェリス女学院大学が所有または管理しています。',
-      },
-      {
-        p: '無断転載や無断使用を禁じます。',
-      },
+      '当WEBサイト上にある情報や画像などはフェリス女学院大学が所有または管理しています。',
+      '無断転載や無断使用を禁じます。'
     ],
     breadcrumbs: [
       {
