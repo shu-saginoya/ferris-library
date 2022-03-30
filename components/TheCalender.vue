@@ -17,12 +17,12 @@
           </v-btn>
         </template>
         <v-list>
-          <v-list-item @click="place = 'ryokuen'" @change="eventColor">
+          <v-list-item @click="place = 'ryokuen'">
             <v-list-item-title>{{
               englishPage ? 'Ryokuen' : '緑園本館'
             }}</v-list-item-title>
           </v-list-item>
-          <v-list-item @click="place = 'yamate'" @change="eventColor">
+          <v-list-item @click="place = 'yamate'">
             <v-list-item-title>{{
               englishPage ? 'Yamate' : '山手分室'
             }}</v-list-item-title>
@@ -61,10 +61,8 @@
         v-model="focus"
         color="primary"
         :events="events"
-        :event-color="getEventColor"
         :type="type"
         :locale="locale"
-        @change="eventColor"
         @click:more="viewDay"
         @click:date="viewDay"
       >
@@ -101,7 +99,6 @@ export default {
       ryokuen: ['緑園本館', 'Ryokuen'],
       yamate: ['山手分室', 'Yamate'],
     },
-    setPlace: [],
     ryokuen,
     yamate,
     focus: '',
@@ -109,7 +106,6 @@ export default {
     selectedEvent: {},
     selectedElement: null,
     selectedOpen: false,
-    events: [],
     colors: [
       'indigo lighten-1',
       'grey lighten-1',
@@ -148,7 +144,30 @@ export default {
       const year = date.getFullYear()
       const month = date.getMonth() + 1
       return year + '年' + month + '月'
-    }
+    },
+    events() {
+      let setPlace
+      if (this.place === 'ryokuen') {
+        setPlace = this.ryokuen
+      } else {
+        setPlace = this.yamate
+      }
+      for (let i = 0; i < setPlace.length; i++) {
+        const number = this.names.indexOf(setPlace[i].name)
+        if (number >= 0) {
+          setPlace[i].color = this.colors[number]
+        } else {
+          setPlace[i].color = this.colors[0]
+        }
+        if (
+          this.englishPage &&
+          (setPlace[i].name === '閉館' || setPlace[i].name === '閉室')
+        ) {
+          setPlace[i].name = 'Closed'
+        }
+      }
+      return setPlace
+    },
   },
   mounted() {
     this.$refs.calendar.checkChange()
@@ -156,9 +175,6 @@ export default {
   methods: {
     viewDay({ date }) {
       this.focus = date
-    },
-    getEventColor(event) {
-      return event.color
     },
     setToday() {
       this.focus = ''
@@ -168,28 +184,6 @@ export default {
     },
     next() {
       this.$refs.calendar.next()
-    },
-    eventColor() {
-      if (this.place === 'ryokuen') {
-        this.setPlace = this.ryokuen
-      } else {
-        this.setPlace = this.yamate
-      }
-      for (let i = 0; i < this.setPlace.length; i++) {
-        const number = this.names.indexOf(this.setPlace[i].name)
-        if (number >= 0) {
-          this.setPlace[i].color = this.colors[number]
-        } else {
-          this.setPlace[i].color = this.colors[0]
-        }
-        if (
-          this.englishPage &&
-          (this.setPlace[i].name === '閉館' || this.setPlace[i].name === '閉室')
-        ) {
-          this.setPlace[i].name = 'Closed'
-        }
-      }
-      this.events = this.setPlace
     },
   },
 }
