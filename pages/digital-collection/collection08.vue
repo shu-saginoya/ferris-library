@@ -75,7 +75,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <Tinybox v-model="index" :images="images" loop></Tinybox>
+    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
     <v-snackbar v-model="snackbar" :multi-line="multiLine" :timeout="timeout">
       {{ university }}ファイルを開きますか？
       <template #action="{ attrs }">

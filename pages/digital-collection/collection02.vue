@@ -68,7 +68,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <Tinybox v-model="index" :images="images" loop></Tinybox>
+    <VueTinybox v-model="index" :images="images" loop></VueTinybox>
   </v-container>
 </template>
 
