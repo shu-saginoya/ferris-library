@@ -1,7 +1,14 @@
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
-    <list-information-search :items="items" :english-page="true"></list-information-search>
+    <v-row>
+      <v-col cols="12" lg="8" xl="6">
+        <list-information-search
+          :items="items"
+          :english-page="true"
+        ></list-information-search>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -13,7 +20,8 @@ export default {
     title: 'Information search',
     items: [
       {
-        subTitle: 'Searching for Books, Journals and Newspapers in Ferris University Library',
+        subTitle:
+          'Searching for Books, Journals and Newspapers in Ferris University Library',
         step: 1,
         list: [
           {
@@ -76,7 +84,8 @@ export default {
           {
             name: 'Primary Sources',
             push: '/links-collection-1',
-            comment: 'Links to sites containing full-text primary sources (free). This is only a Japanese page',
+            comment:
+              'Links to sites containing full-text primary sources (free). This is only a Japanese page',
           },
           {
             name: 'Secondary Sources',
