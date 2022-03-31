@@ -53,12 +53,14 @@
 <script>
 import ryokuen from '@/assets/json/calender-ryokuen.json'
 import yamate from '@/assets/json/calender-yamate.json'
+import common from '@/assets/json/calender-common.json'
 
 export default {
   name: 'HomeCalender',
   data: () => ({
     ryokuen,
     yamate,
+    common,
   }),
   methods: {
     todayEvents(libraryName) {
@@ -67,10 +69,10 @@ export default {
       const today = this.$dayjs()
       switch (libraryName) {
         case 'ryokuen':
-          events = this.ryokuen
+          events = this.ryokuen.concat(this.common)
           break
         case 'yamate':
-          events = this.yamate
+          events = this.yamate.concat(this.common)
           break
       }
       events.forEach(function (value) {

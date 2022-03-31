@@ -35,8 +35,8 @@
       <v-btn fab text small color="grey darken-2" @click="next()">
         <v-icon small> mdi-chevron-right </v-icon>
       </v-btn>
-      <v-toolbar-title v-if="$refs.calendar" class="wrap-text">
-        {{ englishPage ? $refs.calendar.title : title }}
+      <v-toolbar-title class="wrap-text">
+        {{ timeOfFocus }}
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tooltip bottom>
@@ -47,7 +47,7 @@
             icon
             v-bind="attrs"
             v-on="on"
-            @click="setToday"
+            @click="setToday()"
           >
             <v-icon>mdi-calendar-today</v-icon>
           </v-btn>
@@ -84,6 +84,7 @@
 <script>
 import ryokuen from '@/assets/json/calender-ryokuen.json'
 import yamate from '@/assets/json/calender-yamate.json'
+import common from '@/assets/json/calender-common.json'
 
 export default {
   name: 'TheCalender',
@@ -101,6 +102,7 @@ export default {
     },
     ryokuen,
     yamate,
+    common,
     focus: '',
     type: 'month',
     selectedEvent: {},
@@ -139,18 +141,21 @@ export default {
     locale() {
       return this.englishPage ? 'en' : 'ja'
     },
-    title() {
-      const date = new Date(this.$refs.calendar.renderProps.start.date)
-      const year = date.getFullYear()
-      const month = date.getMonth() + 1
-      return year + '年' + month + '月'
+    timeOfFocus() {
+      const locale = this.englishPage ? 'en' : 'ja'
+      const focus = this.focus ? this.focus : undefined
+      const time = this.$dayjs(focus).locale(locale)
+      const formatJapanese = 'YYYY年 M月'
+      const formatEnglish = 'MMM YYYY'
+      const titleFormat = this.englishPage ? formatEnglish : formatJapanese
+      return time.format(titleFormat)
     },
     events() {
       let setPlace
       if (this.place === 'ryokuen') {
-        setPlace = this.ryokuen
+        setPlace = this.ryokuen.concat(this.common)
       } else {
-        setPlace = this.yamate
+        setPlace = this.yamate.concat(this.common)
       }
       for (let i = 0; i < setPlace.length; i++) {
         const number = this.names.indexOf(setPlace[i].name)
@@ -184,7 +189,7 @@ export default {
     },
     next() {
       this.$refs.calendar.next()
-    },
+    }
   },
 }
 </script>
