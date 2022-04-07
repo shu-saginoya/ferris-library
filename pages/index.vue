@@ -3,7 +3,7 @@
     <v-skeleton-loader type="image, card-heading, list-item-two-line, list-item-two-line, list-item-two-line" :loading="loading">
       <v-row>
         <v-col cols="12" xl="8">
-          <home-main-visual></home-main-visual>
+          <home-main-visual-test></home-main-visual-test>
         </v-col>
         <v-col cols="12" xl="8">
           <home-calender></home-calender>
