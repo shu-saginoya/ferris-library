@@ -13,50 +13,13 @@
       ></v-img>
     </v-carousel-item>
   </v-carousel>
-  <!--   <hooper :settings="hooperSettings">
-    <slide v-for="(item, i) in items" :key="i">
-      <v-sheet class="px-1">
-        <v-img :src="item.src" contain></v-img>
-      </v-sheet>
-    </slide>
-    <hooper-pagination slot="hooper-addons"></hooper-pagination>
-  </hooper> -->
 </template>
 
 <script>
-/* import {
-  Hooper,
-  Slide,
-  Pagination as HooperPagination,
-  Navigation as HooperNavigation,
-} from 'hooper'
-import 'hooper/dist/hooper.css' */
-
 export default {
   name: 'HomeMainVisual',
-  /*   components: {
-    Hooper,
-    Slide,
-    HooperPagination,
-    HooperNavigation,
-  }, */
   data() {
     return {
-      /*       hooperSettings: {
-        infiniteScroll: true,
-        autoPlay: true,
-        playSpeed: 6000,
-        transition: 600,
-        centerMode: true,
-        breakpoints: {
-          480: {
-            itemsToShow: 1.75,
-          },
-          640: {
-            itemsToShow: 2.3,
-          },
-        },
-      }, */
       items: [
         {
           src: require('@/assets/images/main-visual/main-visual-01.jpg'),
