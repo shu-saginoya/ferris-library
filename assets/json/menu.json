@@ -204,11 +204,5 @@
                 "icon": "mdi-open-in-new"
             }
         ]
-    },
-    {
-        "category": "English page",
-        "id": "english",
-        "icon": "mdi-translate",
-        "push": "/english"
     }
 ]

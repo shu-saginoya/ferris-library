@@ -4,7 +4,7 @@
     <v-card-text v-html="item.text">
     </v-card-text>
     <v-card-actions @click="show = !show">
-      <v-btn color="primary" text>{{ englishPage ? 'Show more' : '詳細を見る' }}</v-btn>
+      <v-btn color="primary" text>{{ language === 'en' ? 'Show more' : '詳細を見る' }}</v-btn>
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
@@ -56,13 +56,16 @@ export default {
         ],
       }),
     },
-    englishPage: {
-      type: Boolean,
-      default: false,
-    },
   },
   data: () => ({
     show: false,
   }),
+  computed: {
+    language: {
+      get() {
+        return this.$store.state.language
+      },
+    },
+  }
 }
 </script>

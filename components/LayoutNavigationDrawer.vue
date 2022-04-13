@@ -20,7 +20,10 @@
             :target="content.href ? '_blank' : '_self'"
             link
           >
-            <v-list-item-title class="wrap-text" v-text="content.title"></v-list-item-title>
+            <v-list-item-title
+              class="wrap-text"
+              v-text="content.title"
+            ></v-list-item-title>
             <v-list-item-icon v-if="content.icon">
               <v-icon v-text="content.icon"></v-icon>
             </v-list-item-icon>
@@ -28,6 +31,16 @@
         </template>
       </v-list-group>
     </template>
+    <v-divider />
+    <v-list-item
+      :to="languageBtn[languageNo].to"
+      @click="languageSwitching(languageBtn[languageNo].event)"
+    >
+      <v-list-item-icon>
+        <v-icon>mdi-translate</v-icon>
+      </v-list-item-icon>
+      <v-list-item-title>{{ languageBtn[languageNo].name }}</v-list-item-title>
+    </v-list-item>
   </v-list>
 </template>
 
@@ -37,21 +50,46 @@ import menusEnglish from '@/assets/json/menu-english.json'
 
 export default {
   name: 'LayoutNavigationDrawer',
-  props: {
-    englishPage: {
-      type: Boolean,
-      default: false,
-    }
-  },
   data: () => ({
-    menus: [],
     menusJapanese,
     menusEnglish,
+    languageBtn: [
+      {
+        name: 'English page',
+        to: '/english',
+        event: 'en',
+      },
+      {
+        name: '日本語ページ',
+        to: '/',
+        event: 'ja',
+      },
+    ],
   }),
-  mounted() {
-    this.menus = this.englishPage
-      ? menusEnglish
-      : menusJapanese
+  computed: {
+    language: {
+      get() {
+        return this.$store.state.language
+      },
+    },
+    menus() {
+      switch (this.language) {
+        case 'en':
+          return menusEnglish
+        default:
+          return menusJapanese
+      }
+    },
+    languageNo() {
+      return this.language === 'en' ? 1 : 0 
+    }
+  },
+  methods: {
+    languageSwitching(lng) {
+      lng === 'en'
+        ? this.$store.commit('languageEn')
+        : this.$store.commit('languageJa')
+    },
   },
 }
 </script>

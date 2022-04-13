@@ -28,7 +28,7 @@
         </ul>
         <div class="text-right">
           <v-btn color="primary" @click="active = item.step + 1">
-            {{ englishPage ? 'Next' : 'つぎへ' }}
+            {{ language === 'en' ? 'Next' : 'つぎへ' }}
           </v-btn>
         </div>
       </v-stepper-content>
@@ -42,16 +42,19 @@ export default {
   props: {
     items: {
       type: Array,
-      default: () => {}
-    },
-    englishPage: {
-      type: Boolean,
-      default: false,
+      default: () => {},
     },
   },
   data: () => ({
     active: 1,
   }),
+  computed: {
+    language: {
+      get() {
+        return this.$store.state.language
+      },
+    },
+  },
 }
 </script>
 

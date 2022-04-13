@@ -11,7 +11,7 @@
             v-on="on"
           >
             <span>{{
-              englishPage ? placeToLabel[place][1] : placeToLabel[place][0]
+              language === 'en' ? placeToLabel[place][1] : placeToLabel[place][0]
             }}</span>
             <v-icon right> mdi-menu-down </v-icon>
           </v-btn>
@@ -19,12 +19,12 @@
         <v-list>
           <v-list-item @click="place = 'ryokuen'">
             <v-list-item-title>{{
-              englishPage ? 'Ryokuen' : '緑園本館'
+              language === 'en' ? 'Ryokuen' : '緑園本館'
             }}</v-list-item-title>
           </v-list-item>
           <v-list-item @click="place = 'yamate'">
             <v-list-item-title>{{
-              englishPage ? 'Yamate' : '山手分室'
+              language === 'en' ? 'Yamate' : '山手分室'
             }}</v-list-item-title>
           </v-list-item>
         </v-list>
@@ -62,7 +62,7 @@
         color="primary"
         :events="events"
         :type="type"
-        :locale="locale"
+        :locale="language"
         @click:more="viewDay"
         @click:date="viewDay"
       >
@@ -88,12 +88,6 @@ import common from '@/assets/json/calender-common.json'
 
 export default {
   name: 'TheCalender',
-  props: {
-    englishPage: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data: () => ({
     place: 'ryokuen',
     placeToLabel: {
@@ -138,16 +132,18 @@ export default {
     ],
   }),
   computed: {
-    locale() {
-      return this.englishPage ? 'en' : 'ja'
+    language: {
+      get() {
+        return this.$store.state.language
+      },
     },
     timeOfFocus() {
-      const locale = this.englishPage ? 'en' : 'ja'
+      const locale = this.language
       const focus = this.focus ? this.focus : undefined
       const time = this.$dayjs(focus).locale(locale)
       const formatJapanese = 'YYYY年 M月'
       const formatEnglish = 'MMM YYYY'
-      const titleFormat = this.englishPage ? formatEnglish : formatJapanese
+      const titleFormat = locale === 'en' ? formatEnglish : formatJapanese
       return time.format(titleFormat)
     },
     events() {

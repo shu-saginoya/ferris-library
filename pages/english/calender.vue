@@ -3,7 +3,7 @@
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" xl="8">
-        <the-calender :english-page="true"></the-calender>
+        <the-calender></the-calender>
       </v-col>
     </v-row>
   </v-container>
@@ -12,7 +12,6 @@
 <script>
 export default {
   name: 'PageEnglishCalender',
-  layout: 'english',
   data: () => ({
     title: 'Calendar',
 

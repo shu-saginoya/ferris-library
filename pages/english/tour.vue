@@ -10,7 +10,7 @@
         lg="8"
         xl="6"
       >
-        <card-tour :item="item" :english-page="true"></card-tour>
+        <card-tour :item="item"></card-tour>
       </v-col>
     </v-row>
   </v-container>
@@ -19,7 +19,6 @@
 <script>
 export default {
   name: 'PageEnglishTour',
-  layout: 'english',
   data: () => ({
     title: 'Tour and Guidance Workshops',
     items: [

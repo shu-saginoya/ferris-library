@@ -5,7 +5,6 @@
       <v-col cols="12" lg="8" xl="6">
         <list-information-search
           :items="items"
-          :english-page="true"
         ></list-information-search>
       </v-col>
     </v-row>
@@ -15,7 +14,6 @@
 <script>
 export default {
   name: 'PageEnglishInformationSearch',
-  layout: 'english',
   data: () => ({
     title: 'Information search',
     items: [
