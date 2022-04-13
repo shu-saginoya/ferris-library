@@ -1,8 +1,8 @@
 <template>
   <v-card>
     <v-tabs v-model="tab">
-      <v-tab v-text="englishPage ? 'Search' : '検索'"></v-tab>
-      <v-tab v-text="englishPage ? 'Smartphone' : 'スマートフォン'"></v-tab>
+      <v-tab v-text="language === 'en' ? 'Search' : '検索'"></v-tab>
+      <v-tab v-text="language === 'en' ? 'Smartphone' : 'スマートフォン'"></v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item>
@@ -50,7 +50,7 @@
               </v-text-field>
             </form>
             <btn-open-in-new
-              :link="englishPage ? 'Detailed search' : '詳細検索'"
+              :link="language === 'en' ? 'Detailed search' : '詳細検索'"
               url="https://www2.library.ferris.ac.jp/gate?module=search&path=index&method=init"
             ></btn-open-in-new>
             <btn-my-library></btn-my-library>
@@ -62,7 +62,7 @@
           <div>
             <v-card-text>
               <btn-open-in-new
-                :link="englishPage ? 'Smartphone OPAC' : 'スマートフォン版OPAC'"
+                :link="language === 'en' ? 'Smartphone OPAC' : 'スマートフォン版OPAC'"
                 url="http://osirabe.net/opac.ferris/"
               ></btn-open-in-new>
             </v-card-text>
@@ -79,15 +79,16 @@
 <script>
 export default {
   name: 'HomeOpac',
-  props: {
-    englishPage: {
-      type: Boolean,
-      default: false,
-    },
-  },
   data: () => ({
     tab: null,
   }),
+  computed: {
+    language: {
+      get() {
+        return this.$store.state.language
+      },
+    }
+  }
 }
 </script>
 

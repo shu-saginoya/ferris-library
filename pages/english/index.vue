@@ -36,6 +36,7 @@ export default {
   },
   mounted() {
     this.loading = false
+    this.$store.commit('languageEn')
   },
 }
 </script>
