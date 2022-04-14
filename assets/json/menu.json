@@ -116,10 +116,9 @@
                 "push": "/carrier"
             },
             {
-                "title": "新聞（緑園キャンパス）",
+                "title": "緑園本館所蔵新聞リスト",
                 "id": "newspaper",
-                "push": "/newspaper",
-                "icon": "mdi-file-pdf-box"
+                "push": "/newspaper"
             },
             {
                 "title": "一次情報リンク集",
