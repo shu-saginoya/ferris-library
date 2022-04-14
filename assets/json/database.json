@@ -70,17 +70,17 @@
         ]
     },
     {
-        "name": "CiNii Articles",
+        "name": "CiNii Research（旧CiNii Articles）",
         "languages": [
             "日本語"
         ],
-        "explanation": "<p>日本語の学術論文を中心とした雑誌記事情報を検索することができます。</p><p>一部の論文は本文をその場で見ることができます。</p>",
+        "explanation": "<p>日本の学術論文、研究データ、図書・雑誌等を一括で検索することができます。</p><p>論文のみ検索したい場合は、検索タブを「論文」に切り替えてから検索してください。</p><p>一部の論文は本文をその場で見ることができます。</p>",
         "access": " 無制限",
         "logout": false,
         "links": [
             {
                 "name": "アクセス",
-                "url": "http://ci.nii.ac.jp/"
+                "url": "https://cir.nii.ac.jp/articles"
             }
         ],
         "categories": [
