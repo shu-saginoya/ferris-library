@@ -2,7 +2,9 @@
   <v-card>
     <v-tabs v-model="tab">
       <v-tab v-text="language === 'en' ? 'Search' : '検索'"></v-tab>
-      <v-tab v-text="language === 'en' ? 'Smartphone' : 'スマートフォン'"></v-tab>
+      <v-tab
+        v-text="language === 'en' ? 'Smartphone' : 'スマートフォン'"
+      ></v-tab>
     </v-tabs>
     <v-tabs-items v-model="tab">
       <v-tab-item>
@@ -24,9 +26,9 @@
                 id="QSearch"
                 name="word"
                 maxlength="128"
-                :label="englishPage ? 'Quick search' : 'クイックサーチ'"
+                :label="language === 'en' ? 'Quick search' : 'クイックサーチ'"
                 :placeholder="
-                  englishPage
+                  language === 'en'
                     ? 'Please enter a keyword'
                     : 'キーワードを入力してください'
                 "
@@ -62,7 +64,9 @@
           <div>
             <v-card-text>
               <btn-open-in-new
-                :link="language === 'en' ? 'Smartphone OPAC' : 'スマートフォン版OPAC'"
+                :link="
+                  language === 'en' ? 'Smartphone OPAC' : 'スマートフォン版OPAC'
+                "
                 url="http://osirabe.net/opac.ferris/"
               ></btn-open-in-new>
             </v-card-text>
@@ -87,8 +91,8 @@ export default {
       get() {
         return this.$store.state.language
       },
-    }
-  }
+    },
+  },
 }
 </script>
 
