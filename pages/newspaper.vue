@@ -193,7 +193,7 @@ export default {
             country: 'ドイツ',
             publisher: '',
             cycle: '週刊',
-            retentionPeriod: '最新3年分',
+            retentionPeriod: '最新3か月分',
             location: '2F新聞',
             note: '',
           },
