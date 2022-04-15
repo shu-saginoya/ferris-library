@@ -31,16 +31,6 @@
         </template>
       </v-list-group>
     </template>
-    <v-divider />
-    <v-list-item
-      :to="languageBtn[languageNo].to"
-      @click="languageSwitching(languageBtn[languageNo].event)"
-    >
-      <v-list-item-icon>
-        <v-icon>mdi-translate</v-icon>
-      </v-list-item-icon>
-      <v-list-item-title>{{ languageBtn[languageNo].name }}</v-list-item-title>
-    </v-list-item>
   </v-list>
 </template>
 
@@ -53,18 +43,6 @@ export default {
   data: () => ({
     menusJapanese,
     menusEnglish,
-    languageBtn: [
-      {
-        name: 'English page',
-        to: '/english',
-        event: 'en',
-      },
-      {
-        name: '日本語ページ',
-        to: '/',
-        event: 'ja',
-      },
-    ],
   }),
   computed: {
     language: {
@@ -79,16 +57,6 @@ export default {
         default:
           return menusJapanese
       }
-    },
-    languageNo() {
-      return this.language === 'en' ? 1 : 0 
-    }
-  },
-  methods: {
-    languageSwitching(lng) {
-      lng === 'en'
-        ? this.$store.commit('languageEn')
-        : this.$store.commit('languageJa')
     },
   },
 }

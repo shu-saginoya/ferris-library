@@ -37,6 +37,7 @@
 <script>
 export default {
   name: 'PageEnglishReference',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Reference Service',
     items: [

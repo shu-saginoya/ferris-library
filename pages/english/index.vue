@@ -24,6 +24,7 @@
 <script>
 export default {
   name: 'PageEnglishIndex',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Ferris University Library',
     loading: true,
@@ -36,7 +37,6 @@ export default {
   },
   mounted() {
     this.loading = false
-    this.$store.commit('languageEn')
-  },
+  }
 }
 </script>

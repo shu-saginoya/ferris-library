@@ -12,6 +12,7 @@
 <script>
 export default {
   name: 'PageEnglishContact',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Contact / Access',
     items: [
@@ -28,12 +29,12 @@ export default {
           {
             transportation: 'Sotetsu Izumino Line',
             root: '「Ryokuen-toshi Station」3 minutes walk',
-            icon: 'mdi-train'
+            icon: 'mdi-train',
           },
           {
             transportation: 'Kanachu Bus',
             root: '「Ferris」1 minutes walk',
-            icon: 'mdi-train-car-passenger-variant'
+            icon: 'mdi-train-car-passenger-variant',
           },
         ],
       },
@@ -50,7 +51,7 @@ export default {
           {
             transportation: 'JR-EAST Keihin Tohoku Line',
             root: '「Ishikawacho Station」10 minutes walk',
-            icon: 'mdi-train'
+            icon: 'mdi-train',
           },
         ],
       },

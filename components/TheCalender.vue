@@ -161,7 +161,7 @@ export default {
           setPlace[i].color = this.colors[0]
         }
         if (
-          this.englishPage &&
+          this.language === 'en' &&
           (setPlace[i].name === '閉館' || setPlace[i].name === '閉室')
         ) {
           setPlace[i].name = 'Closed'

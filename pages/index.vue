@@ -54,7 +54,6 @@ export default {
   },
   mounted() {
     this.loading = false
-    this.$store.commit('languageJa')
   },
 }
 </script>

@@ -3,9 +3,7 @@
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" lg="8" xl="6">
-        <list-information-search
-          :items="items"
-        ></list-information-search>
+        <list-information-search :items="items"></list-information-search>
       </v-col>
     </v-row>
   </v-container>
@@ -14,6 +12,7 @@
 <script>
 export default {
   name: 'PageEnglishInformationSearch',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Information search',
     items: [

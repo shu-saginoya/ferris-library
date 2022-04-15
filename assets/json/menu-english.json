@@ -80,5 +80,11 @@
                 "icon": "mdi-open-in-new"
             }
         ]
+    },
+    {
+        "category": "日本語ページ",
+        "id": "japanesePage",
+        "icon": "mdi-translate",
+        "push": "/"
     }
 ]

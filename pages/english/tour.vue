@@ -19,6 +19,7 @@
 <script>
 export default {
   name: 'PageEnglishTour',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Tour and Guidance Workshops',
     items: [

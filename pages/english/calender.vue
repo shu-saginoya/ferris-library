@@ -12,9 +12,10 @@
 <script>
 export default {
   name: 'PageEnglishCalender',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Calendar',
-
+    layout: 'LayoutEnglish',
   }),
   head() {
     return {

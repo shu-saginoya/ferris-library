@@ -21,7 +21,13 @@
     <v-row>
       <v-col cols="12" md="10" lg="8">
         <text-sub-title>Please Note</text-sub-title>
-        <v-alert v-for="(note, j) in pleaseNotes" :key="'note' + j" dense outlined :type="note.type">
+        <v-alert
+          v-for="(note, j) in pleaseNotes"
+          :key="'note' + j"
+          dense
+          outlined
+          :type="note.type"
+        >
           {{ note.text }}
         </v-alert>
       </v-col>
@@ -44,6 +50,7 @@
 <script>
 export default {
   name: 'PageEnglishService',
+  layout: 'LayoutEnglish',
   data: () => ({
     title: 'Lending Service',
     panel: [0, 1],
@@ -107,7 +114,7 @@ export default {
       {
         type: 'info',
         text: 'Certain materials may be borrowed for same-day use. There is no limit on the number of these items that may be borrowed.',
-      }
+      },
     ],
     headersQuantity: [
       {
