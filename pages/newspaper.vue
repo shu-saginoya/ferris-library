@@ -1,39 +1,28 @@
 <template>
   <v-container>
-    <v-col cols="12" lg="10" xl="6">
-      <text-page-title>{{ title }}</text-page-title>
-      <p class="update-date">{{ updateDate }}</p>
-    </v-col>
     <v-row>
-      <v-col
-        v-for="(item, index) in items"
-        :key="'item' + index"
-        cols="12"
-        lg="10"
-        xl="6"
-      >
-        <text-sub-title>
-          {{ item.category }}
-        </text-sub-title>
-        <v-expansion-panels accordion focusable>
-          <v-expansion-panel
-            v-for="(newspaper, index2) in item.newspapers"
-            :key="'newspaper' + index2"
-          >
-            <v-expansion-panel-header>
-              <span v-if="!newspaper.subTitle">
-                <v-icon left>mdi-newspaper</v-icon>
-                {{ newspaper.title }}
-              </span>
-              <span v-else class="newspaper-sub-title">
-                {{ newspaper.subTitle }}
-              </span>
-            </v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <list-newspaper-details :items="newspaper"></list-newspaper-details>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
+      <v-col cols="12" lg="10" xl="8">
+        <text-page-title>{{ title }}</text-page-title>
+        <p class="update-date">{{ updateDate }}</p>
+      </v-col>
+      <v-col cols="12" lg="10" xl="8">
+        <v-tabs v-model="tab" fixed-tabs show-arrows>
+          <v-tab v-for="(item, index) in items" :key="'tab' + index">
+            {{ item.category }}
+          </v-tab>
+        </v-tabs>
+        <v-tabs-items v-model="tab">
+          <v-tab-item v-for="(item, index2) in items" :key="'item' + index2">
+            <v-card>
+              <v-card-title>
+                {{ item.category }}
+              </v-card-title>
+              <v-card-text>
+                <list-newspaper :items="item.newspapers"></list-newspaper>
+              </v-card-text>
+            </v-card>
+          </v-tab-item>
+        </v-tabs-items>
       </v-col>
     </v-row>
   </v-container>
@@ -45,6 +34,7 @@ export default {
   data: () => ({
     title: '緑園本館所蔵新聞リスト',
     updateDate: '2022年4月現在',
+    tab: null,
     items: [
       {
         category: '日本語（全国紙・地方紙）',
@@ -57,7 +47,7 @@ export default {
             cycle: '日刊',
             retentionPeriod: '最新3か月分',
             location: '2F新聞',
-            note: '・朝日クロスサーチ（オンライン）<br />1879（明12）～継続中',
+            note: '<ul><li>朝日クロスサーチ（オンライン）<br />1879（明12）～継続中</li></ul>',
           },
           {
             title: '朝日新聞',
@@ -85,18 +75,18 @@ export default {
             country: '',
             publisher: '',
             cycle: '',
-            retentionPeriod: '1966（昭和41）, 1988（昭63）～継続中',
+            retentionPeriod: '1966（昭和41）<br />1988（昭63）～継続中',
             location: '1F雑誌・5F書庫',
             note: '当年度以前は5階書庫。 利用の際は2階カウンターに申し込み。',
           },
           {
             title: '朝日新聞',
-            subTitle: '朝日新聞.マイクロフィルム',
+            subTitle: '朝日新聞 マイクロフィルム',
             country: '',
             publisher: '',
             cycle: '',
             retentionPeriod:
-              '1935（昭和10）～1942（昭和17）, 1944（昭19）～1945（昭20）, 1947（昭22）～1954（昭29）（欠号あり）',
+              '1935（昭和10）～1942（昭和17）<br />1944（昭19）～1945（昭20）<br />1947（昭22）～1954（昭29）（欠号あり）',
             location: '1F貴重書庫',
             note: '利用の際は2階カウンターに申し込み。',
           },
@@ -136,7 +126,8 @@ export default {
             country: '',
             publisher: '',
             cycle: '',
-            retentionPeriod: '1888(明21）11月～1937(昭12年)6月　（欠号あり）',
+            retentionPeriod:
+              '1888（明21）11月～1937（昭12年）6月　（欠号あり）',
             location: '1F雑誌',
             note: '',
           },
@@ -148,7 +139,7 @@ export default {
             cycle: '日刊',
             retentionPeriod: '最新3か月分',
             location: '2F新聞',
-            note: '・日経テレコン21（オンライン）<br />1981(昭56）～継続中<br />・日経全文記事データベース（CD-ROM)<br />1995（平7）～2010(平22) 《2FCD-ROM端末》',
+            note: '<ul><li>日経テレコン21（オンライン）<br />1981(昭56）～継続中</li><li>日経全文記事データベース（CD-ROM)<br />1995（平7）～2010(平22) 《2FCD-ROM端末》</li></ul>',
           },
           {
             title: '毎日新聞',
@@ -158,7 +149,7 @@ export default {
             cycle: '日刊',
             retentionPeriod: '最新3か月分',
             location: '2F新聞',
-            note: '・毎索（オンライン）1872（明5）～継続中',
+            note: '<ul><li>毎索（オンライン）<br />1872（明5）～継続中</li></ul>',
           },
           {
             title: '毎日新聞',
@@ -188,7 +179,7 @@ export default {
             cycle: '日刊',
             retentionPeriod: '最新3か月分',
             location: '2F新聞',
-            note: '・ヨミダス歴史館（オンライン）<br />1874（明7）～継続中<br />・明治／大正／昭和の讀賣新聞（CD-ROM）<br />1874（明7）-1960（昭35） 《2FCD-ROM端末》',
+            note: '<ul><li>ヨミダス歴史館（オンライン）<br />1874（明7）～継続中</li><li>明治／大正／昭和の讀賣新聞（CD-ROM）<br />1874（明7）-1960（昭35） 《2FCD-ROM端末》</li></ul>',
           },
         ],
       },
@@ -335,10 +326,6 @@ export default {
 </script>
 
 <style scoped>
-.newspaper-sub-title {
-  color: grey;
-  padding-left: 2em;
-}
 .update-date {
   text-align: right;
   color: grey;
