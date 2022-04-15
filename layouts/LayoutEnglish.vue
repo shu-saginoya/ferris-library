@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  name: 'LayoutDefault',
+  name: 'LayoutEnglish',
   created() {
-    this.$store.commit('languageJa')
+    this.$store.commit('languageEn')
   },
 }
 </script>
