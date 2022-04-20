@@ -8,6 +8,14 @@
     </v-card-subtitle>
     <v-card-text class="mt-6 news-contents" v-html="newsCard.contents">
     </v-card-text>
+    <v-card-text v-if="newsCard.images">
+      <v-img
+        v-for="(image, index) in newsCard.images"
+        :key="'image' + index"
+        :src="image.src" contain
+        class="article-image"
+      ></v-img>
+    </v-card-text>
     <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
       <btn-inside
         v-for="btn in newsCard.actions"
@@ -69,5 +77,8 @@ export default {
 }
 .news-contents >>> dd {
   padding-left: 1em;
+}
+.article-image {
+  margin: 8px;
 }
 </style>
