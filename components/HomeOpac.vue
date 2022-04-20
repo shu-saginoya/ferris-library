@@ -24,8 +24,8 @@
               <input type="hidden" name="page" value="/search" />
               <v-text-field
                 id="QSearch"
+                v-model="qSearchWord"
                 name="word"
-                maxlength="128"
                 :label="language === 'en' ? 'Quick search' : 'クイックサーチ'"
                 :placeholder="
                   language === 'en'
@@ -46,6 +46,7 @@
                     fab
                     icon
                     color="primary"
+                    :disabled="submitBtn"
                     ><v-icon>mdi-send</v-icon></v-btn
                   >
                 </template>
@@ -85,6 +86,7 @@ export default {
   name: 'HomeOpac',
   data: () => ({
     tab: null,
+    qSearchWord: '',
   }),
   computed: {
     language: {
@@ -92,6 +94,10 @@ export default {
         return this.$store.state.language
       },
     },
+    submitBtn() {
+      const inputLength = this.qSearchWord !== null ? this.qSearchWord.length : 0
+      return inputLength <= 0 || inputLength > 20
+    }
   },
 }
 </script>
