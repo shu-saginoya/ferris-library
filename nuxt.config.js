@@ -49,7 +49,17 @@ export default {
         inject: true,
       },
     ],
+    // microCMS
+    'nuxt-microcms-module'
   ],
+  // microCMS
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.API_KEY,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
