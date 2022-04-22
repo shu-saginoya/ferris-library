@@ -11,7 +11,7 @@
         lg="3"
         xl="2"
       >
-        <v-card height="100%">
+        <v-card height="100%" @click="openDitails(content)">
           <v-img
             :src="content.eyecatch ? content.eyecatch.url : ''"
             height="160px"
@@ -32,6 +32,10 @@
         </v-card>
       </v-col>
     </v-row>
+    <card-exhibition-details
+      ref="cardExhibitionDetails"
+      :items="items"
+    ></card-exhibition-details>
   </v-container>
 </template>
 
@@ -41,18 +45,25 @@ export default {
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
       endpoint: 'exhibition',
-      queries: {orders: 'createdAt'},
+      queries: { orders: 'createdAt' },
     })
     return data
   },
   data: () => ({
     title: '企画展示',
     show: false,
+    items: {},
   }),
   head() {
     return {
       title: this.title,
     }
+  },
+  methods: {
+    openDitails(content) {
+      this.items = content
+      this.$refs.cardExhibitionDetails.dialogSwitching()
+    },
   },
 }
 </script>
