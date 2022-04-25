@@ -1,7 +1,17 @@
 <template>
   <v-container>
-    <text-page-title>{{ title }}</text-page-title>
     <v-row>
+      <v-col cols="12" xl="8">
+        <v-toolbar dense outlined flat rounded>
+          <v-toolbar-title>{{ title }}</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn icon @click="reverseOrder()">
+            <v-icon>mdi-sort</v-icon>
+          </v-btn>
+        </v-toolbar>
+      </v-col>
+    </v-row>
+    <transition-group tag="div" class="row">
       <v-col
         v-for="content in contents"
         :key="content.id"
@@ -15,7 +25,7 @@
           <v-img
             :src="content.eyecatch ? content.eyecatch.url : ''"
             height="160px"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.8)"
+            class="eyecatch"
           >
             <v-card-text>
               <v-chip v-if="content.category" color="primary">
@@ -31,7 +41,7 @@
           </v-card-subtitle>
         </v-card>
       </v-col>
-    </v-row>
+    </transition-group>
     <card-exhibition-details
       ref="cardExhibitionDetails"
       :items="items"
@@ -64,6 +74,22 @@ export default {
       this.items = content
       this.$refs.cardExhibitionDetails.dialogSwitching()
     },
+    reverseOrder() {
+      this.contents.reverse()
+    },
   },
 }
 </script>
+
+<style scoped>
+.v-card:hover .eyecatch {
+  transition: filter 0.4s ease-in-out;
+  filter: grayscale(0%);
+}
+.eyecatch {
+  filter: grayscale(60%);
+}
+.v-move {
+  transition: transform 1s;
+}
+</style>
