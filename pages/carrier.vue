@@ -149,7 +149,7 @@ export default {
         ]
       },
       {
-        name: '日経テレコン21',
+        name: '日経テレコン',
         type: 'データベース',
         logout: false,
         content:
