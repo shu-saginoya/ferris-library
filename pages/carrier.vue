@@ -4,12 +4,16 @@
     <p>
       図書館のキャリア支援のコーナーです。就職活動に役立つ契約データベースや図書館資料を紹介します。
     </p>
+    <v-row>
+      <v-col cols="12" xl="8">
     <v-tabs v-model="tab" fixed-tabs show-arrows>
       <v-tab>企業や業種を研究する</v-tab>
       <v-tab>最新の時事情報をつかむ</v-tab>
       <v-tab>職種や資格について調べる</v-tab>
       <v-tab>OPACで関連本を集める</v-tab>
     </v-tabs>
+      </v-col>
+    </v-row>
     <v-tabs-items v-model="tab">
       <v-tab-item>
         <v-container>
@@ -96,7 +100,7 @@ export default {
         ]
       },
       {
-        name: '日経テレコン21',
+        name: '日経テレコン',
         type: 'データベース',
         logout: false,
         content:
@@ -117,11 +121,11 @@ export default {
         content: ''
       },
       {
-        name: '聞蔵Ⅱビジュアル',
+        name: '朝日新聞クロスサーチ',
         type: 'データベース',
         logout: true,
         content:
-          '1985年から当日までの「朝日新聞」「AERA」「週刊朝日」の記事を同時に検索・閲覧できます。「ナビ検索」を選択すると就活関連記事を一括で抽出することができます。（データ更新：毎日）',
+          '1985年から当日までの「朝日新聞」「AERA」「週刊朝日」の記事を同時に検索・閲覧できます。「就活応援」のジャンルでは、朝日新聞の就活関連記事を、特集ごとに閲覧することができます。（データ更新：毎日）',
         access: '学内PCから',
         links: [
           {

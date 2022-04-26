@@ -1,6 +1,6 @@
 <template>
   <v-row dense>
-    <v-col v-for="(item, i) in items" :key="'item' + i" cols="12" lg="6">
+    <v-col v-for="(item, i) in items" :key="'item' + i" cols="12" xl="8">
       <v-card v-if="item.heading" color="grey lighten-4" flat>
         <v-card-text>
           <span class="font-weight-bold">{{ item.name }}</span><span class="ml-4">{{ item.content }}</span>
