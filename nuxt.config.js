@@ -50,7 +50,7 @@ export default {
       },
     ],
     // microCMS
-    'nuxt-microcms-module'
+    'nuxt-microcms-module',
   ],
   // microCMS
   microcms: {
