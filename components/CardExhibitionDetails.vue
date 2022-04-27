@@ -18,7 +18,7 @@
             <v-icon>mdi-map-marker</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            展示場所‐{{ items.placeToExhibit.placeToExhibit }}
+            展示場所 ‐ {{ items.placeToExhibit.placeToExhibit }}
           </v-list-item-content>
         </v-list-item>
         <v-divider></v-divider>
