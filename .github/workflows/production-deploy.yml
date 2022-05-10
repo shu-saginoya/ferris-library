@@ -46,6 +46,8 @@ jobs:
           username: ${{ secrets.PROD_USERNAME }}
           # FTPのパスワード
           password: ${{ secrets.PROD_PASSWORD }}
+          # アップロードしたいファイルのパス
+          local-dir: ./dist/ 
           # アップロード先のリモートパス
           server-dir: /htdocs/
           # 除外するフォルダ・ファイル
