@@ -1,0 +1,53 @@
+name: Production deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run generate
+      - name: Archive Production Artifact
+        # generateしたdistフォルダを永続化する
+        uses: actions/upload-artifact@master
+        with:
+          name: dist
+          path: dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        # build job で永続化したdistフォルダを取得する
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
+      - name: FTP-Deploy-Action
+        # FTPアップロードアクション（https://github.com/SamKirkland/FTP-Deploy-Action）
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          # FTPのサーバーアドレス
+          server: ${{ secrets.PROD_SERVER }}
+          # FTPのユーザー名
+          username: ${{ secrets.PROD_USERNAME }}
+          # FTPのパスワード
+          password: ${{ secrets.PROD_PASSWORD }}
+          # アップロード先のリモートパス
+          server-dir: /htdocs/
+          # 除外するフォルダ・ファイル
+          exclude: |
+            **/dokupuro/**
