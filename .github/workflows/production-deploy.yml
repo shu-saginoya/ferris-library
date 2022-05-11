@@ -53,3 +53,4 @@ jobs:
           # 除外するフォルダ・ファイル
           exclude: |
             **/dokupuro/**
+            **/images/digital-collection/**
