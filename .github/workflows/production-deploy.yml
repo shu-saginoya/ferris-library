@@ -49,7 +49,7 @@ jobs:
           # アップロードしたいファイルのパス
           local-dir: ./dist/ 
           # アップロード先のリモートパス
-          server-dir: /web/sites/ferris06/htdocs/
+          server-dir: /htdocs/
           # 除外するフォルダ・ファイル
           exclude: |
             **/dokupuro/**
