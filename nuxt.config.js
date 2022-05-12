@@ -49,9 +49,22 @@ export default {
         inject: true,
       },
     ],
+  ],
+
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
     // microCMS
     'nuxt-microcms-module',
   ],
+
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/',
+  },
+
   // microCMS
   microcms: {
     options: {
@@ -59,18 +72,6 @@ export default {
       apiKey: process.env.API_KEY,
     },
     mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
-  },
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-  ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
