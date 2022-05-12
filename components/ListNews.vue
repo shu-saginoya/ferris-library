@@ -1,21 +1,28 @@
 <template>
   <v-card>
     <v-list>
-      <template v-for="(info, index) in displayLists">
-        <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
+      <template v-for="(content, index) in displayLists">
+        <v-divider
+          v-show="index !== 0"
+          :key="'divider' + content.id"
+        ></v-divider>
         <v-list-item
-          :key="'info' + info.id"
+          :key="content.id"
           two-line
           link
-          @click.native=";(dialog = true), (newsCard = info)"
+          @click.native=";(dialog = true), (newsCard = content)"
         >
           <v-list-item-content>
             <v-list-item-title class="wrap-text">
-              <span v-show="$dayjs(info.date) > $dayjs()" class="red--text text--lighten-2">予約投稿：</span>
-              {{ info.title }}
+              <span
+                v-show="$dayjs(content.date) > $dayjs()"
+                class="red--text text--lighten-2"
+                >予約投稿：</span
+              >
+              {{ content.title }}
             </v-list-item-title>
             <v-list-item-subtitle
-              v-text="$dayjs(info.date).format('YYYY年M月D日')"
+              v-text="$dayjs(content.date).format('YYYY年M月D日')"
             >
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -41,18 +48,16 @@
 </template>
 
 <script>
-import lists from '@/assets/json/news.json'
-
 export default {
   name: 'ListNews',
   props: {
     pagination: { type: Boolean, default: false },
-    pageSize: { type: Number, default: 10 },
+    contents: { type: Array, default: () => ([]) },
   },
   data: () => ({
     page: 1,
-    length: 0,
-    lists,
+    pageSize: 10,
+    length: 1,
     displayLists: [],
     dialog: false,
     newsCard: [],
@@ -62,15 +67,16 @@ export default {
     // 非公開モードのチェック
     this.privateMode = this.$route.query.mode
 
-    this.length = Math.ceil(this.lists.length / this.pageSize)
+    const contents = this.contents
+    this.pageSize = contents.length > this.pageSize ? contents.length : this.pageSize
+    this.length = Math.ceil(contents.length / this.pageSize)
 
     if (this.privateMode !== 'private') {
-      this.displayLists = this.lists.filter((element) => {
+      this.displayLists = contents.filter((element) => {
         return new Date() >= new Date(element.date)
       })
-    }
-    else {
-      this.displayLists = this.lists
+    } else {
+      this.displayLists = contents
     }
     this.displayLists = this.displayLists.slice(
       this.pageSize * (this.page - 1),
