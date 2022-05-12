@@ -55,7 +55,7 @@ export default {
   async asyncData({ $microcms }) {
     const data = await $microcms.get({
       endpoint: 'exhibition',
-      queries: { orders: 'createdAt' },
+      queries: { orders: '-date' },
     })
     return data
   },
@@ -84,10 +84,10 @@ export default {
 <style scoped>
 .v-card:hover .eyecatch {
   transition: filter 0.4s ease-in-out;
-  filter: grayscale(0%);
+  filter: grayscale(60%);
 }
 .eyecatch {
-  filter: grayscale(60%);
+  filter: grayscale(0%);
 }
 .v-move {
   transition: transform 1s;
