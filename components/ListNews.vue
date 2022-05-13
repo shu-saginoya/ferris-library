@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-list>
-      <template v-for="(content, index) in displayLists">
+      <template v-for="(content, index) in filteredContents">
         <v-divider
           v-show="index !== 0"
           :key="'divider' + content.id"
@@ -10,7 +10,7 @@
           :key="content.id"
           two-line
           link
-          @click.native=";(dialog = true), (newsCard = content)"
+          @click.native=";(dialog = true), (dialogContent = content)"
         >
           <v-list-item-content>
             <v-list-item-title class="wrap-text">
@@ -37,12 +37,15 @@
     <v-card-text v-if="pagination">
       <v-pagination
         v-model="page"
-        :length="length"
+        :length="pageLength"
         @input="pageChange"
       ></v-pagination>
     </v-card-text>
     <v-dialog v-model="dialog" max-width="600">
-      <card-news :news-card="newsCard" @dialogClose="dialogClose"></card-news>
+      <card-news
+        :news-card="dialogContent"
+        @dialogClose="dialogClose"
+      ></card-news>
     </v-dialog>
   </v-card>
 </template>
@@ -52,40 +55,32 @@ export default {
   name: 'ListNews',
   props: {
     pagination: { type: Boolean, default: false },
-    contents: { type: Array, default: () => ([]) },
+    contents: { type: Array, default: () => [] },
   },
   data: () => ({
     page: 1,
     pageSize: 10,
-    length: 1,
-    displayLists: [],
+    pageLength: 1,
+    publishContents: [],
+    filteredContents: [],
     dialog: false,
-    newsCard: [],
-    mode: undefined,
+    dialogContent: {},
   }),
   mounted() {
-    // 非公開モードのチェック
-    this.privateMode = this.$route.query.mode
-
-    const contents = this.contents
-    this.pageSize = contents.length > this.pageSize ? contents.length : this.pageSize
-    this.length = Math.ceil(contents.length / this.pageSize)
-
-    if (this.privateMode !== 'private') {
-      this.displayLists = contents.filter((element) => {
+    const mode = this.$route.query.mode ?? 'public'
+    let contents = this.contents
+    if (mode !== 'private') {
+      contents = contents.filter((element) => {
         return new Date() >= new Date(element.date)
       })
-    } else {
-      this.displayLists = contents
     }
-    this.displayLists = this.displayLists.slice(
-      this.pageSize * (this.page - 1),
-      this.pageSize * this.page
-    )
+    this.publishContents = contents
+    this.pageChange(this.page)
+    this.pageLength = Math.ceil(this.publishContents.length / this.pageSize)
   },
   methods: {
     pageChange(pageNumber) {
-      this.displayLists = this.lists.slice(
+      this.filteredContents = this.publishContents.slice(
         this.pageSize * (pageNumber - 1),
         this.pageSize * pageNumber
       )
