@@ -151,6 +151,11 @@
         "icon": "mdi-book-open-variant",
         "contents": [
             {
+                "title": "企画展示",
+                "id": "exhibition",
+                "push": "/exhibition"
+            },
+            {
                 "title": "学科推奨図書",
                 "id": "recommend",
                 "push": "/recommend"

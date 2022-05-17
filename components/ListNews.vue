@@ -1,21 +1,28 @@
 <template>
   <v-card>
     <v-list>
-      <template v-for="(info, index) in displayLists">
-        <v-divider v-show="index !== 0" :key="'divider' + info.id"></v-divider>
+      <template v-for="(content, index) in filteredContents">
+        <v-divider
+          v-show="index !== 0"
+          :key="'divider' + content.id"
+        ></v-divider>
         <v-list-item
-          :key="'info' + info.id"
+          :key="content.id"
           two-line
           link
-          @click.native=";(dialog = true), (newsCard = info)"
+          @click.native=";(dialog = true), (dialogContent = content)"
         >
           <v-list-item-content>
             <v-list-item-title class="wrap-text">
-              <span v-show="$dayjs(info.date) > $dayjs()" class="red--text text--lighten-2">予約投稿：</span>
-              {{ info.title }}
+              <span
+                v-show="$dayjs(content.date) > $dayjs()"
+                class="red--text text--lighten-2"
+                >予約投稿：</span
+              >
+              {{ content.title }}
             </v-list-item-title>
             <v-list-item-subtitle
-              v-text="$dayjs(info.date).format('YYYY年M月D日')"
+              v-text="$dayjs(content.date).format('YYYY年M月D日')"
             >
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -30,56 +37,50 @@
     <v-card-text v-if="pagination">
       <v-pagination
         v-model="page"
-        :length="length"
+        :length="pageLength"
         @input="pageChange"
       ></v-pagination>
     </v-card-text>
     <v-dialog v-model="dialog" max-width="600">
-      <card-news :news-card="newsCard" @dialogClose="dialogClose"></card-news>
+      <card-news
+        :news-card="dialogContent"
+        @dialogClose="dialogClose"
+      ></card-news>
     </v-dialog>
   </v-card>
 </template>
 
 <script>
-import lists from '@/assets/json/news.json'
-
 export default {
   name: 'ListNews',
   props: {
     pagination: { type: Boolean, default: false },
-    pageSize: { type: Number, default: 10 },
+    contents: { type: Array, default: () => [] },
   },
   data: () => ({
     page: 1,
-    length: 0,
-    lists,
-    displayLists: [],
+    pageSize: 10,
+    pageLength: 1,
+    publishContents: [],
+    filteredContents: [],
     dialog: false,
-    newsCard: [],
-    mode: undefined,
+    dialogContent: {},
   }),
   mounted() {
-    // 非公開モードのチェック
-    this.privateMode = this.$route.query.mode
-
-    this.length = Math.ceil(this.lists.length / this.pageSize)
-
-    if (this.privateMode !== 'private') {
-      this.displayLists = this.lists.filter((element) => {
+    const mode = this.$route.query.mode ?? 'public'
+    let contents = this.contents
+    if (mode !== 'private') {
+      contents = contents.filter((element) => {
         return new Date() >= new Date(element.date)
       })
     }
-    else {
-      this.displayLists = this.lists
-    }
-    this.displayLists = this.displayLists.slice(
-      this.pageSize * (this.page - 1),
-      this.pageSize * this.page
-    )
+    this.publishContents = contents
+    this.pageChange(this.page)
+    this.pageLength = Math.ceil(this.publishContents.length / this.pageSize)
   },
   methods: {
     pageChange(pageNumber) {
-      this.displayLists = this.lists.slice(
+      this.filteredContents = this.publishContents.slice(
         this.pageSize * (pageNumber - 1),
         this.pageSize * pageNumber
       )

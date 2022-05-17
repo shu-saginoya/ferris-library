@@ -12,24 +12,33 @@
       <v-img
         v-for="(image, index) in newsCard.images"
         :key="'image' + index"
-        :src="image.src" contain
+        :src="image.src"
+        contain
         class="article-image"
       ></v-img>
     </v-card-text>
     <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
       <btn-inside
-        v-for="btn in newsCard.actions"
-        :key="btn.id"
-        :link="btn.link"
-        :to="btn.to"
+        v-if="newsCard.actions"
+        :link="newsCard.actions.link"
+        :to="newsCard.actions.to"
+      ></btn-inside>
+      <btn-inside
+        v-if="newsCard.actions2"
+        :link="newsCard.actions2.link"
+        :to="newsCard.actions2.to"
       ></btn-inside>
     </v-card-actions>
     <v-card-actions v-if="newsCard.openinnew" class="overflow-x-auto">
       <btn-open-in-new
-        v-for="btn in newsCard.openinnew"
-        :key="btn.id"
-        :link="btn.link"
-        :url="btn.url"
+        v-if="newsCard.openinnew"
+        :link="newsCard.openinnew.link"
+        :url="newsCard.openinnew.url"
+      ></btn-open-in-new>
+      <btn-open-in-new
+        v-if="newsCard2.openinnew"
+        :link="newsCard2.openinnew.link"
+        :url="newsCard2.openinnew.url"
       ></btn-open-in-new>
     </v-card-actions>
     <v-card-actions class="justify-end">
@@ -70,7 +79,7 @@ export default {
   padding: 10px 5px;
 }
 .news-contents >>> th {
-  background-color: #EEE;
+  background-color: #eee;
 }
 .news-contents >>> dt {
   font-weight: bold;

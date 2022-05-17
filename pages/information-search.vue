@@ -11,8 +11,8 @@
 
 <script>
 export default {
+  name: 'PageInformationSearch',
   data: () => ({
-    name: 'PageInformationSearch',
     title: '情報検索',
     items: [
       {

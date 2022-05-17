@@ -22,10 +22,10 @@ export default {
   data: () => ({
     pickOut: [
       {
-        name: '貸出サービス',
-        to: '/service',
-        text: '貸出できる期間・冊数などの基本的な利用方法について',
-        image: require(`@/assets/images/pickout/home-pickout-service.png`),
+        name: '企画展示',
+        to: '/exhibition',
+        text: '図書館で実施する企画展示をご紹介します',
+        image: require(`@/assets/images/pickout/home-pickout-exhibition.png`),
       },
       {
         name: 'データベース・電子ブック',
