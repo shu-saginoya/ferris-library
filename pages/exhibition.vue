@@ -37,7 +37,7 @@
             {{ content.title }}
           </v-card-title>
           <v-card-subtitle>
-            {{ $dayjs(content.publishedAt).format('YYYY年M月D日') }}
+            {{ $dayjs(content.date).format('YYYY年M月D日') }}
           </v-card-subtitle>
         </v-card>
       </v-col>
