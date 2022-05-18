@@ -181,7 +181,7 @@ export default {
         pdfs: [
           {
             title: 'フェリス女学院大学附属図書館コンソーシアム利用案内',
-            url: 'pdf/consortium/ferris.pdf',
+            url: '/documents/consortium/ferris.pdf',
             name: 'コンソーシアム利用案内',
             type: 'pdf',
           },
