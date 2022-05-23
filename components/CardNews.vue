@@ -36,9 +36,9 @@
         :url="newsCard.openinnew.url"
       ></btn-open-in-new>
       <btn-open-in-new
-        v-if="newsCard2.openinnew"
-        :link="newsCard2.openinnew.link"
-        :url="newsCard2.openinnew.url"
+        v-if="newsCard.openinnew2"
+        :link="newsCard.openinnew2.link"
+        :url="newsCard.openinnew2.url"
       ></btn-open-in-new>
     </v-card-actions>
     <v-card-actions class="justify-end">

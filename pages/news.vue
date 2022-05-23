@@ -12,10 +12,11 @@
 <script>
 export default {
   name: 'PageNews',
-  async asyncData({ $microcms }) {
+  async asyncData({ params, $microcms, $preview }) {
     const data = await $microcms.get({
       endpoint: 'news',
-      queries: { limit: 100, orders: '-date' },
+      contentId: params.slug,
+      queries: { limit: 100, orders: '-date', draftKey: $preview?.draftKey },
     })
     return data
   },

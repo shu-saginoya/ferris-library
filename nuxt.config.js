@@ -27,6 +27,7 @@ export default {
   plugins: [
     { src: '~/plugins/vue-pdf.js', mode: 'client' },
     { src: '~/plugins/tinybox.js', mode: 'client' },
+    { src: '~/plugins/preview.client.js', mode: 'client' },
     { src: '~/plugins/day.js' },
   ],
 
