@@ -3,7 +3,7 @@
     <text-page-title>{{ title }}</text-page-title>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
-        <list-news :pagination="true" :contents="contents"></list-news>
+          <card-news :news-card="contents"></card-news>
       </v-col>
     </v-row>
   </v-container>
@@ -11,16 +11,17 @@
 
 <script>
 export default {
-  name: 'PageNews',
-  async asyncData({ $microcms }) {
+  name: 'CmsPreview',
+  async asyncData({ params, $microcms, $preview }) {
     const data = await $microcms.get({
       endpoint: 'news',
-      queries: { limit: 100, orders: '-date' },
+      contentId: params.slug,
+      queries: { draftKey: $preview?.draftKey },
     })
     return data
   },
   data: () => ({
-    title: 'News',
+    title: '記事のプレビュー',
   }),
   head() {
     return {
