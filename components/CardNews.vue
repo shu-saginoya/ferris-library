@@ -19,24 +19,24 @@
     </v-card-text>
     <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
       <btn-inside
-        v-if="newsCard.actions"
+        v-if="newsCard.actions.link"
         :link="newsCard.actions.link"
         :to="newsCard.actions.to"
       ></btn-inside>
       <btn-inside
-        v-if="newsCard.actions2"
+        v-if="newsCard.actions2.link"
         :link="newsCard.actions2.link"
         :to="newsCard.actions2.to"
       ></btn-inside>
     </v-card-actions>
     <v-card-actions v-if="newsCard.openinnew" class="overflow-x-auto">
       <btn-open-in-new
-        v-if="newsCard.openinnew"
+        v-if="newsCard.openinnew.link"
         :link="newsCard.openinnew.link"
         :url="newsCard.openinnew.url"
       ></btn-open-in-new>
       <btn-open-in-new
-        v-if="newsCard.openinnew2"
+        v-if="newsCard.openinnew2.link"
         :link="newsCard.openinnew2.link"
         :url="newsCard.openinnew2.url"
       ></btn-open-in-new>
