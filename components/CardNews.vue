@@ -2,43 +2,43 @@
   <v-card>
     <v-system-bar color="primary" dark> News </v-system-bar>
     <v-card-title>
-      {{ newsCard.title }}
+      {{ items.title }}
     </v-card-title>
-    <v-card-subtitle v-text="$dayjs(newsCard.date).format('YYYY年M月D日')">
+    <v-card-subtitle v-text="$dayjs(items.date).format('YYYY年M月D日')">
     </v-card-subtitle>
-    <v-card-text class="mt-6 news-contents" v-html="newsCard.contents">
+    <v-card-text class="mt-6 news-contents" v-html="items.contents">
     </v-card-text>
-    <v-card-text v-if="newsCard.images">
+    <v-card-text v-if="items.images">
       <v-img
-        v-for="(image, index) in newsCard.images"
+        v-for="(image, index) in items.images"
         :key="'image' + index"
         :src="image.src"
         contain
         class="article-image"
       ></v-img>
     </v-card-text>
-    <v-card-actions v-if="newsCard.actions" class="overflow-x-auto">
+    <v-card-actions v-if="items.actions" class="overflow-x-auto">
       <btn-inside
-        v-if="newsCard.actions.link"
-        :link="newsCard.actions.link"
-        :to="newsCard.actions.to"
+        v-if="items.actions && items.actions.link &&items.actions.to"
+        :link="items.actions.link"
+        :to="items.actions.to"
       ></btn-inside>
       <btn-inside
-        v-if="newsCard.actions2.link"
-        :link="newsCard.actions2.link"
-        :to="newsCard.actions2.to"
+        v-if="items.actions2 &&items.actions2.link && items.actions2.to"
+        :link="items.actions2.link"
+        :to="items.actions2.to"
       ></btn-inside>
     </v-card-actions>
-    <v-card-actions v-if="newsCard.openinnew" class="overflow-x-auto">
+    <v-card-actions v-if="items.openinnew" class="overflow-x-auto">
       <btn-open-in-new
-        v-if="newsCard.openinnew.link"
-        :link="newsCard.openinnew.link"
-        :url="newsCard.openinnew.url"
+        v-if="items.openinnew && items.openinnew.link && items.openinnew.url"
+        :link="items.openinnew.link"
+        :url="items.openinnew.url"
       ></btn-open-in-new>
       <btn-open-in-new
-        v-if="newsCard.openinnew2.link"
-        :link="newsCard.openinnew2.link"
-        :url="newsCard.openinnew2.url"
+        v-if="items.openinnew2 && items.openinnew2.link && items.openinnew2.url"
+        :link="items.openinnew2.link"
+        :url="items.openinnew2.url"
       ></btn-open-in-new>
     </v-card-actions>
     <v-card-actions class="justify-end">
@@ -51,7 +51,7 @@
 export default {
   name: 'CardNews',
   props: {
-    newsCard: { type: Object, default: () => {} },
+    items: { type: Object, default: () => {} },
   },
   data: () => ({}),
 }
