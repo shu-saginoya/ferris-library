@@ -1,6 +1,7 @@
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
+    <p>※現在、学外の方はご利用いただけません。</p>
     <v-row>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-select
