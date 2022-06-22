@@ -8,13 +8,19 @@
         </v-alert>
       </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
+        <div class="text-center text-md-left text-h6 mb-2">
+          <v-icon left>mdi-newspaper-variant-outline</v-icon>関連ニュース
+        </div>
+        <list-news :contents="contents"></list-news>
+      </v-col>
+      <v-col cols="12" md="10" lg="8" xl="6" class="mt-2">
         <v-select
           v-model="selected"
           :items="items"
           filled
           label="選択してください"
         ></v-select>
-        <template v-for="(content, index) in contents">
+        <template v-for="(content, index) in itemsContents">
           <v-card
             v-if="selected == content.name"
             :key="index"
@@ -57,12 +63,6 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="12" md="10" lg="8" xl="6">
-        <div class="text-center text-md-left text-h6 mb-2">
-          <v-icon left>mdi-newspaper-variant-outline</v-icon>関連ニュース
-        </div>
-        <list-news :contents="contents"></list-news>
-      </v-col>
     </v-row>
     <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
@@ -90,7 +90,7 @@ export default {
       '横浜市内大学図書館コンソーシアム参加大学所属の方',
       '一般の方',
     ],
-    contents: [
+    itemsContents: [
       {
         name: '卒業生・修了生',
         service: [
