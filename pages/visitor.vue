@@ -1,8 +1,12 @@
 <template>
   <v-container>
     <text-page-title>{{ title }}</text-page-title>
-    <p>※現在、学外の方はご利用いただけません。</p>
-    <v-row>
+    <v-row dense>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <v-alert dense text type="warning">
+          現在、学外の方はご利用いただけません。
+        </v-alert>
+      </v-col>
       <v-col cols="12" md="10" lg="8" xl="6">
         <v-select
           v-model="selected"
@@ -53,6 +57,12 @@
           </v-card>
         </template>
       </v-col>
+      <v-col cols="12" md="10" lg="8" xl="6">
+        <div class="text-center text-md-left text-h6 mb-2">
+          <v-icon left>mdi-newspaper-variant-outline</v-icon>関連ニュース
+        </div>
+        <list-news :contents="contents"></list-news>
+      </v-col>
     </v-row>
     <confirm-download ref="confirmDownload" :file="openFile"></confirm-download>
   </v-container>
@@ -61,6 +71,13 @@
 <script>
 export default {
   name: 'PageVisitor',
+  async asyncData({ $microcms }) {
+    const data = await $microcms.get({
+      endpoint: 'news',
+      queries: { ids: 'ugtb1i4y1_10' },
+    })
+    return data
+  },
   data: () => ({
     title: '学外の方へ',
     selected: '',

@@ -19,12 +19,12 @@
     </v-card-text>
     <v-card-actions v-if="items.actions" class="overflow-x-auto">
       <btn-inside
-        v-if="items.actions && items.actions.link &&items.actions.to"
+        v-if="items.actions && items.actions.link && items.actions.to"
         :link="items.actions.link"
         :to="items.actions.to"
       ></btn-inside>
       <btn-inside
-        v-if="items.actions2 &&items.actions2.link && items.actions2.to"
+        v-if="items.actions2 && items.actions2.link && items.actions2.to"
         :link="items.actions2.link"
         :to="items.actions2.to"
       ></btn-inside>

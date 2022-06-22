@@ -17,16 +17,7 @@
             {{ section.title }}
           </v-card-title>
           <v-card-text :key="'section-text' + i">
-            <template v-for="(item, j) in section.contents">
-              <div
-                v-if="item.subtitle"
-                :key="'subtitle' + j"
-                class="subtitle-2 text-decoration-underline mt-2"
-              >
-                {{ item.subtitle }}
-              </div>
-              <p :key="'text' + j">{{ item.text }}</p>
-            </template>
+            <div v-html="section.contents"></div>
             <p v-if="section.date" class="text-right">{{ section.date }}</p>
           </v-card-text>
         </template>
@@ -38,13 +29,7 @@
               cols="12"
               md="6"
             >
-              <v-btn
-                block
-                outlined
-                @click.native="
-                  ;(subContentsDialog = true), (subContentsCard = sub)
-                "
-              >
+              <v-btn block outlined @click.native="openSubContents(sub)">
                 {{ sub.title }}
               </v-btn>
             </v-col>
@@ -61,18 +46,7 @@
         <v-card-subtitle v-if="subContentsCard.date">
           {{ subContentsCard.date }}
         </v-card-subtitle>
-        <v-card-text>
-          <template v-for="(item, m) in subContentsCard.contents">
-            <div
-              v-if="item.subtitle"
-              :key="'subContentsTitle' + m"
-              class="subtitle-2 text-decoration-underline mt-2"
-            >
-              {{ item.subtitle }}
-            </div>
-            <p :key="'subContentsText' + m">{{ item.text }}</p>
-          </template>
-        </v-card-text>
+        <v-card-text v-html="subContentsCard.contents"> </v-card-text>
         <v-card-actions v-if="subContentsCard.actions">
           <btn-inside
             v-for="btn in subContentsCard.actions"
@@ -100,72 +74,22 @@ export default {
     mainContents: [
       {
         title: '緑園・山手とも対象者を限定して開館',
-        contents: [
-          {
-            subtitle: 'ご利用いただける方',
-            text: '学部生、大学院生、専任教員、2022年度ご出講の非常勤講師、事務職員（副手を含む）',
-          },
-          {
-            subtitle: 'ご予約によりご利用いただける方',
-            text: '名誉教授',
-          },
-          {
-            text: '当面の間、上記以外の方は対象外とさせていただきます。一般公開はしていません。開館日時は変更する可能性があります。',
-          },
-          {
-            text: '今後の予定は状況により予告なく変更することがあります。今後のスケジュールにつきましては、学生：FerrisPassport、教職員：グループウェアでご確認ください。',
-          },
-        ],
-        date: '2022年4月1日現在',
+        contents:
+          '<p class="subtitle-2 text-decoration-underline mt-2">ご利用いただける方</p><p>学部生、大学院生、専任教員、名誉教授、2022年度ご出講の非常勤講師、卒業生・修了生、定年退職教職員、事務職員（副手を含む）</p><p>当面の間、上記以外の方は対象外とさせていただきます。一般公開はしていません。開館日時は変更する可能性があります。</p><p>今後の予定は状況により予告なく変更することがあります。今後のスケジュールにつきましては、学生：FerrisPassport、教職員：グループウェアでご確認ください。</p>',
+        date: '2022年6月22日現在',
       },
     ],
     subContents: [
       {
         title: '名誉教授の先生方へ',
-        contents: [
-          {
-            text: '名誉教授の先生方にはご不便をおかけしておりましたが、研究支援の観点から図書館をご利用いただけるようにいたします。',
-          },
-          {
-            text: 'ご入構、正門でのスムーズな受付のために名誉教授の先生方におかれましては',
-          },
-          {
-            text: '（１）前日までに電話、メール等で図書館あてにご連絡ください。',
-          },
-          {
-            text: '（２）ご来館予定の月日、時間（午前か午後かなど）をお知らせください。',
-          },
-          {
-            text: '（３）正門での消毒、検温、ご本人確認にご協力をお願いいたします。',
-          },
-          {
-            subtitle: '資料貸出',
-            text: '資料貸出を希望される方には、宅配による発送も可能です。図書館あてメールにてご相談ください。',
-          },
-        ],
-        date: '2021年5月12日',
+        contents:
+          '<p>名誉教授の先生方にはご不便をおかけしておりましたが、研究支援の観点から図書館をご利用いただけるようにいたします。</p><p>事前予約は不要です。</p><p>正門での消毒、検温、ご本人確認には、引き続きご協力をお願いいたします。</p><p class="subtitle-2 text-decoration-underline mt-2">資料貸出</p><p>資料貸出を希望される方には、宅配による発送も可能です。図書館あてメールにてご相談ください。</p>',
+        date: '2022年6月22日',
       },
       {
         title: '2022年度前期の宅配貸出について',
-        contents: [
-          {
-            text: '新型コロナ感染対策等のためキャンパス入構が困難な学部生及び大学院生については、前期（2022/04/01（金）～）も引き続き宅配貸出を行います。',
-          },
-          {
-            subtitle: '申込み',
-            text: '学外から受けられるサポート＞「宅配による貸出について（PDF）」にしたがい、オンラインレファレンスから申し込んでください。',
-          },
-          {
-            subtitle: '注意点',
-            text: '（１）1回の申込は10冊以内とし、できるだけまとめて申し込んでください。',
-          },
-          {
-            text: '（２）発送は毎週木曜日の予定です。',
-          },
-          {
-            text: '（３）「遠隔受講授業名」を忘れずに入力してください。',
-          },
-        ],
+        contents:
+          '<p>新型コロナ感染対策等のためキャンパス入構が困難な学部生及び大学院生については、前期（2022/04/01（金）～）も引き続き宅配貸出を行います。</p><p class="subtitle-2 text-decoration-underline mt-2">申込み</p><p>学外から受けられるサポート＞「宅配による貸出について（PDF）」にしたがい、オンラインレファレンスから申し込んでください。</p><p class="subtitle-2 text-decoration-underline mt-2">注意点</p><p>（１）1回の申込は10冊以内とし、できるだけまとめて申し込んでください。</p><p>（２）発送は毎週木曜日の予定です。</p><p>（３）「遠隔受講授業名」を忘れずに入力してください。</p>',
         actions: [
           {
             link: '学外から受けられるサポート',
@@ -178,5 +102,17 @@ export default {
   mounted() {
     this.loading = false
   },
+  methods: {
+    openSubContents(contents) {
+      this.subContentsDialog = true
+      this.subContentsCard = contents
+    },
+  },
 }
 </script>
+
+<style scoped>
+.sub-title {
+  text-decoration: underline;
+}
+</style>
