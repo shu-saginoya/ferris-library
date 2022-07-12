@@ -118,6 +118,9 @@ export default {
 .explanation >>> caption {
   text-align: left;
 }
+.explanation >>> p {
+  margin-bottom: 0.5em;
+}
 .explanation >>> table {
   border-collapse: collapse;
 }

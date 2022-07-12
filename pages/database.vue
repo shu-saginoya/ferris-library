@@ -15,6 +15,13 @@
             <span v-else>{{ listfilter.length }}件の項目を表示しています</span>
           </v-toolbar-title>
           <v-spacer></v-spacer>
+          <!-- <v-text-field
+            v-model="filterKeyword"
+            label="キーワード検索"
+            hide-details
+            clearable
+            class="mr-2"
+          ></v-text-field> -->
           <v-btn outlined @click="dialog = true">
             <v-icon>mdi-magnify</v-icon>
             検索
